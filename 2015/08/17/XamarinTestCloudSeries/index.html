@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Get started with Xamarin Test Cloud | Esteban Solano G.</title>
+  <meta name="description" content="Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Get started with Xamarin Test Cloud" />
+  <meta property="og:description" content="Let's take a look to Xamarin's Test Cloud) and examine the basics for implementing automated UI Acceptance Testing for mobile application and explore the main features of this product." />
+  <meta property="og:url" content="http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/" />
+  <meta property="og:site_name" content="Get started with Xamarin Test Cloud" />
+  <meta property="og:image" content="http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries//2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/preview.png" />
+  <meta property="og:image:width" content="795" />
+  <meta property="og:image:height" content="600" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Mon Aug 17 2015 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries//2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Get started with Xamarin Test Cloud" />
+  <meta name="twitter:description" content="Let's take a look to Xamarin's Test Cloud) and examine the basics for implementing automated UI Acceptance Testing for mobile application and explore the main features of this product." />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-offset-1 col-xs-8 col-sm-12">Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD</h2>
+        <button type="button" class="navbar-toggle" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/XamarinForms/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>XamarinForms</p>
+        </a>
+    
+        <a href="/blog/tags/TestCloud/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>TestCloud</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Get started with Xamarin Test Cloud
+    </h1>
+    <p class="content">
+      <p>Let’s take a look to <a href="//testcloud.xamarin.com">Xamarin’s Test Cloud</a> and examine the basics for implementing automated UI Acceptance Testing for mobile application and explore the main features of this product.</p>
+<a id="more"></a>
+<h2 id="Automating-UI-tests"><a href="#Automating-UI-tests" class="headerlink" title="Automating UI tests"></a>Automating UI tests</h2><p>At a glance, Xamarin Cloud Test allows you to automate UI Acceptance Testing by just following these steps:</p>
+<ol>
+<li>Setup the UI test-project with UITest in C# or Calabash (Ruby).</li>
+<li>Arrange, Act and Assert your tests.</li>
+<li>Submit and run your tests in the cloud.</li>
+</ol>
+<p><img src="./images/test-cloud.png" alt="Xamarin Test Cloud" title="Xamarin Test Cloud"></p>
+<h2 id="1-Setup-the-UI-test-project-with-UITest-in-C"><a href="#1-Setup-the-UI-test-project-with-UITest-in-C" class="headerlink" title="1. Setup the UI test-project with UITest in C#"></a>1. Setup the UI test-project with UITest in C#</h2><p>If you already familiar with Unit Testing in .Net, you can easily start your UI tests for your Xamarin Forms and scaffold the project by just indicating the name and location of your test project.</p>
+<p>Now, UITest for C# is fully based on NUnit so if you are already familiar with it will be as easily as your normal Unit/Acceptance tests for other projects.</p>
+<p>Here is how to add the project <a href="http://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/#Adding_a_New_Xamarin.UITest_Project" target="_blank" rel="noopener">step by step</a> with more details.</p>
+<h3 id="Target-the-platforms-you-need"><a href="#Target-the-platforms-you-need" class="headerlink" title="Target the platforms you need."></a>Target the platforms you need.</h3><p>By having the project in place, you can just just add the reference and target both Android and iOS from a single cross-platform test suite. </p>
+<p>You can take a sample from our repository in <a href="https://github.com/stvansolano/crossPlatformDevelopment/tree/master/FeaturedApps/ToDoApp/" target="_blank" rel="noopener">GitHub</a>, where you can locate the prototyping app and the code for the UI tests as well.</p>
+<h3 id="Making-our-UITest-cross-platform"><a href="#Making-our-UITest-cross-platform" class="headerlink" title="Making our UITest cross-platform."></a>Making our UITest cross-platform.</h3><p>Since we are developing a cross-platform app, we can also make our tests to go cross-platform by just refactoring the code to make it run for other platforms as well. So let’s make a class that will abstract the application instance:</p>
+<p><br></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">namespace Tests</span><br><span class="line">&#123;</span><br><span class="line">    using NUnit.Framework;</span><br><span class="line">    using Xamarin.UITest;</span><br><span class="line"></span><br><span class="line">    public <span class="class"><span class="keyword">class</span> <span class="title">CrossPlatformTests</span></span></span><br><span class="line">    &#123;</span><br><span class="line">        protected IApp App &#123; get; set; &#125;</span><br><span class="line"></span><br><span class="line">        [SetUp]</span><br><span class="line">        public virtual void SetUp()</span><br><span class="line">        &#123;</span><br><span class="line">            Assert.Ignore(<span class="string">"This class requires a platform-specific bootstrapper to override the `SetUp` method"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>By abstracting the application with the <em>IApp</em> member, it will allow you to have shared test suites for both Android and iOS.</p>
+<h2 id="2-Arrange-Act-and-Assert-your-tests"><a href="#2-Arrange-Act-and-Assert-your-tests" class="headerlink" title="2. Arrange, Act and Assert your tests"></a>2. Arrange, Act and Assert your tests</h2><p>So by extending the previous class we are able to define the body of test to be run in every platform. Let’s add some basic tests to make sure our app is loaded the first time.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">namespace Tests</span><br><span class="line">&#123;</span><br><span class="line">    using NUnit.Framework;</span><br><span class="line">    using System;</span><br><span class="line">    using System.IO;</span><br><span class="line">    using System.Reflection;</span><br><span class="line">    using Xamarin.UITest;</span><br><span class="line">    using Xamarin.UITest.Configuration;</span><br><span class="line"></span><br><span class="line">    [TestFixture()]</span><br><span class="line">    public <span class="class"><span class="keyword">class</span> <span class="title">AndroidTest</span> :</span> CrossPlatformTests</span><br><span class="line">    &#123;</span><br><span class="line">        [SetUp]</span><br><span class="line">        public override void SetUp()</span><br><span class="line">        &#123;</span><br><span class="line">            App = ConfigureApp.Android.StartApp();</span><br><span class="line"></span><br><span class="line">            App.Screenshot(<span class="string">"Given the app is loaded"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        [Test]</span><br><span class="line">        public void AppLaunches()</span><br><span class="line">        &#123;</span><br><span class="line">            App.Screenshot(<span class="string">"First screen."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Then our new class can both contain both shared test-cases and add any platform-specific tests if necessary.</p>
+<h2 id="3-Submit-your-tests-to-the-cloud"><a href="#3-Submit-your-tests-to-the-cloud" class="headerlink" title="3. Submit your tests to the cloud."></a>3. Submit your tests to the cloud.</h2><p>Once you have the project in place, you can just start running your test cases right the way.</p>
+<p>But before running the test suite in Xamarin Cloud, you need to make sure you’re deploying it in <em>Release</em> mode in Visual/Xamarin Studio to make it work.</p>
+<h3 id="Targeting-devices-to-run"><a href="#Targeting-devices-to-run" class="headerlink" title="Targeting devices to run."></a>Targeting devices to run.</h3><p>After uploading, you will be prompted to select the number of devices to be run against your test suite that best fill your needs. After run, you can inspect the screenshots that we previously indicated as part of the test cases.</p>
+<p>Here are the test results with the snapshots taken in every device:</p>
+<img src="/2015/08/17/XamarinTestCloudSeries/test-suite-android.png" title="Test-suite for Android">
+<p>Here is how you can submit your tests <a href="http://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/" target="_blank" rel="noopener">step by step</a> with more details.</p>
+<h3 id="Inspecting-the-results"><a href="#Inspecting-the-results" class="headerlink" title="Inspecting the results."></a>Inspecting the results.</h3><p>There you go! Your tests will start running and you will immediately receive the results as they execute. Additionally, you will receive an email after the tests are done.</p>
+<img src="/2015/08/17/XamarinTestCloudSeries/tests-summary.png" title="Test Summary">
+<p>Here are the results for the <a href="https://testcloud.xamarin.com/test/7f86cdf4-519e-4baa-aff2-43bf802441aa/?step=0_0_0" target="_blank" rel="noopener">sample app test run</a> with the screenshots taken during the test executions.</p>
+<img src="/2015/08/17/XamarinTestCloudSeries/tests-results.png" title="Tests Results">
+<p>And that’s it! Now we can focus on implementing more tests depending on application’s needs. </p>
+<p>In further posts we will additional features of Xamarin Test Clould including <em>REPL</em> and deeper assertion cases.</p>
+<h2 id="Additional-Xamarin-resources"><a href="#Additional-Xamarin-resources" class="headerlink" title="Additional Xamarin resources."></a>Additional Xamarin resources.</h2><p><a href="http://developer.xamarin.com/guides/testcloud/introduction-to-test-cloud/" target="_blank" rel="noopener">Intro to Xamarin Test cloud</a><br><a href="http://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/" target="_blank" rel="noopener">Xamarin.UITest C# Cheat Sheet</a><br><a href="https://github.com/stvansolano/crossPlatformDevelopment/tree/master/FeaturedApps/ToDoApp/" target="_blank" rel="noopener">Code examples</a><br><a href="https://developer.xamarin.com/guides/testcloud/uitest/working-with/repl/" target="_blank" rel="noopener">Working with <em>REPL</em></a></p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2015/10/17/Intro-Xamarin/">
+                ← Introducción al desarrollo de&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2015/06/20/Getting-Started-With-Markdown/" class="btn info">
+                Getting Started With Markdown →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/&text=Get started with Xamarin Test Cloud&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD | Mobile Certified Developer
+        <br/>
+        <a href="https://twitter.com/stvansolano">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2020 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

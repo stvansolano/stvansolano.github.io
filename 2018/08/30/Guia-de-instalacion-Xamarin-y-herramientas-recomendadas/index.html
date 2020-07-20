@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Guia de instalacion de Xamarin, VS y herramientas recomendadas (actualizada 2018) | Esteban Solano G.</title>
+  <meta name="description" content="Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Guia de instalacion de Xamarin, VS y herramientas recomendadas (actualizada 2018)" />
+  <meta property="og:description" content="Comparto a continuación una guía actualizada de instalación de Xamarin para desarrollo de aplicaciones moviles, C# y .Net y varias herramientas/links recomendadas." />
+  <meta property="og:url" content="http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/" />
+  <meta property="og:site_name" content="Guia de instalacion de Xamarin, VS y herramientas recomendadas (actualizada 2018)" />
+  <meta property="og:image" content="http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/preview.png" />
+  <meta property="og:image:width" content="795" />
+  <meta property="og:image:height" content="600" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Thu Aug 30 2018 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Guia de instalacion de Xamarin, VS y herramientas recomendadas (actualizada 2018)" />
+  <meta name="twitter:description" content="Comparto a continuación una guía actualizada de instalación de Xamarin para desarrollo de aplicaciones moviles, C# y .Net y varias herramientas/links recomendadas." />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-offset-1 col-xs-8 col-sm-12">Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD</h2>
+        <button type="button" class="navbar-toggle" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
+        </a>
+    
+        <a href="/blog/tags/Comunidad/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Comunidad</p>
+        </a>
+    
+        <a href="/blog/tags/Charla/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Charla</p>
+        </a>
+    
+        <a href="/blog/tags/Taller/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Taller</p>
+        </a>
+    
+        <a href="/blog/tags/GitHub/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>GitHub</p>
+        </a>
+    
+        <a href="/blog/tags/Git/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Git</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Guia de instalacion de Xamarin, VS y herramientas recomendadas (actualizada 2018)
+    </h1>
+    <p class="content">
+      <p>Comparto a continuación una guía actualizada de instalación de Xamarin para desarrollo de aplicaciones moviles, C# y .Net y varias herramientas/links recomendadas.<br><a id="more"></a></p>
+<p><img src="2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/preview.png" alt="Sistemas Operativos" title="Sistemas Operativos"></p>
+<h2 id="La-importancia-de-esta-guia-y-de-compartir-nuestras-experiencias"><a href="#La-importancia-de-esta-guia-y-de-compartir-nuestras-experiencias" class="headerlink" title="La importancia de esta guía y de compartir nuestras experiencias."></a>La importancia de esta guía y de compartir nuestras experiencias.</h2><p>Muy a menudo atiendo consultas específicas sobre la instalación, implementaciones de apps con Xamarin y también sobre opciones de capacitaciones en este tema. Y como informáticos, casi que todos hemos estado allí, no? Comienzas a utilizar algo, lo instalas o sabes de alguien que ya lo ha hecho pero de repente tienes problemas…</p>
+<p>En mi caso y desde hace varios años he tenido la oportunidad de impartir talleres, charlas e iniciar en la enseñanza superior en aplicaciones móviles en Costa Rica y por más de año tuve la oportunidad de iniciar dar clases en Universidad Cenfotec de Costa Rica y estar en contacto con profesionales en temas de desarrollo móvil, web y .Net en general.</p>
+<p>Más recientemente profesor y consultor he tenido oportunidad de impartir a más de 200 estudiantes, colegas entre talleres, charlas, cursos abiertos y también capacitaciones a empresas y grupos específicos (modalidad intensiva-personalizada por mi cuenta), por lo que decidí actualizar una publicación en este tema y compartirla abiertamente con la comunidad técnica.</p>
+<p>Espero sea de gran ayuda. Si tienes algún problema siguiendo la instalación o encuentras algo que haya que mejorar o actualizar, puedes contactarme a <a href="mailto:stvansolano@outlook.com" target="_blank" rel="noopener">stvansolano@outlook.com</a> y le estaré actualizando a la brevedad.</p>
+<h2 id="Requisitos-de-software-instalacion-y-configuracion-Windows-y-MacOS"><a href="#Requisitos-de-software-instalacion-y-configuracion-Windows-y-MacOS" class="headerlink" title="Requisitos de software, instalación y configuración (Windows y MacOS)"></a>Requisitos de software, instalación y configuración (Windows y MacOS)</h2><p>Se recomienda la misma configuración utilizada en desarrollo Android/Java para Windows usado en otros cursos (dado que se desarrolla con el Android NDK y varios componentes adicionales), </p>
+<h3 id="Requisitos-de-instalacion-Windows"><a href="#Requisitos-de-instalacion-Windows" class="headerlink" title="Requisitos de instalación Windows."></a>Requisitos de instalación Windows.</h3><ul>
+<li>Windows 8.1 o superior (Windows 10 recomendado), 64bit</li>
+<li>Procesador 1.8 GHz Quad-core o superior</li>
+<li>8 GB de RAM o superior</li>
+<li>Si tienes Hyper-V, deshabilitarlo o bien utilizar el emulador de Visual Studio compatible con Hyper-V</li>
+<li>Espacio en disco: 100 GB de espacio libre (recomendable).</li>
+<li>Velocidad de disco (recomendado): Para mejorar el desempeño y la experiencia del curso, instalar Windows y Visual Studio en discos de estado sólido (SSD).</li>
+<li>Tarjeta de Video de alta resolución que soporte una resolución mínima de 720p (1280 by 720) y compatible con aceleración de gráficos preferiblemente.</li>
+</ul>
+<h2 id="Requisitos-de-instalacion-Visual-Studio-Windows-y-Mac"><a href="#Requisitos-de-instalacion-Visual-Studio-Windows-y-Mac" class="headerlink" title="Requisitos de instalación Visual Studio (Windows y Mac)."></a>Requisitos de instalación Visual Studio (Windows y Mac).</h2><h3 id="Instalacion-Windows"><a href="#Instalacion-Windows" class="headerlink" title="Instalación Windows:"></a>Instalación Windows:</h3><p>Se requiere instalar Visual Studio 2017 (Community o gratuita, Professional o Enterprise), y posteriormente instalar el componente de Xamarin desde la ventana de complementos a instalar (usualmente ubicado al final de la ventana adjunta):<br><img src="2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/vs2017install.png" alt="Instalacion Xamarin" title="Instalacion Xamarin"></p>
+<h2 id="Instalacion-MacOS"><a href="#Instalacion-MacOS" class="headerlink" title="Instalación MacOS:"></a>Instalación MacOS:</h2><p>Se requiere Instalar Visual Studio para Mac (gratuito). Momento, Visual Studio para Mac?? Sí! Puedes seguirse la siguiente guía completa y conocer más detalles en: <a href="https://docs.microsoft.com/en-us/visualstudio/mac/installation" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/visualstudio/mac/installation</a></p>
+<p><img src="2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/vs4mac.png" alt="VS 4 Mac" title="VS 4 Mac"></p>
+<blockquote>
+<p>Momento, Visual Studio para Mac??</p>
+</blockquote>
+<h2 id="Requisitos-de-instalacion-actualizaciones-Android-Windows-MacOS"><a href="#Requisitos-de-instalacion-actualizaciones-Android-Windows-MacOS" class="headerlink" title="Requisitos de instalación/actualizaciones Android (Windows / MacOS)."></a>Requisitos de instalación/actualizaciones Android (Windows / MacOS).</h2><p>Android Studio: Disponible en <a href="https://developer.android.com/studio/index.html" target="_blank" rel="noopener">https://developer.android.com/studio/index.html</a><br>Esto permite contar con las mas recientes versiones de Android y configuracion del ambiente</p>
+<p>Posterior a la instalación de Visual Studio, seguir pasos de instalación de Android (Google) del siguiente link:</p>
+<p><a href="https://developer.android.com/topic/instant-apps/getting-started/setup.html#check_your_system_requirements" target="_blank" rel="noopener">https://developer.android.com/topic/instant-apps/getting-started/setup.html#check_your_system_requirements</a></p>
+<p>De los cuales se necesita instalado:</p>
+<ul>
+<li>JDK 1.8</li>
+<li>Android Studio 3.0 o superior</li>
+<li>Emuladores (sección “Set up your device or emulator”)</li>
+<li>Desde Android/Xamarin Studio, usar el SDK Manager para verificar los siguientes paquetes:</li>
+<li>Android SDK 6.0 o superior</li>
+<li>Android SDK Build Tools 26.x o superior</li>
+<li>Android SDK Tools 25.x o superior.</li>
+<li>Android SDK Platform Tools 25.x o superior</li>
+<li>Android Support Library (última versión, disponible en la sección Extras)</li>
+<li>Android Repository (última, sección Extras)</li>
+<li>Intel x86 Emulator Accelerator (HAXM installer) (disponible en la sección Extras)</li>
+</ul>
+<p>La mayoría de estos componentes son instalados en línea por Visual Studio, favor verificarlos y de no estar instalados proceder a instalarlos. De no estar instalados proceder a instalarlos.</p>
+<h2 id="Requisitos-de-instalacion-actualizaciones-Xamarin-Windows-Visual-Studio"><a href="#Requisitos-de-instalacion-actualizaciones-Xamarin-Windows-Visual-Studio" class="headerlink" title="Requisitos de instalación/actualizaciones Xamarin (Windows/Visual Studio)"></a>Requisitos de instalación/actualizaciones Xamarin (Windows/Visual Studio)</h2><p>En actualizar Xamarin a una version reciente. Para ello realizar lo siguiente:</p>
+<ol>
+<li>Abrir Visual Studio</li>
+<li>Ir a Tools -&gt; Options -&gt; Xamarin (Al final de la lista izquierda de la ventana emergente)</li>
+<li>Abrir la seccion Xamarin -&gt; Others -&gt; Check now</li>
+<li>Dar clic en Download y proceder con la instalacion</li>
+</ol>
+<h2 id="Requisitos-de-instalacion-actualizaciones-Xamarin-Android-Player-descontinuado"><a href="#Requisitos-de-instalacion-actualizaciones-Xamarin-Android-Player-descontinuado" class="headerlink" title="Requisitos de instalación / actualizaciones Xamarin Android Player (descontinuado)"></a>Requisitos de instalación / actualizaciones Xamarin Android Player (descontinuado)</h2><p>Disponible en el siguiente link: <a href="https://www.xamarin.com/android-player" target="_blank" rel="noopener">https://www.xamarin.com/android-player</a><br>Posterior a la descarga favor instalar las siguientes opciones marcadas en la imagen adjunta.</p>
+<p><img src="2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/emulator.png" alt="Emulador" title="Emulador"></p>
+<h2 id="Comprobacion-en-Windows"><a href="#Comprobacion-en-Windows" class="headerlink" title="Comprobación en Windows:"></a>Comprobación en Windows:</h2><p>Una vez que tengan instalado el software de Visual Studio 2017 + Xamarin, comenzar a hacer aplicaciones es bastante sencillo. Los siguientes pasos te permiten crear una aplicación Xamarin.Forms en minutos:</p>
+<p>También puedes hacer la siguiente prueba para comprobar que todo esté en orden:</p>
+<ol>
+<li>Ir a File -&gt; New Project en Visual Studio (Archivo -&gt; Nuevo Proyecto)</li>
+<li>Ubicar la sección Installed-&gt;Templates-&gt; C# -&gt; Cross-platform -&gt; Cross-platform App</li>
+<li>Indicar un nombre de al proyecto (Prueba) y darle clic en OK (tardará unos momentos mientras se crea el proyecto)</li>
+<li>Una vez generado, ir a la sección de Build -&gt; Rebuild solution y esperar a que termine la compilación.</li>
+<li>En la sección de errores debería aparecer en 0 errores y posiblemente algunos Warnings (nada grave)</li>
+<li>En la sección de Explorar de soluciones (Solution Explorer) hacer clic derecho en PruebaDroid y a continuación en la opción “Establecer como proyecto de arranque” o “Set as startup project” y posteriormente en el botón “Run” (Correr) seleccionar el dispositivo “Nexus” (deberá aparecer listado). Posterior a este paso el emulador dará inicio y la aplicación se ejecuta exitosamente desplegando una pantalla con el mensaje similar a “Hello World, Xamarin.Forms!”</li>
+</ol>
+<p><img src="2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/xamarin.png" alt="Xamarin" title="Xamarin"></p>
+<h2 id="Importante-y-antes-de-empezar-a-codificar"><a href="#Importante-y-antes-de-empezar-a-codificar" class="headerlink" title="Importante y antes de empezar a codificar."></a>Importante y antes de empezar a codificar.</h2><p>A partir de este punto puedes crear aplicaciones con Xamarin nativas para dispositivos Android, iOS, UWP y otras tecnologías asombrosas. Antes de continuar te recomiendo echar un vistazo a otras publicaciones y herramientas de gran utilidad y utilizadas profesionalmente en estos tiempos.</p>
+<h3 id="De-mi-blog"><a href="#De-mi-blog" class="headerlink" title="De mi blog:"></a>De mi blog:</h3><ul>
+<li><p>Cómo desplegar apps para Android en tu dispositivo físico<br><a href="http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/">http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/</a></p>
+</li>
+<li><p>Utilizando VSTS con Git para versionamiento de tus proyectos de software<br><a href="http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/">http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/</a><br>Cualquier consulta con gusto.</p>
+</li>
+<li><p>Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)<br><a href="http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/">http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/</a></p>
+</li>
+<li><p>Guía de instalacion MacOS/iOS para desarrollo .Net, ASP.Net Core y Xamarin<br><a href="http://stvansolano.github.io/2018/03/25/Guia-de-instalacion-MacOS-iOS-para-desarrollo-Net-ASP-Net-Core-y-Xamarin/preview.png">http://stvansolano.github.io/2018/03/25/Guia-de-instalacion-MacOS-iOS-para-desarrollo-Net-ASP-Net-Core-y-Xamarin/preview.png</a></p>
+</li>
+</ul>
+<p>Si deseas puedes ponerte en contacto conmigo enviandome un correo a <a href="mailto:stvansolano@outlook.com" target="_blank" rel="noopener">stvansolano@oultook.com</a> por si tienes sugerencias y/o compartir tus experiencias en el tema.</p>
+<p>Saludos!</p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2018/09/21/Sharing-on-Friday-Visual-Studio-For-Mac-Intro/">
+                ← Sharing on Friday! - Visual S&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2018/07/19/Enhorabuena-Renovado-como-Microsoft-MVP-por-tercer-ano-consecutivo/" class="btn info">
+                ¡Enhorabuena! Renovado como M&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/&text=Guia de instalacion de Xamarin, VS y herramientas recomendadas (actualizada 2018)&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD | Mobile Certified Developer
+        <br/>
+        <a href="https://twitter.com/stvansolano">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2020 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Grabacion TechJam Nicaragua 2020 - Mobile Backends Docker, .NET Core, Xamarin y SQL Server en Linux | Esteban Solano G.</title>
+  <meta name="description" content="Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Grabacion TechJam Nicaragua 2020 - Mobile Backends Docker, .NET Core, Xamarin y SQL Server en Linux" />
+  <meta property="og:description" content="Comparto la grabación de mi charla del sábado 22 de febrero de 2020, donde la oportunidad de asistir como ponente remotamente en TechJam Nicaragua 2020" />
+  <meta property="og:url" content="http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/" />
+  <meta property="og:site_name" content="Grabacion TechJam Nicaragua 2020 - Mobile Backends Docker, .NET Core, Xamarin y SQL Server en Linux" />
+  <meta property="og:image" content="http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/preview.png" />
+  <meta property="og:image:width" content="795" />
+  <meta property="og:image:height" content="600" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Sat Feb 22 2020 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Grabacion TechJam Nicaragua 2020 - Mobile Backends Docker, .NET Core, Xamarin y SQL Server en Linux" />
+  <meta name="twitter:description" content="Comparto la grabación de mi charla del sábado 22 de febrero de 2020, donde la oportunidad de asistir como ponente remotamente en TechJam Nicaragua 2020" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-offset-1 col-xs-8 col-sm-12">Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD</h2>
+        <button type="button" class="navbar-toggle" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/DotNet/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>DotNet</p>
+        </a>
+    
+        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
+        </a>
+    
+        <a href="/blog/tags/Conferences/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Conferences</p>
+        </a>
+    
+        <a href="/blog/tags/Docker/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Docker</p>
+        </a>
+    
+        <a href="/blog/tags/REST/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>REST</p>
+        </a>
+    
+        <a href="/blog/tags/Comunidad/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Comunidad</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Grabacion TechJam Nicaragua 2020 - Mobile Backends Docker, .NET Core, Xamarin y SQL Server en Linux
+    </h1>
+    <p class="content">
+      <p>Comparto la grabación de mi charla del sábado 22 de febrero de 2020, donde la oportunidad de asistir como ponente remotamente en TechJam Nicaragua 2020. </p>
+<a id="more"></a>
+<h2 id="Sobre-el-evento"><a href="#Sobre-el-evento" class="headerlink" title="Sobre el evento"></a>Sobre el evento</h2><p>TechJam 2020 fue evento que consistió en 3 hilos de conferencias como parte de un mismo evento, interactuando con expositores de Nicaragua e invitados especiales incluyendo Microsoft MVPs y miembros de la .NET Foundation.</p>
+<p>Mi charla se tituló: <strong> Mobile Backends - Docker, .NET Core + SQL Server (Linux)</strong></p>
+<p>Como parte de la charla, mostré la utilización de Docker para crear imágenes de Docker basadas en SQL Server sobre linux, crear un backend de .NET Core y conectarlo con una aplicación Xamarin.Forms</p>
+<p><br></p>
+<p><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Gracias <a href="https://twitter.com/DotnetNicaragua?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">@DotnetNicaragua</a> por la invitación y coordinacion de los 3 tracks simultaneos con la comunidad. NET e invitados! <a href="https://twitter.com/dotnet?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">@dotnet</a> <a href="https://twitter.com/dotnetfdn?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">@dotnetfdn</a> <a href="https://t.co/bBfGJXfDRc" target="_blank" rel="noopener">https://t.co/bBfGJXfDRc</a> <a href="https://t.co/GfxGJ8At8V" target="_blank" rel="noopener">pic.twitter.com/GfxGJ8At8V</a></p>&mdash; Esteban Solano G. 🇨🇷 (@stvansolano) <a href="https://twitter.com/stvansolano/status/1231385399861370882?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">February 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2 id="Grabacion-disponible-en-YouTube"><a href="#Grabacion-disponible-en-YouTube" class="headerlink" title="Grabacion disponible en YouTube"></a>Grabacion disponible en YouTube</h2><p>Dejo por acá la grabación cortesía de la comunidad Nicaragua Developers:</p>
+<p><br></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Dx64ItK2owk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="Agradecimiento"><a href="#Agradecimiento" class="headerlink" title="Agradecimiento"></a>Agradecimiento</h2><p>Muchas gracias a la organizacion de .NET Nicaragua por invitarme y a todos los participantes presenciales y remotos por atender!</p>
+<h3 id="Diapositivas"><a href="#Diapositivas" class="headerlink" title="Diapositivas:"></a>Diapositivas:</h3><p>Por acá el <a href="https://speakerd.s3.amazonaws.com/presentations/69e7c3042ad04f49b04a9ef25e23e3d5/Mobile_backends_-_Docker__DotNet.pdf" target="_blank" rel="noopener">Link de descarga.</a></p>
+<script async class="speakerdeck-embed" data-id="69e7c3042ad04f49b04a9ef25e23e3d5" data-ratio="1.29456384323641" src="//speakerdeck.com/assets/embed.js"></script>
+
+<h3 id="Codigo-fuente"><a href="#Codigo-fuente" class="headerlink" title="Codigo fuente"></a>Codigo fuente</h3><p>Como parte del ejemplo mostré mi repositorio <code>XamarinExplorer</code> de donde puedes bajarte el branch de develop y explorar el Dockerfile, código de backend en .NET Core y la aplicación Xamarin</p>
+<p>Link al código: <a href="https://github.com/stvansolano/xamarin-explorer" target="_blank" rel="noopener">XamarinExplorer en GitHub</a></p>
+<h3 id="Mas-contenido-y-actividades"><a href="#Mas-contenido-y-actividades" class="headerlink" title="Más contenido y actividades"></a>Más contenido y actividades</h3><p>¡No olvides <a href="http://stvansolano.github.io/blog/#suscribe">suscribirte</a> a mi blog para recibir noticias sobre próximos eventos y artículos que estaré publicando.</p>
+<p>Nos vemos en la próxima!</p>
+<p>Saludos</p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2020/03/07/Resumen-y-contenidos-charla-Open-Data-Day-2020-Costa-Rica-Intro-Machine-Learning-en-la-nube-azure/">
+                ← Resumen y contenidos - Charla&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2019/12/01/Resumen-Actividades-presenciales-y-en-linea-de-Noviembre-2019-Slides-videos-y-mas/" class="btn info">
+                Resumen - Actividades presenc&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/&text=Grabacion TechJam Nicaragua 2020 - Mobile Backends Docker, .NET Core, Xamarin y SQL Server en Linux&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD | Mobile Certified Developer
+        <br/>
+        <a href="https://twitter.com/stvansolano">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2020 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Publicando apps en las tiendas: Permisos, tips y problemas frecuentes | Esteban Solano G.</title>
+  <meta name="description" content="Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Publicando apps en las tiendas: Permisos, tips y problemas frecuentes" />
+  <meta property="og:description" content="Una recopilacion de temas, tips, repasos y preguntas a problemas frecuentes a la hora de preparar aplicaciones para las principales tiendas de aplicaciones móviles: Google Play y Apple Store." />
+  <meta property="og:url" content="http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/" />
+  <meta property="og:site_name" content="Publicando apps en las tiendas: Permisos, tips y problemas frecuentes" />
+  <meta property="og:image" content="http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/preview.png" />
+  <meta property="og:image:width" content="795" />
+  <meta property="og:image:height" content="600" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Tue Jun 19 2018 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Publicando apps en las tiendas: Permisos, tips y problemas frecuentes" />
+  <meta name="twitter:description" content="Una recopilacion de temas, tips, repasos y preguntas a problemas frecuentes a la hora de preparar aplicaciones para las principales tiendas de aplicaciones móviles: Google Play y Apple Store." />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-offset-1 col-xs-8 col-sm-12">Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD</h2>
+        <button type="button" class="navbar-toggle" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
+        </a>
+    
+        <a href="/blog/tags/Android/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Android</p>
+        </a>
+    
+        <a href="/blog/tags/iOS/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>iOS</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Publicando apps en las tiendas: Permisos, tips y problemas frecuentes
+    </h1>
+    <p class="content">
+      <p>Una recopilación de temas, tips, repasos y preguntas a problemas frecuentes a la hora de preparar aplicaciones para las principales tiendas de aplicaciones móviles: Google Play y Apple Store.</p>
+<a id="more"></a>
+<p>Algunos aspectos importantes a preparar antes de publicar tu aplicación:</p>
+<ul>
+<li>Nombre adecuado</li>
+<li>Iconos (resoluciones y tamaños Android/iOS)</li>
+<li>Audiencia y tipo de aplicación</li>
+<li>Llaves de desarrollo y permisos</li>
+</ul>
+<p><img src="/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/preview.png" alt="Apps" title="Apps"></p>
+<h2 id="Problemas-frecuentes-Apple-Store"><a href="#Problemas-frecuentes-Apple-Store" class="headerlink" title="Problemas frecuentes - Apple Store"></a>Problemas frecuentes - Apple Store</h2><blockquote>
+<p>iTunes Store operation failed. Missing required icon file. The bundle does not contain an app icon for iPhone / iPod Touch of exactly “120x120” pixels, in .png format for iOS versions &gt;= 7.0</p>
+</blockquote>
+<p>Este problema es bastante común entre plataformas, de hecho puede suceder en Swift, ReactNative, <a href="https://jira.appcelerator.org/browse/TIMOB-23925" target="_blank" rel="noopener">Appcelerator Titanium</a>, <a href="https://github.com/NativeScript/nativescript-cli/issues/1490" target="_blank" rel="noopener">NativeScript</a> y cualquier otro que tenga que ver con XCode o el info.plist. Es un tema temas de manejo de íconos y en mi caso  n particular me llevo su rato en Xamarin viendo de que se trataba. Particularmente le vi que sucedía más recientemente (hablamos de finales de 2017-principios de 2018) y por más que vi gente que le sucedía el mismo problema en diferentes lugares. Lease <a href="https://forums.developer.apple.com/thread/86290" target="_blank" rel="noopener">aqui</a>, <a href="https://github.com/CocoaPods/CocoaPods/issues/7003" target="_blank" rel="noopener">aqui</a>, <a href="https://github.com/expo/expo/issues/539" target="_blank" rel="noopener">aqui</a>, tambien <a href="https://forums.xamarin.com/discussion/71397/missing-required-file-icon-error-itms-90022-itms-90023" target="_blank" rel="noopener">aqui</a> y <a href="https://forums.xamarin.com/discussion/24510/itunes-app-rejection-invalid-image-path-for-appicons120x120" target="_blank" rel="noopener">aqui</a>, aunque al final lo pude resolver corrigiendolo en el info.plist en una de sus entradas:</p>
+<p><br><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleIconFiles<span class="tag">&lt;/<span class="name">key</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>appIcon120x120.png<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>A pesar de que los iconos de aplicacion van en su propio archivo <em>xcassets</em>, fue necesario añadir esa entrada e incluir la imagen como <code>BundleResource</code> en el proyecto.</p>
+<h2 id="Links-de-referencia-Apple"><a href="#Links-de-referencia-Apple" class="headerlink" title="Links de referencia (Apple)"></a>Links de referencia (Apple)</h2><ul>
+<li>Manejo de permisos y entradas descriptivas en iOS/Apple (CocoaKeys): <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW47" target="_blank" rel="noopener">Link</a></li>
+</ul>
+<h2 id="Otros-problemas-comunes"><a href="#Otros-problemas-comunes" class="headerlink" title="Otros problemas comunes:"></a>Otros problemas comunes:</h2><ul>
+<li>“App rejected due to missing usage descriptions” en iOS. Links de ayuda: <a href="https://forums.xamarin.com/discussion/113707/this-app-attempts-to-access-privacy-sensitive-data-without-a-usage-description" target="_blank" rel="noopener">Link 1</a> y <a href="https://stackoverflow.com/questions/39415895/app-rejected-due-to-missing-usage-descriptions-xcode8" target="_blank" rel="noopener">Link 2</a></li>
+</ul>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2018/07/19/Enhorabuena-Renovado-como-Microsoft-MVP-por-tercer-ano-consecutivo/">
+                ← ¡Enhorabuena! Renovado como M&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2018/04/05/Busco-developers-y-trainers-en-Xamarin-en-espanol-para-Costa-Rica/" class="btn info">
+                Busco developers y trainers e&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/&text=Publicando apps en las tiendas: Permisos, tips y problemas frecuentes&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD | Mobile Certified Developer
+        <br/>
+        <a href="https://twitter.com/stvansolano">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2020 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

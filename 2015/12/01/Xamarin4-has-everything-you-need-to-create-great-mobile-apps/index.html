@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Xamarin 4 has everything you need to create great mobile apps! | Esteban Solano G.</title>
+  <meta name="description" content="Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Xamarin 4 has everything you need to create great mobile apps!" />
+  <meta property="og:description" content="Let's take a look into some of the features and enhancements included in Xamarin 4.0 for developing cross-platform applications including Android, iOS and UWP (Universal Windows Apps)." />
+  <meta property="og:url" content="http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/" />
+  <meta property="og:site_name" content="Xamarin 4 has everything you need to create great mobile apps!" />
+  <meta property="og:image" content="http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/preview.png" />
+  <meta property="og:image:width" content="795" />
+  <meta property="og:image:height" content="600" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Tue Dec 01 2015 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Xamarin 4 has everything you need to create great mobile apps!" />
+  <meta name="twitter:description" content="Let's take a look into some of the features and enhancements included in Xamarin 4.0 for developing cross-platform applications including Android, iOS and UWP (Universal Windows Apps)." />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-offset-1 col-xs-8 col-sm-12">Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD</h2>
+        <button type="button" class="navbar-toggle" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/XamarinForms/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>XamarinForms</p>
+        </a>
+    
+        <a href="/blog/tags/TestCloud/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>TestCloud</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Xamarin 4 has everything you need to create great mobile apps!
+    </h1>
+    <p class="content">
+      <p>Let’s take a look into some of the features and enhancements included in Xamarin 4.0 for developing cross-platform applications including Android, iOS and UWP (Universal Windows Apps). </p>
+<a id="more"></a>
+<h2 id="Introducing-Xamarin-Forms-2-0"><a href="#Introducing-Xamarin-Forms-2-0" class="headerlink" title="Introducing Xamarin Forms 2.0"></a>Introducing Xamarin Forms 2.0</h2><p>This time I made a simple app called <em>“Lucky Winner”</em> for randomly select a person from a list of participants using the commonly used <em>System.Random</em> class for random numbers just like any other .Net program. </p>
+<p>Here are some screenshots of the app running on different platforms:</p>
+<img src="/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/preview.png" title="Apps preview">
+<p>You can download the full source for this app from my GitHub repository <a href="https://github.com/stvansolano/lucky-winner" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="Developing-a-Xamarin-Forms-app-from-scratch"><a href="#Developing-a-Xamarin-Forms-app-from-scratch" class="headerlink" title="Developing a Xamarin.Forms app from scratch"></a>Developing a Xamarin.Forms app from scratch</h2><p>By installing Xamarin Platform and geting a valid/trial license you will be able to create a PCL (Portable Class Library) that contains most of the code for you to be shared and compile native apps for Android, iOS and UWP. </p>
+<p>So let’s pick the Xamarin.Forms template from the available list inside Visual Studio:</p>
+<img src="/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/setup.png" title="Cross-platform app template">
+<p>By doing so will get:</p>
+<ul>
+<li>A Xamarin.Forms project for sharing XAML/C# code between platforms</li>
+<li>Android project referencing Xamarin.Forms</li>
+<li>iOS project</li>
+<li>UWP project</li>
+</ul>
+<p>If you are familiar with MVVM, XAML and C# it will be quite familiar to easily include Pages, ViewModels, Views in your project just like the following.</p>
+<img src="/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/structure.png" title="Project structure">
+<h2 id="Building-User-Interfaces-with-MVVM-in-a-cross-platform-way"><a href="#Building-User-Interfaces-with-MVVM-in-a-cross-platform-way" class="headerlink" title="Building User Interfaces with MVVM, in a cross-platform way"></a>Building User Interfaces with MVVM, in a cross-platform way</h2><p>Let’s take a look at the XAML code used for defining the list of participants:<br><br></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">ListView</span> <span class="attr">x:Name</span>=<span class="string">"PlayersSelector"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">ItemsSource</span>=<span class="string">"&#123;Binding Path=Players&#125;"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">SeparatorColor</span>=<span class="string">"Gray"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">SelectedItem</span>=<span class="string">"&#123;Binding Path=Winner, Mode=TwoWay&#125;"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">ListView.ItemTemplate</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">DataTemplate</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">ViewCell</span>&gt;</span></span><br><span class="line">    	        <span class="tag">&lt;<span class="name">ViewCell.ContextActions</span>&gt;</span></span><br><span class="line">		   	<span class="tag">&lt;<span class="name">ToolbarItem</span> <span class="attr">Command</span>=<span class="string">"&#123;Binding DeleteCommand&#125;"</span> <span class="attr">Text</span>=<span class="string">"Borrar"</span> /&gt;</span></span><br><span class="line">	        <span class="tag">&lt;/<span class="name">ViewCell.ContextActions</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">		    <span class="tag">&lt;<span class="name">StackLayout</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span></span></span><br><span class="line"><span class="tag">		        	<span class="attr">HorizontalOptions</span>=<span class="string">"Start"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">Image</span> <span class="attr">IsVisible</span>=<span class="string">"&#123;Binding Path=IsWinner&#125;"</span></span></span><br><span class="line"><span class="tag">			       <span class="attr">Source</span>=<span class="string">"Prize.png"</span></span></span><br><span class="line"><span class="tag">			       <span class="attr">HeightRequest</span>=<span class="string">"25"</span> <span class="attr">WidthRequest</span>=<span class="string">"25"</span> /&gt;</span></span><br><span class="line">			       </span><br><span class="line">		       	<span class="tag">&lt;<span class="name">Label</span> <span class="attr">Text</span>=<span class="string">"¡GANADOR!"</span></span></span><br><span class="line"><span class="tag">		       	    <span class="attr">IsVisible</span>=<span class="string">"&#123;Binding Path=IsWinner&#125;"</span></span></span><br><span class="line"><span class="tag">					<span class="attr">TextColor</span>=<span class="string">"Red"</span></span></span><br><span class="line"><span class="tag">					<span class="attr">FontAttributes</span>=<span class="string">"Bold"</span></span></span><br><span class="line"><span class="tag">					<span class="attr">VerticalTextAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag">					/&gt;</span></span><br><span class="line">						</span><br><span class="line">				<span class="tag">&lt;<span class="name">Label</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Path=PlayerName&#125;"</span></span></span><br><span class="line"><span class="tag">					<span class="attr">VerticalTextAlignment</span>=<span class="string">"Center"</span></span></span><br><span class="line"><span class="tag">				/&gt;</span></span><br><span class="line">		    <span class="tag">&lt;/<span class="name">StackLayout</span>&gt;</span></span><br><span class="line">		    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">HorizontalOptions</span>=<span class="string">"End"</span> </span></span><br><span class="line"><span class="tag">		    	    <span class="attr">Command</span>=<span class="string">"&#123;Binding Path=DeleteCommand&#125;"</span></span></span><br><span class="line"><span class="tag">			    <span class="attr">Text</span>=<span class="string">"x"</span> /&gt;</span></span><br><span class="line">	       <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br><span class="line">	       <span class="tag">&lt;/<span class="name">ViewCell</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;/<span class="name">DataTemplate</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">ListView.ItemTemplate</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ListView</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>The <em>Binding</em> element acts like the glue between your View and ViewModels for allowing you to have clear separation of concerns between them. Other common features supported for Xamarin.Forms with MVVM include <em>Two-way binding</em>, <em>Command Pattern</em> and <em>Value Converters</em>. </p>
+<h2 id="Getting-a-lucky-winner-with-C-just-like-in-any-other-program"><a href="#Getting-a-lucky-winner-with-C-just-like-in-any-other-program" class="headerlink" title="Getting a lucky winner with C# just like in any other program."></a>Getting a lucky winner with C# just like in any other program.</h2><p>Remember how to generate a random number in C# but not sure how do get it done for a mobile app? No worries! You can use standard System core features in C# (even 6.0 features) plus other cool features including lamda expressions, delegates, actions, Linq and async operations.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Play</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">var</span> random = <span class="keyword">new</span> Random(DateTime.Now.Millisecond);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> lucky = random.Next(<span class="number">0</span>, ViewModel.Players.Count);</span><br><span class="line">    <span class="keyword">var</span> selectedPlayer = ViewModel.Players.ElementAtOrDefault(lucky);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (selectedPlayer != <span class="keyword">null</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        selectedPlayer.IsWinner = <span class="keyword">true</span>;</span><br><span class="line">        ViewModel.Winner = selectedPlayer;</span><br><span class="line">    </span><br><span class="line">        PlayersSelector.ScrollTo(selectedPlayer, ScrollToPosition.MakeVisible, <span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Bring-Material-Design-to-your-Android-application"><a href="#Bring-Material-Design-to-your-Android-application" class="headerlink" title="Bring Material Design to your Android application"></a>Bring Material Design to your Android application</h2><p>Another great feature for Xamarin for Android is ability to easily incorporate <em>Material Design</em> into your Android apps. This can be done by adding the <a href="https://components.xamarin.com/gettingstarted/xamandroidsupportdesign" target="_blank" rel="noopener">Support Design Library</a> available as a package from NuGet.</p>
+<h2 id="Additional-resources-amp-links"><a href="#Additional-resources-amp-links" class="headerlink" title="Additional resources &amp; links."></a>Additional resources &amp; links.</h2><p><a href="https://blog.xamarin.com/introducing-xamarin-4/" target="_blank" rel="noopener">Introducing Xamarin 4</a><br><a href="https://blog.xamarin.com/introduction-to-android-material-design/" target="_blank" rel="noopener">Adding Material Design to Xamarin Apps</a><br><a href="https://github.com/stvansolano/lucky-winner" target="_blank" rel="noopener">Lucky Winner source code</a></p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/">
+                ← Workshop de Xamarin 4 en Brai&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2015/11/24/taller-de-introduccion-xamarin-2da-fecha/" class="btn info">
+                Taller de Introducción Xamari&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/&text=Xamarin 4 has everything you need to create great mobile apps!&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Senior Software Engineer | Xamarin & Microsoft MVP, MCP & MCSD | Mobile Certified Developer
+        <br/>
+        <a href="https://twitter.com/stvansolano">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2020 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+## Additional references
+
+- **Source code for app:** 
+    
+    https://github.com/stvansolano/aspnet5linux
+
+- **ASP.NET Core 1.0 packages:**
+    
+    https://docs.asp.net/en/latest/fundamentals/static-files.html
+    http://blog.jsinh.in/hosting-asp-net-5-web-application-on-linux/#.VrZvsFjhCUk
+
+- **Cloud9 Custom Runners:**
+
+    https://docs.c9.io/docs/custom-runners
+    https://codingarchitect.wordpress.com/2015/03/16/running-c-net-code-from-cloud-9-ide/
+
+- **Yeoman scaffolding:**
+
+    http://yeoman.io/generators/
+    http://docs.asp.net/en/latest/client-side/yeoman.html
+
+- **Compiling with Mono:**
+
+    http://stackoverflow.com/questions/25784490/does-cloud-9-support-net-for-build-or-deploy-or-debug
+
+- **Visual Studio Code & OmniSharp:**
+
+    http://developer.telerik.com/featured/developing-asp-net-5-web-apps-with-visual-studio-code/
+    https://azure.microsoft.com/en-us/documentation/articles/web-sites-create-web-app-using-vscode/
+    http://www.cyberciti.biz/faq/debian-ubuntu-fedora-linux-installing-visual-studio-code/
+    http://www.sitepoint.com/visual-studio-code-linux/
+    http://www.techrepublic.com/article/create-c-code-on-your-mac-using-atom-and-omnisharp/
+    https://blog.rendle.io/fun-with-asp-net-5-linux-docker-part-2/
+    https://msdn.microsoft.com/en-us/magazine/mt573713.aspx
+
+- **Editors & IDEs**
+
+    https://strongloop.com/strongblog/node-js-compare-sublime-vs-atom-cloud-9/
+    http://blog.adamcarr.net/2014/04/21/visual-studio-online-monaco-the-browser-ide/
+
+- **ASP.NET Core 1.0 development & documentation:**
+    http://www.codeproject.com/Articles/992208/Angular-JS-Application-with-MVC-Web-API-ASPNET-and
+    http://www.w3schools.com/aspnet/razor_syntax.asp
+
+    How to:
+
+    *   [Add a Controller and View](http://go.microsoft.com/fwlink/?LinkID=398600)
+    *   [Add an appsetting in config and access it in app.](http://go.microsoft.com/fwlink/?LinkID=699562)
+    *   [Manage User Secrets using Secret Manager.](http://go.microsoft.com/fwlink/?LinkId=699315)
+    *   [Use logging to log a message.](http://go.microsoft.com/fwlink/?LinkId=699316)
+    *   [Add packages using NuGet.](http://go.microsoft.com/fwlink/?LinkId=699317)
+    *   [Add client packages using Bower.](http://go.microsoft.com/fwlink/?LinkId=699318)
+    *   [Target development, staging or production environment.](http://go.microsoft.com/fwlink/?LinkId=699319)
+    
+
+- **Overview**
+    *   [Conceptual overview of what is ASP.NET Core 1.0](http://go.microsoft.com/fwlink/?LinkId=518008)
+    *   [Fundamentals of ASP.NET Core 1.0 such as Startup and middleware.](http://go.microsoft.com/fwlink/?LinkId=699320)
+    *   [Working with Data](http://go.microsoft.com/fwlink/?LinkId=398602)
+    *   [Security](http://go.microsoft.com/fwlink/?LinkId=398603)
+    *   [Client side development](http://go.microsoft.com/fwlink/?LinkID=699321)
+    *   [Develop on different platforms](http://go.microsoft.com/fwlink/?LinkID=699322)
+    *   [Read more on the documentation site](http://go.microsoft.com/fwlink/?LinkID=699323)
+
+
+- **Run & Deploy**
+    *   [Run your app](http://go.microsoft.com/fwlink/?LinkID=517851)
+    *   [Run your app on .NET Core](http://go.microsoft.com/fwlink/?LinkID=517852)
+    *   [Run commands in your project.json](http://go.microsoft.com/fwlink/?LinkID=517853)
+    *   [Publish to Microsoft Azure Web Apps](http://go.microsoft.com/fwlink/?LinkID=398609)
