@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Resumen y contenidos charla DotNetConf Latam 2020: Xamarin Real-time mobile apps con CosmosDB y SignalR | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Resumen y contenidos charla DotNetConf Latam 2020: Xamarin Real-time mobile apps con CosmosDB y SignalR" />
+  <meta property="og:description" content="Comparto las diapositivas, links, video y codigo en GitHub de mi participacion en el DotNet Conf Latam Online 2020. Gracias a todos por participar!" />
+  <meta property="og:url" content="http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/" />
+  <meta property="og:site_name" content="Resumen y contenidos charla DotNetConf Latam 2020: Xamarin Real-time mobile apps con CosmosDB y SignalR" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/preview.png" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/preview.png"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Sat Mar 28 2020 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Resumen y contenidos charla DotNetConf Latam 2020: Xamarin Real-time mobile apps con CosmosDB y SignalR" />
+  <meta name="twitter:description" content="Comparto las diapositivas, links, video y codigo en GitHub de mi participacion en el DotNet Conf Latam Online 2020. Gracias a todos por participar!" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/DotNet/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>DotNet</p>
+        </a>
+    
+        <a href="/blog/tags/Mobile/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Mobile</p>
+        </a>
+    
+        <a href="/blog/tags/Serverless/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Serverless</p>
+        </a>
+    
+        <a href="/blog/tags/SignalR/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>SignalR</p>
+        </a>
+    
+        <a href="/blog/tags/CosmosDB/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>CosmosDB</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Resumen y contenidos charla DotNetConf Latam 2020: Xamarin Real-time mobile apps con CosmosDB y SignalR
+    </h1>
+    <p class="content">
+      <p>Comparto las diapositivas, links, video y codigo en GitHub de mi participacion en el DotNet Conf Latam Online 2020. Gracias a todos por participar!</p>
+<a id="more"></a>
+<h2 id="Sobre-el-evento"><a href="#Sobre-el-evento" class="headerlink" title="Sobre el evento"></a>Sobre el evento</h2><p>El mes de marzo se realizo la .NET Conf Online: Focus on Xamarin, en donde profesionales y entusiastas de estas tecnologías compartieron sus conocimientos y mejores prácticas en el desarrollo de aplciaciones móviles nativas con Xamarin.</p>
+<p>Para Latam, Luis Beltrán y Humberto Jaimes corrieron con el evento de manera en línea, con más de 10 horas continuas de transmisión con miembros de la comunindad Latinoamericana de .NET</p>
+<p>Para mi charla hablé sobre desarrollo Serverless con Azure y Xamarin, utilizando SignalR, CosmosDB todo sobre Azure Functions en la nube.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s_zZ7ALiNJQ?start=29" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>El código de la demo disponible en mi GitHub desde la dirección: <a href="https://github.com/stvansolano/my-todo-app/" target="_blank" rel="noopener">https://github.com/stvansolano/my-todo-app/</a> (carpeta Serverless/SignalR)</p>
+<h2 id="Agenda-del-evento"><a href="#Agenda-del-evento" class="headerlink" title="Agenda del evento"></a>Agenda del evento</h2><p>Saturday, 28 March 2020</p>
+<ul>
+<li><p>8:15am    Keynote Bienvenida al evento</p>
+</li>
+<li><p>8:30am    Conectando apps móviles Xamarin Forms con Azure Functions (serverless) Eduardo Barrios - .NET Developer (Guatemala)</p>
+</li>
+<li><p>9:20am    Xamarin Forms Best Practices Charlin Agramonte y Rendy Del Rosario Microsoft MVPs (República Dominicana)</p>
+</li>
+<li><p>10:10am    Integrando AzureAD a tus aplicaciones de Xamarin.Forms Jesus Angulo - Microsoft MVP (Perú)</p>
+</li>
+<li><p>11:00am    Data Binding for Xamarin Forms In-Depth Alejandro Ruiz Varela - Microsoft MVP (México)</p>
+</li>
+<li><p>11:50am    Cómo crear un control XAML perzonalizado Humberto Jaimes - Microsoft MVP (México)</p>
+</li>
+<li><p>12:40pm    CI/CD en Xamarin apps con GitHub, Bitrise y AppCenter Cristian González - Xamarin Developer (México)</p>
+</li>
+<li><p>1:30pm    Desarrollo de aplicaciones Real-time con Xamarin y CosmosDB Esteban Solano Granados - Microsoft MVP (Costa Rica)</p>
+</li>
+<li><p>2:20pm    Mejores prácticas de T-SQL para Developers Jesús Gil - Microsoft MVP (México)</p>
+</li>
+<li><p>3:10pm    Explorando Xamarin.Forms CarouselView Luis Beltrán - Microsoft MVP (México)</p>
+</li>
+<li><p>4:00pm    Validación de formularios con Xamarin Forms Héctor Pérez - Xamarin Trainer (México)</p>
+</li>
+<li><p>4:50pm    Cierre del evento</p>
+</li>
+</ul>
+<h3 id="Diapositivas"><a href="#Diapositivas" class="headerlink" title="Diapositivas:"></a>Diapositivas:</h3><p>Por acá el <a href="https://speakerd.s3.amazonaws.com/presentations/a02b51ee905d4c5ba23a83f302d78dab/NET_Conf_Focus_Latam.pdf" target="_blank" rel="noopener">Link de descarga.</a></p>
+<p><br/></p>
+<script async class="speakerdeck-embed" data-id="a02b51ee905d4c5ba23a83f302d78dab" data-ratio="1.29456384323641" src="//speakerdeck.com/assets/embed.js"></script>
+
+<h2 id="Agradecimiento"><a href="#Agradecimiento" class="headerlink" title="Agradecimiento"></a>Agradecimiento</h2><p>Muchas gracias a las más de 300 personas registradas al evento, a Luis Beltrán y Humberto Jaimes por la excelente organización antes y durante el evento y a todos/as los asistentes de la actividad!</p>
+<p>Estaré actualizando este post con el resto del material utilizado, scripts y codigo que use en la presentacion. Te invito a suscribirte a mi blog <a href="https://stvansolano.github.io/taller/#suscribe">en este link</a> y a mantenernos en contacto.</p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/">
+                ← Guia de CSharp 8 y NET 5: pri&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2020/03/07/Resumen-y-contenidos-charla-Open-Data-Day-2020-Costa-Rica-Intro-Machine-Learning-en-la-nube-azure/" class="btn info">
+                Resumen y contenidos - Charla&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/&text=Resumen y contenidos charla DotNetConf Latam 2020: Xamarin Real-time mobile apps con CosmosDB y SignalR&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

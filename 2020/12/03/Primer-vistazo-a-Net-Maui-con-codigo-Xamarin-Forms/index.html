@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Primer vistazo a .Net Maui (con codigo incluido) | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Primer vistazo a .Net Maui (con codigo incluido)" />
+  <meta property="og:description" content="Demos un vistazo preliminar a .NET Maui previo a los primeros previews que estaran disponibles a la comunidad proximamente! Codigo y baterias incluidas!" />
+  <meta property="og:url" content="http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/" />
+  <meta property="og:site_name" content="Primer vistazo a .Net Maui (con codigo incluido)" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/preview.png" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/preview.png"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Thu Dec 03 2020 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Primer vistazo a .Net Maui (con codigo incluido)" />
+  <meta name="twitter:description" content="Demos un vistazo preliminar a .NET Maui previo a los primeros previews que estaran disponibles a la comunidad proximamente! Codigo y baterias incluidas!" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/DotNet/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>DotNet</p>
+        </a>
+    
+        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
+        </a>
+    
+        <a href="/blog/tags/OSS/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>OSS</p>
+        </a>
+    
+        <a href="/blog/tags/Maui/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Maui</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Primer vistazo a .Net Maui (con codigo incluido)
+    </h1>
+    <p class="content">
+      <p>Demos un vistazo preliminar a .NET Maui previo a los primeros previews que estarán disponibles a la comunidad próximamente! Código y baterías incluídas!<br><a id="more"></a></p>
+<p><img src="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/preview.png" alt="Maui overview" title="Maui overview"></p>
+<p>Esta publicación forma parte del 2do Calendario de Adviento Xamarin, organizado por mi colega Luis Beltran. Te invito a leer las demás publicaciones desde el siguiente link:</p>
+<blockquote>
+<p>Calendario de Adviento Xamarin 2020: <a href="https://www.luisbeltran.mx/2020/11/16/segundo-calendario-de-adviento-de-xamarin-en-espanol/" target="_blank" rel="noopener">https://www.luisbeltran.mx/2020/11/16/segundo-calendario-de-adviento-de-xamarin-en-espanol/</a></p>
+</blockquote>
+<h2 id="Sobre-NET-Maui"><a href="#Sobre-NET-Maui" class="headerlink" title="Sobre .NET Maui"></a>Sobre .NET Maui</h2><ul>
+<li>Maui es la evolución natural de Xamarin.Forms, irá tomando forma en 2021 y se espera que los primeros builds y previews se den finales de este año 2020 - principios de 2021 para tomar fuerza en la ola de .NET 6 (vNext).</li>
+<li>La última versión liberada de Xamarin.Forms es la numero 5.0 la cual está saliendo por estos tiempos y su sucesor natural será .NET Maui (No un XF 6 sino -&gt; Maui 1.0). </li>
+<li>Si bien habrá que esperar bastante hasta Noviembre 2021, habrán previews durante casi todo el año de Maui y se espera que alcance la versión .NET 6 la cual será a su vez LTS (Long-Term-Support) lo cual traerá mucha estabilidad en el mediano plazo para los proyectos que estén haciendo la transición a Maui o nazcan completamente bajo esta plataforma. </li>
+</ul>
+<p>Ansioso por .NET MAUI? No puedes esperar? Bueno, por acá algunas sugerencias:</p>
+<ul>
+<li>Prepara tu código para que sea re-utilizable con .NET 5 o .NET Standard</li>
+<li>Revisa constantemente el roadmap de Maui desde su repositorio en GitHub. Actualmente se está preparando lo que podrá ser la preview antes de final de año! <a href="https://github.com/dotnet/maui/wiki/Roadmap#net-maui-preview-1-late-2020" target="_blank" rel="noopener">Roadmap 2020-21</a></li>
+<li>Juega con .NET Maui y corre la voz! (es lo que haremos a continuación)</li>
+</ul>
+<h2 id="¿Que-veremos-en-este-articulo"><a href="#¿Que-veremos-en-este-articulo" class="headerlink" title="¿Qué veremos en este artículo?"></a>¿Qué veremos en este artículo?</h2><ul>
+<li>Lo que veremos en esta publicación es meramente experimental. El uso del codigo es con fines exploratorios y no se recomienda utilizarlo para fines de producción.</li>
+<li>Mas que abarcar contenido enfocado en el repositorio, este artículo pretende motivar y e ir conociendo la estructura del proyecto Maui, y servir de guia para que otros desarrolladores den sus primeros pasos en el proyecto y realicen contribuciones alineadas al proyecto.</li>
+<li>Es esperable que muchos principios recopilados  en este artículo se mantengan con el tiempo y sean la base de Maui con lo que la comunidad Xamarin y Microsoft aporten en el proyecto. No obstante, otros pueden cambiar radicalmente y combinarse/emigrar en otros proyectos experimentales, software libre y contribuciones OSS de Microsoft.</li>
+</ul>
+<h3 id="Aviso-Disclaimer-Experimental"><a href="#Aviso-Disclaimer-Experimental" class="headerlink" title="Aviso / Disclaimer [Experimental]"></a>Aviso / Disclaimer [Experimental]</h3><ul>
+<li>Varias de las conclusiones e ideas expuestas en este articulo fueron producto de la observación y experimentación con el codigo y pueden (o no) estar alineadas con el roadmap actual Maui al momento de la lectura del artículo o incluso quedarse atrás en el tiempo en lo que Maui toma madurez y estén disponibles las primeras vistas previas en 2021 como previews usando .NET 5 y .NET 6. Por tanto, las opiniones y observaciones en este artículo son propias del autor y pueden no estar alineadas completamente con el roadmap de Microsoft en Maui, lo que estara sujeto a validación y correcciones si el artículo lo amerite. Sólo el tiempo lo dira :) </li>
+<li>Dado que el proyecto sigue aun en desarrollo, no hay garantía de que todo lo escrito en este artículo se mantenga vigente con el tiempo, por lo que puede haber discrepancias y el artículo estara sujeto a correcciones para garantizar la verdad. </li>
+<li>Este artículo NO busca generar discrepancias o faltas a la verdad de lo grandioso que se espera que sea Maui, ni hacer comparaciones con otros frameworks o librerias existentes dentro y fuera de Microsoft.</li>
+</ul>
+<p>Teniendo claro lo anterior, comenzamos :)</p>
+<h2 id="1-Comenzando-con-el-repositorio-de-Maui"><a href="#1-Comenzando-con-el-repositorio-de-Maui" class="headerlink" title="1- Comenzando con el repositorio de Maui."></a>1- Comenzando con el repositorio de Maui.</h2><p>Puedes hacer ‘fork’ o clonar localmente en tu equipo el repositorio de Maui directamente desde GitHub, extenderlo y enviar sugerencias en el codigo. Te recomiendo darle una leida al README.md y el código de conducta que Xamarin ha mantenido desde que es Open Source años atrás:</p>
+<p><a href="https://github.com/dotnet/maui" target="_blank" rel="noopener">https://github.com/dotnet/maui</a></p>
+<p><img src="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/maui-structure.png" alt="Maui structure" title="Maui structure"></p>
+<h2 id="2-Creando-un-repositorio-tipo-“Playground”-para-Maui"><a href="#2-Creando-un-repositorio-tipo-“Playground”-para-Maui" class="headerlink" title="2- Creando un repositorio tipo “Playground” para Maui"></a>2- Creando un repositorio tipo “Playground” para Maui</h2><p>Para efectos de este ejemplo - disponible en GitHub <a href="https://github.com/stvansolano/dotnet-maui-playground" target="_blank" rel="noopener">bajo mi cuenta</a>, haremos una app Xamarin desde 0 utilizando NetStandard2.0 y los templates de Visual Studio 2019 para Mac y Windows disponibles en 2020, los cuales generan la misma estructura de archivos independientemente de que uses Windows o Mac.</p>
+<p><strong>IMPORTANTE:</strong> El código de Maui actual contiene una carpeta <code>Samples</code> donde de hecho ya viene algo que podemos utilizar si no queremos utilizar este playground. </p>
+<blockquote>
+<p>He puesto el código utilizado en GitHub donde se pueden examinar más de cerca los cambios entre una app Xamarin.Forms de 2020 hacia un .NET Maui experimental.</p>
+</blockquote>
+<p>Por ahora y por la estructura tradicional que estamos usando y como veremos mas adelante con Maui, los proyectos se mantienen compatibles dado que aun son basados en .Net Standard.</p>
+<p><img src="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/hello-world-1.png" alt="HelloWorld" title="HelloWorld"></p>
+<blockquote>
+<p>File -&gt; New Project -&gt; Blank Forms App<br><em>Nombre:</em> HelloWorld </p>
+</blockquote>
+<p><strong>¿Qué esperar de esto a futuro en Maui?</strong> Bastante en este aspecto:</p>
+<ul>
+<li>A futuro podremos contar con la característica llamada “Estructura unificada de proyecto” para que podamos apuntar a iOS  Android y correr desde un solo lugar. </li>
+<li>Por lo que veremos más adelante, será cuestión de que en su momento el equipo de Xamarin / Microsoft introduzca la nueva generación (o equivalente técnico) para que los proyectos de Android / iOS puedan vivir dentro de un proyecto de .NET moderno (5 y superior) con nuevos targets <code>net-android</code> y <code>net-ios</code> para poderse usar a como se hace hoy día con <code>&lt;TargetFrameworks&gt;</code> en los archivos <code>.csproj</code>.</li>
+<li>Dado que .NET 5 tiene desde hace bastante tiempo, podremos esperar que .NET Maui incluya la habilidad de generar y correr los proyectos multi-plataforma desde la mismísima terminal/línea de comandos. </li>
+</ul>
+<p>En otras palabras, podremos tener algo como lo siguiente:</p>
+<p><code>dotnet new maui</code></p>
+<p>Lo cual es algo muy común en frameworks como React Native y Flutter hoy en día.</p>
+<h2 id="3-Haciendo-“switch”-a-Maui-en-lugar-de-Xamarin-Forms-para-nuestro-proyecto-experimental"><a href="#3-Haciendo-“switch”-a-Maui-en-lugar-de-Xamarin-Forms-para-nuestro-proyecto-experimental" class="headerlink" title="3- Haciendo “switch” a Maui en lugar de Xamarin.Forms para nuestro proyecto experimental."></a>3- Haciendo “switch” a Maui en lugar de Xamarin.Forms para nuestro proyecto experimental.</h2><p>Desde nuestro app de HelloWorld (playground), agregamos a la solución los proyectos principales que provienen del proyecto Maui, para poderlos compilar y usarlos en nuestra aplicación.</p>
+<p>Para ello simplemente agregamos mediante clic derecho a la solución -&gt; <strong>Add existing project…</strong> y agregamos los siguientes, entre otros:</p>
+<ul>
+<li>Xamarin.Forms.Core</li>
+<li>Xamarin.Forms.Xaml</li>
+<li>Xamarin.Forms.Platform.Android</li>
+<li>Xamarin.Forms.Platform.iOS</li>
+<li>Xamarin.Platform.Handlers (nuevo!)</li>
+</ul>
+<p>Teniendo compilado todo, podemos comentar/quitar las referencias de Xamarin.Forms de nuestros proyectos iOS/Android para empezar a usar Maui por primera vez!</p>
+<p><img src="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/hello-world-2-1.png" alt="Maui references" title="Maui references"></p>
+<blockquote>
+<p>Como es esperado, Maui se compone mayormente del codigo original de Xamarin.Forms, con estructura un poco diferente y con codigo nuevo que se espera para la nueva implementación.</p>
+</blockquote>
+<p><strong>¿Qué esperar de esto a futuro en Maui?</strong> Habrá un cambio de nombre en los namespaces como ya se ha anunciado: </p>
+<ul>
+<li><code>System.Maui</code> sustituirá al conocido <code>Xamarin.Forms</code></li>
+<li><code>System.Device</code> sustuirá al conocido <code>Xamarin.Essentials</code></li>
+</ul>
+<h3 id="Probando-IView-y-los-nuevos-Handlers-aka-la-“extincion-de-los-Renderers”"><a href="#Probando-IView-y-los-nuevos-Handlers-aka-la-“extincion-de-los-Renderers”" class="headerlink" title="Probando IView y los nuevos Handlers (aka la “extinción de los Renderers”)"></a>Probando <code>IView</code> y los nuevos <code>Handlers</code> (aka la “extinción de los Renderers”)</h3><p>Maui introducirá mediante los clásicos <code>interfaces</code> de C# una forma mucho más fácil de poder extender e implementar lo que se solía hacer con los famosos <code>Renderers</code> de Xamarin.Forms: Acceder a los controles nativos de una forma directa, sin intermediarios. </p>
+<p>Una de las interfaces se llama <code>IView</code> y al parecer tendremos una para <code>IApplication</code> también. Esto puede facilitar mucho la implementación en los tradicionales <code>Delegates</code> y <code>Activity</code> de iOS/Android respectivamente, lo que nos permitiría tener personalizaciones con mucho menos código desde nuestro código multi-plataforma y próximas plataformas que se sumen a la iniciativa. </p>
+<p><img src="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/hello-world-3.png" alt="Maui ui" title="Maui ui"></p>
+<p>En lugar de Renderers, los Handlers sacan provecho del <a href="https://docs.microsoft.com/en-us/visualstudio/mac/project-multitargeting?view=vsmac-2019" target="_blank" rel="noopener">multi-targeting</a> para poder acceder directamente a los controles nativos de la plataforma (.NET para iOS y .NET para Android, y así sucesivamente) y poder acceder sin mucho intermediario los objetos que Xamarin nos ha permitido acceder desde C# tradicionalmente.</p>
+<p>Veamos como quedaría la implementación de nuestro propio botón y definir un Handler para definir sus atributos.</p>
+<p><img src="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/hello-world-4.png" alt="Maui renderer" title="Maui renderer"></p>
+<p><strong>¿Qué esperar de esto a futuro en Maui?</strong> </p>
+<ul>
+<li>Con la estructura unificada de proyecto y la “extinción de los Renderers”, no solamente ganamos en facilidad de implementación, también es una mejora en rendimiento (sujeta a comprobación eventualmente, claro está) con todo lo que desde ya <a href="https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/" target="_blank" rel="noopener">se está logrando en desempeño con la version 5 de .NET</a>. </li>
+<li>Como ya se anunció, MVVM y XAML no serán los únicos modos de desarrollar aplicaciones Maui, ya que se espera que tendremos la característica de desarrollo de aplicaciones MVU (Model-View-Update) y Blazor (Razor) sean soportadas. </li>
+<li>Además del ya soportado C# Markup (disponible ahora en <a href="https://github.com/xamarin/XamarinCommunityToolkit" target="_blank" rel="noopener">Xamarin Community Toolkit</a>) se espera que las aplicaciones declarativas con C# con HotReload sean de las características más prominentes para la plataforma. Más que una moda, el poder permitir nuevas formas de desarrollar viniendo de otros lenguajes, MVU y la misma web se vuelven una excelente forma de ampliar el uso .NET en todos lados.</li>
+</ul>
+<h2 id="4-Corriendo-el-proyecto"><a href="#4-Corriendo-el-proyecto" class="headerlink" title="4- Corriendo el proyecto"></a>4- Corriendo el proyecto</h2><p>Para este ejemplo usaremos el tooling actual desde VS para Mac y vemos que es posible correrlo sin problemas.</p>
+<p><img src="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/hello-world-run-android.png" alt="Hello World run" title="Hello World run"></p>
+<p><strong>¿Qué esperar de esto a futuro en Maui?</strong></p>
+<ul>
+<li>Maui en su momento lográ tener feature-parity (igualdad de características) y lograr mucho mejor desempeño (al que ya tiene ya de por sí) al que se tiene hoy en día para desarrollar aplicaciones Android, iOS, UWP y otras plataformas. </li>
+<li>Además, no tendremos que preocuparnos por tener que implementar Handlers complejos o la apariencia multi-plataforma que realmente necesitemos hacerlo, lo cual terminaríamos haciendo (si fuera el caso) a un nivel nativo mediante las mismas APIs de las plataformas móviles.</li>
+</ul>
+<h2 id="5-Conclusiones-del-experimento"><a href="#5-Conclusiones-del-experimento" class="headerlink" title="5. Conclusiones del experimento."></a>5. Conclusiones del experimento.</h2><ul>
+<li>Dado la velocidad que esta teniendo el proyecto Maui y las fechas de publicación de este artículo, pueda que muchos conceptos cambien y evolucionen a ideas mucho mas eficientes e innovadoras.</li>
+<li>Como era de esperar, mucho del código utilizado para este ejemplo es inicial y proviene mayormente de Xamarin.Forms originalmente pero nos da un pequeño vistazo de las grandes cosas que se vienen para .NET y Maui. </li>
+<li>Si bien se espera que mucha de la estructura y conceptos prevalezcan, pueda que varios de los componentes cambien con el tiempo naturalmente por componentes sucesores en la tecnología, y lo más importante, el Core mantiene su integridad. De ahí la importancia de que Maui esté en un repositorio complemamente aparte sin que afecte las versiones actuales de Xamarin.Forms y lo que venga en el próximo año.</li>
+<li>El código base y los Handlers lucen bastante prometedor. Y no sólo desde allí, podemos esperar bastantes mejoras en el tooling actual hasta el punto que alcance todo lo necesario para que Maui tenga mucho más valor. </li>
+</ul>
+<h2 id="Recapitulando"><a href="#Recapitulando" class="headerlink" title="Recapitulando:"></a>Recapitulando:</h2><ul>
+<li>Estructura unificada de proyecto </li>
+<li>Mas plantillas desde la CLI para generar los proyectos (linux incluso y su creciente soporte en GTK)</li>
+<li>Nuevos mecanismos de soporte para correr desde la CLI y VS Code (GitHub actions, App Center, Azure DevOps)</li>
+<li>Y por último y no menos esperado: Hot-reload basado C# directamente!</li>
+</ul>
+<h2 id="5-Recursos-adicionales-y-recomendaciones"><a href="#5-Recursos-adicionales-y-recomendaciones" class="headerlink" title="5- Recursos adicionales y recomendaciones"></a>5- Recursos adicionales y recomendaciones</h2><ul>
+<li>Codigo del playground en GitHub: <a href="https://github.com/stvansolano/dotnet-maui-playground" target="_blank" rel="noopener">https://github.com/stvansolano/dotnet-maui-playground</a></li>
+<li><a href="https://javiersuarezruiz.wordpress.com/2020/05/19/aloha-maui/" target="_blank" rel="noopener">Introducción de .NET Multi-platform App UI</a> | Javier Suarez Ruiz</li>
+<li><a href="https://javiersuarezruiz.wordpress.com/2020/06/15/videoblog-introduccion-a-net-maui/" target="_blank" rel="noopener">Vlog - Introducción a .NET MAUI</a> | Javier Suarez Ruiz</li>
+<li><a href="https://www.youtube.com/watch?v=zZ_cdaN2qao" target="_blank" rel="noopener">.NET Maui hacking!</a> | James Clancey - Maui + Comet + MVU</li>
+<li><a href="https://www.youtube.com/watch?v=qbHO8J3bId0" target="_blank" rel="noopener">Introducing .NET Maui</a> | David Ortinau en YouTube</li>
+</ul>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/">
+                ← Work at an awesome place. I'm&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/" class="btn info">
+                Creating your first GitHub co&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/&text=Primer vistazo a .Net Maui (con codigo incluido)&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

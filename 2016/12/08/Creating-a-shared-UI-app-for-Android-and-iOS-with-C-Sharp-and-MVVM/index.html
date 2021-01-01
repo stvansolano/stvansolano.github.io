@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Creating a shared UI app for Android &amp; iOS with C# and MVVM | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Creating a shared UI app for Android & iOS with C# and MVVM" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/" />
+  <meta property="og:site_name" content="Creating a shared UI app for Android & iOS with C# and MVVM" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/preview.png" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/preview.png"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Thu Dec 08 2016 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Creating a shared UI app for Android & iOS with C# and MVVM" />
+  <meta name="twitter:description" content="" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/Android/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Android</p>
+        </a>
+    
+        <a href="/blog/tags/Mobile/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Mobile</p>
+        </a>
+    
+        <a href="/blog/tags/MVVM/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>MVVM</p>
+        </a>
+    
+        <a href="/blog/tags/iOS/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>iOS</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Creating a shared UI app for Android & iOS with C# and MVVM
+    </h1>
+    <p class="content">
+      <p>The <em>Model-View-ViewModel</em> (MVVM) Pattern was introduced earlier in 2005 as a way of developing WPF desktop applications (Windows Presentation Foundation). However, most of its key concepts remain usable today as other technologies are including more support for MVVM-like features including <em>Bindings</em> and <em>Command</em> capabilities as they evolve.</p>
+<a id="more"></a>
+<p>Nowadays, a lot of <em>MV-W(whatever)</em> related technologies got some level of MVVM support like <em>KnockoutJS</em>, <em>Angular</em>, <em>KendoUI</em> and other web and non-web technologies and start bringing <em>Bindings</em> as first-class citizens and allow to combine them with <em>Command</em> Pattern and <em>Asynchronous method invocation (AMI)</em> implementations.</p>
+<h2 id="A-practical-MVVM-example"><a href="#A-practical-MVVM-example" class="headerlink" title="A practical MVVM example:"></a>A practical MVVM example:</h2><p>In an overview, MVVM is highly recommended for:</p>
+<ul>
+<li>Scale-out your views as your project grow and stay organized.</li>
+<li>Separation of concerns between designing UI and focus on logic separately.</li>
+<li>Allowing Testability in your application (mocking, Test Driven Development, Behavior Driven Development and beyond).</li>
+</ul>
+<p><img src="/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/mvvm.png" alt="MVVM overview" title="Preview"></p>
+<p>Let’s see how you can take advantage of MVVM concepts and re-use those practices to develop a cross-platform mobile application and take advantage of Commands, Bindings and more.</p>
+<h2 id="The-View"><a href="#The-View" class="headerlink" title="The View"></a>The View</h2><p><img src="/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/sharedUI.png" alt="The View" title="The View"></p>
+<p>The view might contain two important elements:</p>
+<ul>
+<li>Bindings (which is the glue to make the View work with our ViewModel)</li>
+<li>Commands (abstracts the main actions of the views, including clicks, taps, gestures and more)</li>
+<li>States (portions of the view capable of reacting depending on the state of the ViewModel)</li>
+</ul>
+<p>Here is the code for the shared UI between iOS and Android<br><br/><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">   <span class="tag">&lt;<span class="name">local:CardView</span> <span class="attr">HeightRequest</span>=<span class="string">"70"</span>&gt;</span></span><br><span class="line"> 		<span class="tag">&lt;<span class="name">StackLayout</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">Image</span> <span class="attr">Aspect</span>=<span class="string">"Fill"</span> <span class="attr">HeightRequest</span>=<span class="string">"30"</span> <span class="attr">WidthRequest</span>=<span class="string">"70"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">Image.Source</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">UriImageSource</span> <span class="attr">Uri</span>=<span class="string">"&#123;Binding FlagSource&#125;"</span></span></span><br><span class="line"><span class="tag">							    <span class="attr">CacheValidity</span>=<span class="string">"3"</span></span></span><br><span class="line"><span class="tag">							    <span class="attr">CachingEnabled</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">Image.Source</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">Image</span>&gt;</span></span><br><span class="line">	   <span class="tag">&lt;<span class="name">StackLayout</span> <span class="attr">Orientation</span>=<span class="string">"Vertical"</span></span></span><br><span class="line"><span class="tag">					<span class="attr">Margin</span>=<span class="string">"10,0,10,0"</span></span></span><br><span class="line"><span class="tag">					<span class="attr">VerticalOptions</span>=<span class="string">"FillAndExpand"</span>&gt;</span></span><br><span class="line">	   		<span class="tag">&lt;<span class="name">Label</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Model.Name&#125;"</span> <span class="attr">LineBreakMode</span>=<span class="string">"TailTruncation"</span></span></span><br><span class="line"><span class="tag">				   <span class="attr">Margin</span>=<span class="string">"0"</span> <span class="attr">FontSize</span>=<span class="string">"20"</span></span></span><br><span class="line"><span class="tag">				   <span class="attr">TextColor</span>=<span class="string">"Black"</span> /&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">Label</span> <span class="attr">Text</span>=<span class="string">"&#123;Binding Model.Region&#125;"</span></span></span><br><span class="line"><span class="tag">				   <span class="attr">Margin</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">				   <span class="attr">TextColor</span>=<span class="string">"#C0C0C0"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">StackLayout</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">StackLayout.Margin</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">OnPlatform</span> <span class="attr">x:TypeArguments</span>=<span class="string">"Thickness"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">OnPlatform.iOS</span>&gt;</span>15,10,0,10<span class="tag">&lt;/<span class="name">OnPlatform.iOS</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">OnPlatform.Android</span>&gt;</span>5,5,5,5<span class="tag">&lt;/<span class="name">OnPlatform.Android</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">OnPlatform</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">StackLayout.Margin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">StackLayout</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">local:CardView.GestureRecognizers</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">TapGestureRecognizer</span> <span class="attr">Command</span>=<span class="string">"&#123;Binding BrowseCommand&#125;"</span> </span></span><br><span class="line"><span class="tag">							  <span class="attr">CommandParameter</span>=<span class="string">"&#123;Binding&#125;"</span> </span></span><br><span class="line"><span class="tag">							  /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">local:CardView.GestureRecognizers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">local:CardView</span>&gt;</span></span><br></pre></td></tr></table></figure><br>Layout is shared between iOS and Android and rendered native on each platform. Shared functionality includes abstracted controls, layout containers, Commands, Bindings with minimum platform specifics and native control embedding, which are also supported if prefered to use AXAML or XIBs implementations.</p>
+<h2 id="The-ViewModel"><a href="#The-ViewModel" class="headerlink" title="The ViewModel"></a>The ViewModel</h2><p>The ViewModel responsibility is to keep properties and data to be served to the view without worrying about how it looks. As mentioned before, it can keep the state of the view and handle observable actions and elements</p>
+<p>There are two important elements here that allow decoupling your ViewModel and handle the UI in sync:</p>
+<ul>
+<li><strong>ObservableCollection<T></strong> - A generic class that allows our view to be observed and keep in sync with our ViewModel</li>
+<li><strong>PropertyChanged notifications</strong> - Specific notifications that can be attached to the properties to keep Two-Way communication between the View and ViewModel)</li>
+</ul>
+<p>Let’s see a ViewModel class for a Search operation and focus on the results.<br><br/></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CountrySearchViewModel</span> :</span> BindableObject</span><br><span class="line">&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">CountrySearchViewModel</span><span class="params">(IEnumerable&lt;CountryViewModel&gt; countries)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		Results = <span class="keyword">new</span> ObservableCollection&lt;CountryViewModel&gt;();</span><br><span class="line">		Countries = countries;</span><br><span class="line"></span><br><span class="line">		OnFilter();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> IEnumerable&lt;CountryViewModel&gt; Countries &#123; <span class="built_in">get</span>; &#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="built_in">string</span> _searchText;</span><br><span class="line">	<span class="keyword">public</span> <span class="built_in">string</span> SearchText</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">get</span> &#123; <span class="keyword">return</span> _searchText; &#125;</span><br><span class="line">		<span class="built_in">set</span></span><br><span class="line">		&#123;</span><br><span class="line">			_searchText = value;</span><br><span class="line">			OnPropertyChanged(nameof(SearchText));</span><br><span class="line">			OnFilter();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> ObservableCollection&lt;CountryViewModel&gt; Results &#123; <span class="built_in">get</span>; <span class="keyword">private</span> <span class="built_in">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnFilter</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		Results.Clear();</span><br><span class="line"></span><br><span class="line">		var query = <span class="built_in">string</span>.IsNullOrEmpty(SearchText) ?</span><br><span class="line">		                  Countries.ToArray()</span><br><span class="line">						  : Countries.Where(item =&gt; item.Matches(SearchText)).ToArray();</span><br><span class="line"></span><br><span class="line">		foreach (var item in query)</span><br><span class="line">		&#123;</span><br><span class="line">			Results.Add(item);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The <em>ViewModel</em> allows to keep UI in sync with observable collections and properties hooked into the controls. Furthermore, you can take some of the recently introduced C# 6 features.</p>
+<p><img src="http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/platformSpecifics.png" alt="ViewModel hooked" title="View Model hooked"></p>
+<p>ViewModel interaction in each platform (side-by-side) built with Commands, Bindings, and Navigation.</p>
+<h2 id="The-Model"><a href="#The-Model" class="headerlink" title="The Model"></a>The Model</h2><p>Then the <em>Model</em> class can act like the DTO of your application and come as needed, mean a Database, Web Service, a file, etc with domain-specific logic when required.<br><br/></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Country</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> Name &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> Region &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> SubRegion &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> Population &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> NativeName &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> Alpha2Code &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> Demonym &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Handling-Platform-abstractions-amp-specifics"><a href="#Handling-Platform-abstractions-amp-specifics" class="headerlink" title="Handling Platform abstractions &amp; specifics"></a>Handling Platform abstractions &amp; specifics</h3><p>By having this separation of concerns, other important can be abstracted and adapted into the app to provide common functionalities for the application including:</p>
+<ul>
+<li>Screen-to-Screen Navigation (which can be abstracted to have ViewModel-to-ViewModel navigation through the application).</li>
+<li>Third-party communications (Authentication, Local Storage, WebServices, etc).</li>
+<li>Device capabilities &amp; features (Bluetooth, Camera, Accelerometer, etc).</li>
+<li>Asynchronous &amp; background processing.</li>
+</ul>
+<h3 id="Commands-Bindings-and-ViewModel-communication"><a href="#Commands-Bindings-and-ViewModel-communication" class="headerlink" title="Commands, Bindings and ViewModel communication:"></a>Commands, Bindings and ViewModel communication:</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ToolbarItem</span> <span class="attr">Command</span>=<span class="string">"&#123;Binding SearchCommand, Source=&#123;x:Reference RootPage&#125;&#125;"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">Order</span>=<span class="string">"Secondary"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">Text</span>=<span class="string">"Search"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>By declaring the Bindings they can be filled with the Commands declared in the ViewModel and arrange the navigation as the following:<br><br/></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    SearchCommand = <span class="keyword">new</span> Command(async obj =&gt; await CallSearchAsync());</span><br><span class="line"></span><br><span class="line"><span class="comment">//... later in the code</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> async <span class="built_in">Task</span> <span class="title">CallSearchAsync</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    var searchPage = <span class="keyword">new</span> SearchPage(Countries);</span><br><span class="line"></span><br><span class="line">    await NavigationService.PushAsync(searchPage);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="MVVM-Highlights-amp-considerations"><a href="#MVVM-Highlights-amp-considerations" class="headerlink" title="MVVM Highlights &amp; considerations."></a>MVVM Highlights &amp; considerations.</h3><ul>
+<li><strong>Understand MVVM is a key, and a responsibility to carry-on</strong>. You still need to consider if MVVM might be good for your application and take advantage of it when necessary and prevent you from overkilling your apps in case you are building a slightly simple application.</li>
+<li><strong>Reuse the concepts you may already know.</strong> Taking ahead of MVVM and can allow you focus on the architecture of your app as you to understand the basics of the underlying technology (desktop, the web, mobile) and platform specifics.</li>
+<li><strong>Adopting an MVVM Framework? Keep in mind: Frameworks are optional.</strong> Use them as needed since you might start with a pure MVVM implementation and eventually bring an MVVM toolkit but only for solving a MVVM problem in your app (lots of Views, ViewModels, ViewModel communication, navigation, etc) and flavors vary between different implementations including <a href="http://www.mvvmlight.net/" target="_blank" rel="noopener">MvvmLight</a>, <a href="https://mvvmcross.com/" target="_blank" rel="noopener">MvvmCross</a>, <a href="https://github.com/PrismLibrary/Prism" target="_blank" rel="noopener">Prism</a> as some of them are adding <em>Reactive programming</em> features like <a href="https://github.com/reactiveui/ReactiveUI" target="_blank" rel="noopener">ReactiveUI</a>.</li>
+<li><strong>Consider starting MVVM “pure” and your UI/project becomes wide and complex</strong>. An MVVM solution/framework/library and avoid to overwhelm your app with stuff that you might not need.</li>
+<li><strong>Bindings are spreading out. Take them seriously.</strong> Before coding your own screens and UI interactions, you might consider avoiding re-inventing the wheel in the platform as some of those concepts are been introduced to both Android and iOS. The recent addition of Android’s <a href="https://developer.android.com/topic/libraries/data-binding/index.html" target="_blank" rel="noopener">Data-Binding Library</a> and <a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="noopener">ReactiveCocoa</a> for iOS, which might be good options to consider before starting to code.</li>
+</ul>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li>An MVVM Pattern introduction - <a href="https://msdn.microsoft.com/en-us/library/hh848246.aspx" target="_blank" rel="noopener">Link</a>.</li>
+<li>Patterns - WPF Apps With The Model-View-ViewModel Design Pattern - <a href="https://blogs.msdn.microsoft.com/johngossman/2005/10/08/introduction-to-modelviewviewmodel-pattern-for-building-wpf-apps/" target="_blank" rel="noopener">Link</a>.</li>
+<li>Cross-Platform - Share UI Code Across Mobile Platforms - <a href="https://msdn.microsoft.com/en-us/magazine/dn904669.aspx" target="_blank" rel="noopener">Link</a>.</li>
+<li>Android Binding library - <a href="https://developer.android.com/topic/libraries/data-binding/index.html" target="_blank" rel="noopener">Link</a>.</li>
+<li>ReactiveCocoa documentation - <a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="noopener">Link</a>.</li>
+<li>Command Pattern - <a href="http://www.oodesign.com/command-pattern.html" target="_blank" rel="noopener">Link</a>.</li>
+</ul>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2017/01/23/Anunciando-Continua-XamarinDiplomado-Intermediate-Xamarin-en-espa%C3%B1ol-gratuito/">
+                ← Anunciando: ¡Continua Xamarin&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/" class="btn info">
+                Introducción a las aplicacion&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/&text=Creating a shared UI app for Android & iOS with C# and MVVM&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

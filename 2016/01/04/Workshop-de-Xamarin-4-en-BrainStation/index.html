@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Workshop de Xamarin 4 en BrainStation | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Workshop de Xamarin 4 en BrainStation" />
+  <meta property="og:description" content="El próximo Miércoles 13 de Enero de 2016 estaré presentando un Workshop de desarrollo de aplicaciones nativas con C# / .Net y Xamarin de manera gratuita con la empresa BrainStation Costa Rica. ¡Únete al evento!" />
+  <meta property="og:url" content="http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/" />
+  <meta property="og:site_name" content="Workshop de Xamarin 4 en BrainStation" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/invitation.png" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/invitation.png"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Mon Jan 04 2016 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/invitation.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Workshop de Xamarin 4 en BrainStation" />
+  <meta name="twitter:description" content="El próximo Miércoles 13 de Enero de 2016 estaré presentando un Workshop de desarrollo de aplicaciones nativas con C# / .Net y Xamarin de manera gratuita con la empresa BrainStation Costa Rica. ¡Únete al evento!" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
+        </a>
+    
+        <a href="/blog/tags/Taller/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Taller</p>
+        </a>
+    
+        <a href="/blog/tags/Workshop/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Workshop</p>
+        </a>
+    
+        <a href="/blog/tags/XamarinForms/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>XamarinForms</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Workshop de Xamarin 4 en BrainStation
+    </h1>
+    <p class="content">
+      <p>El próximo Miércoles 13 de Enero de 2016 estaré presentando un Workshop de desarrollo de aplicaciones nativas con C# / .Net y Xamarin de manera gratuita con la empresa <a href="http://www.brainstation.io/" target="_blank" rel="noopener">BrainStation</a> Costa Rica. ¡Únete al evento!</p>
+<a id="more"></a>
+<h2 id="Xamarin-4-Desarrollo-de-aplicaciones-moviles-nativas-con-C-Net"><a href="#Xamarin-4-Desarrollo-de-aplicaciones-moviles-nativas-con-C-Net" class="headerlink" title="Xamarin 4: Desarrollo de aplicaciones móviles nativas con C# / .Net"></a>Xamarin 4: Desarrollo de aplicaciones móviles nativas con C# / .Net</h2><p>Te invitamos a unirte a esta actividad, participa en la celebración de la más reciente versión de Xamarin 4 y aprende a construir, probar, monitorear y acelerar el desarrollo de aplicaciones móviles de forma nativa con sus conocimientos en C# y .Net</p>
+<p><a href="http://www.brainstation.io/event/-201614162753" target="_blank" rel="noopener"><img src="/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/invitation.png" alt="Invitación"></a></p>
+<p>Tendremos demos de aplicaciones, código abierto y rifas entre los asistentes.</p>
+<p><strong>IMPORTANTE</strong>: El cupo es limitado y recomendamos traer computadora (NO es indispensable). Te dejamos la invitación por acá para el registro de la actividad. </p>
+<p>NO HABRÁ RSVP en Meetup en esta ocasión, ya que deberán registrarse y confirmar su espacio directamente con BrainStation por motivos de logística del evento.</p>
+<p><strong>Registro:</strong> <a href="http://www.brainstation.io/event/-201614162753" target="_blank" rel="noopener">http://www.brainstation.io/event/-201614162753</a></p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2016/02/01/Resumen-Arquitectura-REST-y-servicios-moviles/">
+                ← Resumen - Arquitectura REST y&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/" class="btn info">
+                Xamarin 4 has everything you &hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/&text=Workshop de Xamarin 4 en BrainStation&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

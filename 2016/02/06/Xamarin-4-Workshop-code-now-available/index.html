@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Xamarin 4 Workshop code now available! | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Xamarin 4 Workshop code now available!" />
+  <meta property="og:description" content="Here is the source-code links and additional resources for the Xamarin 4 Worshop that I presented on January 13th, 2006. Thanks everyone for attending!" />
+  <meta property="og:url" content="http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/" />
+  <meta property="og:site_name" content="Xamarin 4 Workshop code now available!" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/workshop.jpg" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/workshop.jpg"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Sat Feb 06 2016 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/workshop.jpg" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Xamarin 4 Workshop code now available!" />
+  <meta name="twitter:description" content="Here is the source-code links and additional resources for the Xamarin 4 Worshop that I presented on January 13th, 2006. Thanks everyone for attending!" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/Taller/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Taller</p>
+        </a>
+    
+        <a href="/blog/tags/Workshop/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Workshop</p>
+        </a>
+    
+        <a href="/blog/tags/XamarinForms/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>XamarinForms</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Xamarin 4 Workshop code now available!
+    </h1>
+    <p class="content">
+      <p>Here is the source-code links and additional resources for the Xamarin 4 Worshop that I presented on January 13th, 2006. Thanks everyone for attending!</p>
+<a id="more"></a>
+<h1 id="Xamarin-4-Workshop"><a href="#Xamarin-4-Workshop" class="headerlink" title="Xamarin 4 Workshop"></a>Xamarin 4 Workshop</h1><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>System requirements:<br><a href="https://developer.xamarin.com/guides/xamarin-forms/getting-started/installation/" target="_blank" rel="noopener">https://developer.xamarin.com/guides/xamarin-forms/getting-started/installation/</a></p>
+<h2 id="Getting-Xamarin-installed"><a href="#Getting-Xamarin-installed" class="headerlink" title="Getting Xamarin installed"></a>Getting Xamarin installed</h2><p>Install Xamarin platform.</p>
+<ul>
+<li><p>For Windows/Mac: <a href="https://xamarin.com/download" target="_blank" rel="noopener">https://xamarin.com/download</a></p>
+</li>
+<li><p>Or you can get it by installing Visual Studio 2015</p>
+</li>
+</ul>
+<p>Visual Studio 2015: <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank" rel="noopener">https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx</a></p>
+<h3 id="Recommended-Emulators-for-Android"><a href="#Recommended-Emulators-for-Android" class="headerlink" title="Recommended Emulators for Android"></a>Recommended Emulators for Android</h3><p><a href="https://xamarin.com/android-player" target="_blank" rel="noopener">Xamarin Android Player</a></p>
+<p><a href="https://www.genymotion.com/#!/download" target="_blank" rel="noopener">Genymotion</a></p>
+<h2 id="Developing-a-Xamarin-Forms-app-from-scratch"><a href="#Developing-a-Xamarin-Forms-app-from-scratch" class="headerlink" title="Developing a Xamarin.Forms app from scratch"></a>Developing a Xamarin.Forms app from scratch</h2><p>In Visual Studio:<br>– <em>New Project -&gt; Installed -&gt; Visual C# -&gt; Cross-Platform -&gt; Blank App (Xamarin.Forms Portable)</em></p>
+<p>In Xamarin Studio:<br>– <em>File -&gt; New -&gt; Solution -&gt; Cross-platform -&gt; App -&gt; Xamarin.Forms App (Use Portable Class Library)</em></p>
+
+<p>Let’s inspect the App.cs main code that which is responsible for supporting the UI for all the platforms running our app:</p>
+<p>By doing so will get:</p>
+<ul>
+<li>A Xamarin.Forms project for sharing XAML/C# code between platforms</li>
+<li>Android project referencing Xamarin.Forms</li>
+<li>iOS project</li>
+<li>UWP project</li>
+</ul>
+<p>Let’s set the project structure to be used later in this tutorial:</p>
+
+<h2 id="Hello-World-Xamarin-Forms"><a href="#Hello-World-Xamarin-Forms" class="headerlink" title="Hello World, Xamarin.Forms!"></a>Hello World, Xamarin.Forms!</h2> 
+<p>This is the single code shared across those platforms:</p>
+
+<h2 id="Adding-more-pages-to-the-app-with-MasterDetailPage"><a href="#Adding-more-pages-to-the-app-with-MasterDetailPage" class="headerlink" title="Adding more pages to the app with MasterDetailPage"></a>Adding more pages to the app with MasterDetailPage</h2><ul>
+<li>Adding a Menu</li>
+<li>Basic Controls page</li>
+<li>Introducing App.xaml</li>
+<li>Customizing your app (<strong>aka</strong> ResourceDictionary/Styles)</li>
+<li></li>
+</ul>
+<h2 id="Additional-resources-amp-links"><a href="#Additional-resources-amp-links" class="headerlink" title="Additional resources &amp; links."></a>Additional resources &amp; links.</h2><ul>
+<li><a href="https://blog.xamarin.com/introducing-xamarin-4/" target="_blank" rel="noopener">Introducing Xamarin 4</a></li>
+<li><a href="https://developer.xamarin.com/guides/xamarin-forms/controls/" target="_blank" rel="noopener">Xamarin Forms Reference</a></li>
+<li><a href="https://developer.xamarin.com/guides/cross-platform/getting_started/beginning_a_xamarin_trial/" target="_blank" rel="noopener">Getting Xamarin license</a></li>
+<li><a href="https://testcloud.xamarin.com/" target="_blank" rel="noopener">Xamarin Test Cloud</a></li>
+<li><a href="https://blog.xamarin.com/introduction-to-android-material-design/" target="_blank" rel="noopener">Adding Material Design to Xamarin Apps</a></li>
+<li><a href="http://xamarin.meetup.com/es-ES/" target="_blank" rel="noopener">Comunidad Xamarin Costa Rica Mobile .Net Dev Group</a></li>
+</ul>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2016/02/09/Asp-Net-Core-1-0-Talks-Costa-Rica-Invitacion/">
+                ← ASP.NET Core 1.0 Talks Costa &hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2016/02/01/Resumen-Arquitectura-REST-y-servicios-moviles/" class="btn info">
+                Resumen - Arquitectura REST y&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/&text=Xamarin 4 Workshop code now available!&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

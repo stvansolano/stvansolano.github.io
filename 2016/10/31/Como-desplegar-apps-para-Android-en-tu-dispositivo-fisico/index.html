@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Cómo desplegar apps para Android en tu dispositivo físico | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cómo desplegar apps para Android en tu dispositivo físico" />
+  <meta property="og:description" content="Les comparto algunas recomendaciones para poder desplegar apps para Android en dispositivos físicos Android por medio de las opciones de desarrollador" />
+  <meta property="og:url" content="http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/" />
+  <meta property="og:site_name" content="Cómo desplegar apps para Android en tu dispositivo físico" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/preview.png" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/preview.png"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Mon Oct 31 2016 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Cómo desplegar apps para Android en tu dispositivo físico" />
+  <meta name="twitter:description" content="Les comparto algunas recomendaciones para poder desplegar apps para Android en dispositivos físicos Android por medio de las opciones de desarrollador" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
+        </a>
+    
+        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
+        </a>
+    
+        <a href="/blog/tags/Android/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Android</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Cómo desplegar apps para Android en tu dispositivo físico
+    </h1>
+    <p class="content">
+      <p>Les comparto algunas recomendaciones para poder desplegar apps para Android en dispositivos físicos Android por medio de las opciones de desarrollador.</p>
+<a id="more"></a>
+<p>Es posible correr y depurar aplicaciones para Android si tienes un teléfono Android, lo cual es súper útil si has tenido dificultad para correr los emuladores de Android o bien corran muy lento, además, esta opción te permite probar tu aplicación en un dispositivo real y llevarlo a versiones anteriores de Android o bien escenarios no tan comunes con factores como el acceso a internet o bien la ubicación geográfica, entre otros.</p>
+<p><img src="/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/preview.png" alt="Desplegar apps para Android" title="Desplegar y depurar apps para Android"></p>
+<p><strong>Importante:</strong> Ninguno de las recomendaciones en este artículo representa un problema para tu dispositivo móvil y NO requiere <em>“bootear”</em> tu teléfono. Puedes deshabilitar las opciones de depuración posteriormente luego y continuar usando tu teléfono normalmente.</p>
+<h2 id="Desplegando-una-app-para-Android-en-un-dispositivo-fisico"><a href="#Desplegando-una-app-para-Android-en-un-dispositivo-fisico" class="headerlink" title="Desplegando una app para Android en un dispositivo físico."></a>Desplegando una app para Android en un dispositivo físico.</h2><p>Para lograrlo es necesario habilitar la conocida opción de <em>“Opciones de desarrollador”</em> y poder así orrer tu aplicación de manera que pueda listarse en tu ambiente de desarrollo y desplegarla, depurarla y hacer las correciones que necesites.</p>
+<p>Es importante revisar la configuración de nuestro ambiente de desarrollo y asegurarnos de contar con lo siguiente:</p>
+<ul>
+<li>Tener instalado los drivers propios de su teléfono, esto típicamente se obtiene desde la pagina de cada fabricante, o bien algunos son instalados de forma automática cuando conectamos el teléfono mediante USB a nuestra computadora. También puedes instalar el ADB Driver (Universal) de este <a href="http://adbdriver.com" target="_blank" rel="noopener">link</a></li>
+<li>Instalar el <em>Google USB driver</em> desde el <em>Android SDK Manager</em> en tu computadora, esto permite poder el despliegue a las apps a traves del IDE de tu preferencia (Android/Xamarin/Visual Studio).</li>
+<li>Habilitar las opciones de desarrollador Android y permitir la depuración USB desde el dispositivo.</li>
+</ul>
+<p>A continuación te comparto un video que resume lo anterior:</p>
+<p><a href="https://youtu.be/AvkHwaKEylc" target="_blank" rel="noopener" title="Video"><img src="/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/video.png" alt="Video"></a></p>
+<h2 id="Automatizacion-y-despliegue-en-dispositivos-reales"><a href="#Automatizacion-y-despliegue-en-dispositivos-reales" class="headerlink" title="Automatización y despliegue en dispositivos reales."></a>Automatización y despliegue en dispositivos reales.</h2><p>También, es posible automatizar el despliegue de aplicaciones móviles y ejecutar casos de prueba sobre la interfaz gráfica. Para ello existen diversos <em>frameworks</em> de automatización como <em>Appium, Robotium, Expresso y Xamarin Test-Cloud</em>.</p>
+<p>Si deseas automatizar pruebas de interfaz gráfica con C# o NodeJS, te recomiendo utilizar <em>Xamarin Test Cloud</em>, el cual es una herramienta en línea (modalidad de pago, existe período de prueba), el cual permite probar aplicaciones en dispositivos Android y iOS de manera automatizada, tomar capturas de pantallas, acceder a videos de la ejecución de las pruebas y más. </p>
+<p>También te dejo el link <a href="http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/">por acá</a> de un artículo que escribí anteriormente sobre este tema y el sitio oficial de Test Cloud:</p>
+<p><a href="https://www.xamarin.com/test-cloud" target="_blank" rel="noopener">&gt;&gt;Xamarin Test Cloud - Pruebas móviles hecho fácil.</a></p>
+<h2 id="Distribucion-de-aplicaciones-moviles"><a href="#Distribucion-de-aplicaciones-moviles" class="headerlink" title="Distribución de aplicaciones móviles."></a>Distribución de aplicaciones móviles.</h2><p>Si bien podemos desplegar aplicaciones de manera local en nuestro dispositivo y es útil para desarrollo “bajo el mismo techo”, también existen otras alternativas que pueden resultar de utilidad para desplegar aplicaciones en múltiples dispositivos para realizar pruebas de rendimiento, calidad e incluso ante un grupo de usuarios <em>“beta”</em>, esto mediante Es posible utilizar servicios de terceros que permiten desplegar aplicaciones ante un grupo específico a través de plataformas especializadas para ello.</p>
+<p>Una de esas plataformas es <em>HockeyApp</em>, en la cual podemos colocar el <em>APK/IPA</em> de versiones de prueba para distribuirlos de una manera privada y sin tener que salir a la tienda. Mejor aún, <em>HockeyApp</em> nos permite gestionar tanto versiones como grupos de usuario de distribución y disponer de métricas, reporte de errores y mucho más.</p>
+<p><a href="https://hockeyapp.net/" target="_blank" rel="noopener">&gt;&gt;HockeyApp: La plataforma para tus apps.</a></p>
+<h2 id="¿Quieres-aprender-mas-¡Participa-conmigo-y-otros-desarrolladores-moviles"><a href="#¿Quieres-aprender-mas-¡Participa-conmigo-y-otros-desarrolladores-moviles" class="headerlink" title="¿Quieres aprender más? ¡Participa conmigo y otros desarrolladores móviles!"></a>¿Quieres aprender más? ¡Participa conmigo y otros desarrolladores móviles!</h2><p>Si estas cerca de Costa Rica, puedes atender <a href="http://www.meetup.com/es-ES/Costa-Rica-Mobile-Developers/" target="_blank" rel="noopener">nuestro grupo de desarrollo móvil local</a> y compartir con otros desarrolladores sobre temas de Android, iOS y UWP en el área. </p>
+<p>Si estás interesado/a en participar con nosotros o bien contactarme, puedes escribirme a <a href="mailto:stvansolano@outlook">stvansolano@outlook</a> o bien seguirme a través de mi cuenta de Twitter: <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">@stvansolano</a></p>
+<h2 id="Links-complementarios-y-de-referencia-sobre-el-despliegue-de-apps-en-Android"><a href="#Links-complementarios-y-de-referencia-sobre-el-despliegue-de-apps-en-Android" class="headerlink" title="Links complementarios y de referencia sobre el despliegue de apps en Android."></a>Links complementarios y de referencia sobre el despliegue de apps en Android.</h2><p><a href="http://programacion-moviles.blogspot.com/2015/08/depuracion-de-aplicaciones-android-studio-en-dispositivo-fisico.html" target="_blank" rel="noopener">Link 1</a><br><a href="http://academiaandroid.com/depuracion-aplicaciones-android-en-dispositivo-fisico-usb/" target="_blank" rel="noopener">Link 2</a></p>
+<p>¡No olvides <a href="http://stvansolano.github.io/blog/#suscribe">suscribirte</a> a mi blog para recibir noticias sobre próximos eventos y artículos que estaré publicando.</p>
+<p>Nos vemos en la próxima.</p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2016/11/23/Recap-del-primer-diplomado-de-Xamarin-Latinoamerica-de-Microsoft/">
+                ← Recap: Primer diplomado de Xa&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2016/10/03/Invitacion-Xamarin-Bootcamp-2016-en-Ulacit-Costa-Rica/" class="btn info">
+                Invitación - Xamarin Bootcamp&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/&text=Cómo desplegar apps para Android en tu dispositivo físico&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

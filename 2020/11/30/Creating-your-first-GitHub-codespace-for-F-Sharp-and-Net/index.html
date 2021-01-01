@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Creating your first GitHub codespace for F# and .Net 5.0 | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Creating your first GitHub codespace for F# and .Net 5.0" />
+  <meta property="og:description" content="Let's create our own F# codespace that can be used as a GitHub template to allow others to roll-up their own F#, .NET 5 based repositories!" />
+  <meta property="og:url" content="http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/" />
+  <meta property="og:site_name" content="Creating your first GitHub codespace for F# and .Net 5.0" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/preview.png" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/preview.png"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Mon Nov 30 2020 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Creating your first GitHub codespace for F# and .Net 5.0" />
+  <meta name="twitter:description" content="Let's create our own F# codespace that can be used as a GitHub template to allow others to roll-up their own F#, .NET 5 based repositories!" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/Docker/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Docker</p>
+        </a>
+    
+        <a href="/blog/tags/OSS/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>OSS</p>
+        </a>
+    
+        <a href="/blog/tags/NET/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>.NET</p>
+        </a>
+    
+        <a href="/blog/tags/Github/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Github</p>
+        </a>
+    
+        <a href="/blog/tags/FSharp/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>FSharp</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Creating your first GitHub codespace for F# and .Net 5.0
+    </h1>
+    <p class="content">
+      <p>Let’s create our own F# codespace that can be used as a GitHub template to allow others to roll-up their own F#, .NET 5 based repositories!<br><a id="more"></a></p>
+<blockquote>
+<p><strong>TL;DR:</strong> GitHub Codespaces (GHCS) enables developers to create its own environments based on Open Source and Docker containers to tailor your development environments. You can get early access to GHCS from <a href="https://github.com/features/codespaces" target="_blank" rel="noopener">this link</a> and try this sample from <a href="https://github.com/stvansolano/fsharp-codespace" target="_blank" rel="noopener">this</a> link from my GitHub account.</p>
+</blockquote>
+<h2 id="Give-F-amp-Codespaces-it-a-try"><a href="#Give-F-amp-Codespaces-it-a-try" class="headerlink" title="Give F# &amp; Codespaces it a try!"></a>Give F# &amp; Codespaces it a try!</h2><p>This blog entry is part of the <a href="https://sergeytihon.com/2020/10/22/f-advent-calendar-in-english-2020/" target="_blank" rel="noopener">F# Calendar of Advent 2020 organized by Sergey Tihon in his blog</a>. Check out the full calendar post and spread the word!</p>
+<p><img src="/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/preview.png" alt="FSharp codespace" title="FSharp codespace"></p>
+<p>If you are new to F# like me, keep in mind that there are plenty of online tools and tips to learn F# direcly in the browser. Here are some available from F# Foundation and MSFT docs websites: </p>
+<ul>
+<li><a href="https://fsharp.org/learn/" target="_blank" rel="noopener">https://fsharp.org/learn/</a></li>
+<li><a href="https://try.fsharp.org/" target="_blank" rel="noopener">https://try.fsharp.org/</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line?WT.mc_id=DT-MVP-5002082" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line</a></li>
+</ul>
+<p>For this post, we will:</p>
+<ol>
+<li>Take a base GitHub Codespace template (or create your own)</li>
+<li>Hit the Code-&gt;Run in Codespace </li>
+<li>Start coding!</li>
+</ol>
+<p>Let’s get it started!</p>
+<h2 id="1-Take-a-base-GitHub-Codespace-template-or-create-your-own"><a href="#1-Take-a-base-GitHub-Codespace-template-or-create-your-own" class="headerlink" title="1. Take a base GitHub Codespace template (or create your own)"></a>1. Take a base GitHub Codespace template (or create your own)</h2><p>Let’s create our own F#, .NET 5 codespace that can be used as a GitHub template to allow others to roll-up their own repositories. </p>
+<p><img src="/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/codespace-structure.png" alt="Codespace structure" title="Codespace structure"></p>
+<p>Most of the files needed live inside the <code>.devcontainer</code> folder structure. It needs to be at the root level in order to GHCS to understand it:</p>
+<ul>
+<li><code>Dockerfile</code> - A standard Docker file that will be taken by GHCS infrastructure. No prior knowledge of Docker is require to this, but it worths to mention. You can extend this file and include things based on your needs.</li>
+<li><code>library-scripts</code> - Just a folder where we can place specific <code>bash</code> scripts that will be run by our Dockerfile</li>
+<li><code>devcontainer.json</code> - A special JSON file that tells the Codespace. For this codespace, we will include some F# goodies to make it easier for starters:</li>
+</ul>
+<p>For the <code>Dockerfile</code> we will use the following Codespace Base image (Docker):</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ARG <span class="attribute">VARIANT</span>=3.1</span><br><span class="line"><span class="keyword">FROM</span> mcr.microsoft.com/vscode/devcontainers/dotnetcore:<span class="variable">$&#123;VARIANT&#125;</span></span><br><span class="line"><span class="comment"># ..</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>As you may expect, changing the VARIANT to 5 is the only change that we need in case we need to upgrade this environment so .NET 5 will be out of the box!</p>
+</blockquote>
+<p>For the <code>dev-container.json</code> file, you can get a closer look to the following section:</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Add the IDs of extensions you want installed when the container is created.</span></span><br><span class="line"><span class="string">"extensions"</span>: [</span><br><span class="line">    <span class="string">"ms-azuretools.vscode-docker"</span>,</span><br><span class="line">    <span class="string">"ms-dotnettools.csharp"</span>,</span><br><span class="line">    <span class="string">"github.github-vscode-theme"</span>,</span><br><span class="line">    <span class="string">"coenraads.bracket-pair-colorizer-2"</span>,</span><br><span class="line">    <span class="string">"github.vscode-pull-request-github"</span>,</span><br><span class="line">    <span class="string">"ms-azuretools.vscode-docker"</span>,</span><br><span class="line">    <span class="string">"ms-vsliveshare.vsliveshare"</span>,</span><br><span class="line">    <span class="string">"vscode-icons-team.vscode-icons"</span>,</span><br><span class="line">    <span class="string">"visualstudioexptteam.vscodeintellicode"</span>,</span><br><span class="line">    <span class="string">"ms-azuretools.vscode-docker"</span>,</span><br><span class="line">    <span class="string">"vscode-icons-team.vscode-icons"</span>,</span><br><span class="line">    <span class="string">"ionide.ionide-fsharp"</span></span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<p><strong>Important:</strong> If you want to extend this workspace or getting more familiar with GHCS under the hood, I highly recommend you to check out the <code>dev-containers</code> repo from GitHub and Visual Studio Code documentation:</p>
+<h3 id="VS-Code-Dev-Containers"><a href="#VS-Code-Dev-Containers" class="headerlink" title="- VS Code / Dev Containers"></a>- VS Code / Dev Containers</h3><p><a href="https://github.com/microsoft/vscode-dev-containers" target="_blank" rel="noopener">https://github.com/microsoft/vscode-dev-containers</a></p>
+<h3 id="VS-Code-Codespaces"><a href="#VS-Code-Codespaces" class="headerlink" title="- VS Code / Codespaces"></a>- VS Code / Codespaces</h3><p><a href="https://code.visualstudio.com/docs/remote/codespaces" target="_blank" rel="noopener">https://code.visualstudio.com/docs/remote/codespaces</a></p>
+<p>There you can find a big list of pre-defined images and great resources in case you want to go deep with other Docker supported technologies.</p>
+<p>After this, we can stage-commit-push our changes and make the repo ready to go as a Template from GitHub.</p>
+<h2 id="2-Hit-the-Code-gt-Run-in-Codespace-GHCS-access-required"><a href="#2-Hit-the-Code-gt-Run-in-Codespace-GHCS-access-required" class="headerlink" title="2. Hit the Code-&gt;Run in Codespace (GHCS access required)"></a>2. Hit the Code-&gt;Run in Codespace (GHCS access required)</h2><p>At this point, it will just need to get some minutes to let GitHub Codespaces to take all the source, build your codespace and let it bring it to you:</p>
+<p><img src="/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/codespace-ready.png" alt="Codespace ready" title="Codespace ready"></p>
+<h2 id="3-Start-coding"><a href="#3-Start-coding" class="headerlink" title="3. Start coding!"></a>3. Start coding!</h2><p>Let’s check everything to get our hands into the code:</p>
+<p><code>dotnet --version</code></p>
+<p><img src="/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/codespace-check.png" alt="Codespace check" title="Codespace check"></p>
+<p>Then let’s create our first F# project from the command line:</p>
+<p><code>dotnet new console -lang &quot;F#&quot; HelloWorld</code></p>
+<p>If you have coded with VSCode in the past, it brings a easy ready-to-run interface where we can include extensions from community. Earlier in this post, we had <code>ionide.ionide-fsharp</code> so it makes super easy to have our program up &amp; running with the ‘Play button’:</p>
+<p><img src="/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/codespace-run.png" alt="Codespace run" title="Codespace run"></p>
+<p>Thus, you can place breakpoints!</p>
+<p>And that’s it! Happy coding!</p>
+<h3 id="Recommended-links"><a href="#Recommended-links" class="headerlink" title="Recommended links"></a>Recommended links</h3><ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line?WT.mc_id=DT-MVP-5002082" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line</a></li>
+<li><a href="https://fsharp.org/learn/" target="_blank" rel="noopener">https://fsharp.org/learn/</a></li>
+<li><a href="https://try.fsharp.org/" target="_blank" rel="noopener">https://try.fsharp.org/</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line</a></li>
+<li><a href="https://github.com/microsoft/vscode-dev-containers" target="_blank" rel="noopener">https://github.com/microsoft/vscode-dev-containers</a></li>
+<li><a href="https://code.visualstudio.com/docs/remote/codespaces" target="_blank" rel="noopener">https://code.visualstudio.com/docs/remote/codespaces</a></li>
+</ul>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/">
+                ← Primer vistazo a .Net Maui (c&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2020/11/14/Resumen-y-contenidos-charla-Mockeando-APIs-con-CSharp-y-Xamarin-DotNet-Conf-Latam/" class="btn info">
+                Resumen y contenidos de mi ch&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/&text=Creating your first GitHub codespace for F# and .Net 5.0&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>

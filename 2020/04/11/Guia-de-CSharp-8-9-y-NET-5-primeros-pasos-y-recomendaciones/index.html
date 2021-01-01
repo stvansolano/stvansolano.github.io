@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+  <link rel="canonical" href="http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/" />
+  <link rel="publisher" href="https://twitter.com/stvansolano"/>
+  <link rel="author" href="https://twitter.com/stvansolano" />
+  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Guia de CSharp 8 y NET 5: primeros pasos y recomendaciones | Esteban Solano G.</title>
+  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
+  
+ 
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Guia de CSharp 8 y NET 5: primeros pasos y recomendaciones" />
+  <meta property="og:description" content="Ya probaste o estas usando NET 5? Conoce las novedades del lenguaje C# y lo que viene nuevo para el lenguaje CSharp y .NET 5 (codigo fuente incluido!)" />
+  <meta property="og:url" content="http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/" />
+  <meta property="og:site_name" content="Guia de CSharp 8 y NET 5: primeros pasos y recomendaciones" />
+  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/preview.png" />
+  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/preview.png"> 
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
+  <meta property="article:tag" content="Xamarin Platform" />
+  <meta property="article:section" content="Blog" />
+  <meta property="article:published_time" content="Sat Apr 11 2020 00:00:00 GMT+0000" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/preview.png" />
+  <meta name="twitter:url" content="http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/" />
+  <meta name="twitter:site" content="@stvansolano">
+  <meta name="twitter:creator" content="@stvansolano">
+  <meta name="twitter:title" content="Guia de CSharp 8 y NET 5: primeros pasos y recomendaciones" />
+  <meta name="twitter:description" content="Ya probaste o estas usando NET 5? Conoce las novedades del lenguaje C# y lo que viene nuevo para el lenguaje CSharp y .NET 5 (codigo fuente incluido!)" />
+
+  <meta name="generator" content="Esteban Solano G.">
+  <link rel="stylesheet" type="text/css" href="/base.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/overrides.css" />
+  <script async type="text/javascript" src="/script.min.js"></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64743742-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <base href="/" />
+</head>
+<body data-ng-controller="default">
+  <header class="">
+    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
+      <h1 class="text-center">
+          /stvansolano
+      </h1>
+      <section class="social-links text-center">
+        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
+        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
+        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
+        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
+        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
+      </section>
+      <div class="text-center">
+        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
+        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
+          
+          Blog
+          <span class="caret"></span>
+        </button>
+      </div>
+    </nav>
+</header>
+  <section class="col-md-2" data-ng-hide="isCollapsed">
+    <nav class="list-group box-shadow">
+        <a class="list-group-item" href="/">
+            <i class="fa fa-home">&nbsp;</i>
+            Home
+        </a>
+        <a class="list-group-item" href="/blog">
+           <p class="list-group-item-text">
+              <i class="fa fa-bookmark">&nbsp;</i>
+              Blog
+          </p>
+        </a>
+        <a class="list-group-item" href="/community">
+           <p class="list-group-item-text">
+              <i class="fa fa-users">&nbsp;</i>
+              Community
+          </p>
+        </a>
+        <a class="list-group-item" href="/about">
+          <p class="list-group-item-text">
+              <i class="fa fa-code">&nbsp;</i>
+              About    
+          </p>
+        </a>    
+    </nav>
+</section>
+  
+  
+    
+
+
+<main class="content col-sm-10" role="main">
+  <article>
+    <span class="post-meta">
+
+    
+    
+        <a href="/blog/tags/DotNet/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>DotNet</p>
+        </a>
+    
+        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
+        </a>
+    
+        <a href="/blog/tags/Docker/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Docker</p>
+        </a>
+    
+        <a href="/blog/tags/REST/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>REST</p>
+        </a>
+    
+        <a href="/blog/tags/Comunidad/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Comunidad</p>
+        </a>
+    
+        <a href="/blog/tags/Online/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Online</p>
+        </a>
+    
+        <a href="/blog/tags/WebAPI/" class="list-group-item-text">
+        <p class="badge"><i class="fa fa-tag">&nbsp;</i>WebAPI</p>
+        </a>
+    
+
+</span>
+    <h1 class="post-title">
+      Guia de CSharp 8 y NET 5: primeros pasos y recomendaciones
+    </h1>
+    <p class="content">
+      <p>Ya probaste o estas usando NET 5? Conoce las novedades del lenguaje C# y lo que viene nuevo para el lenguaje CSharp y .NET 5 (codigo fuente incluido!)</p>
+<a id="more"></a>
+<h2 id="Sobre-el-evento"><a href="#Sobre-el-evento" class="headerlink" title="Sobre el evento"></a>Sobre el evento</h2><p>Para el mes de abril tuvimos un livestream con la comunidad Latino .NET Online en donde comparti lo ultimo hasta la fecha en cuanto a NET 5, lo ultimo en temas de .NET el cual se espera liberar para noviembre de 2020.</p>
+<p>Si bien todo está como Preview (2) por estas fechas, es posible acceder a los binarios del SDK de .NET 5 e incluso probarlo desde contenedores Docker, por lo que decidí darle un vistazo y de paso compartir sobre las novedades que introdujo C# 8 y lo que está a la vista para la versión 9 del lenguaje.</p>
+<p><img src="/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/preview.png" alt="CSharp 8 y NET 5" title="CSharp 8 y NET 5"></p>
+<p>Para la demo, construí un repositorio recopilando varios contenidos, entre ellos:</p>
+<ul>
+<li>Poderlo correr desde VSCode y la extensión de Remote Containers, esto con Docker<br>VSCode + Remote containers Computadora personal</li>
+<li>EFCore 5 Preview (Que incorpora lo ultimo de Entity Framework y soporte para CosmosDB)</li>
+<li>Una base de datos SQL Server linux disponible para el ambiente mediante Docker Compose</li>
+<li>Ejemplos de Blazor Server y Blazor Web Assembly Template disponibles para .NET (Core en general)</li>
+<li>Ejemplos de C# 8 con multi-targeting para NET Core 3.1 (actual) y NET 5 (futuro)</li>
+</ul>
+<p>Para los ejemplos de C# 8 decidí elegir 10 e incluirlos en el código para que sea fácil de utilizar, compilarlo y correrlo.</p>
+<ol>
+<li>Using-Declarations</li>
+<li>Default-Interface-Methods</li>
+<li>Switch-Expressions</li>
+<li>Property-Patterns</li>
+<li>Tuple-Patterns</li>
+<li>Positional-Patterns</li>
+<li>Static-Local-Functions</li>
+<li>Async-Streams</li>
+<li>Indexes-And-Ranges</li>
+<li>Coalescing-Assignment</li>
+</ol>
+<p>Te invito a bajar el repositorio y explorar los contenidos desde este link: </p>
+<p><a href="https://github.com/stvansolano/csharp-sandbox/tree/master/samples/CSharp8-Examples" target="_blank" rel="noopener">https://github.com/stvansolano/csharp-sandbox/tree/master/samples/CSharp8-Examples</a></p>
+<p>Te recomiendo también darle un vistazo al archivo <a href="https://github.com/stvansolano/csharp-sandbox/blob/master/README.md" target="_blank" rel="noopener">README.md</a> del proyecto en donde coloqué los pasos para correr los contenedores y los ejemplos.</p>
+<p>Si bien utilizar Docker para este tipo de pruebas puede sonar demasiado laborioso, se me hizo sencillo e interesante de probar todo junto con la extensión de remote containers de VSCode, así como usar Docker Compose para levantar un contenedor de SQL Server Linux como había hecho en otras sesiones y ponerlo a trabajar todo junto con Web API y EF Core5 (también en Preview).</p>
+<p>No sólo eso, sino que poder componer un Azure DevOps pipeline se vuelve súper fácil y en cuestión de minutos se puede hacer push a un Azure Container Instance y ponerlo a correr en Azure en un par de clicks/commits al repositorio.</p>
+<h2 id="Grabacion-de-la-charla"><a href="#Grabacion-de-la-charla" class="headerlink" title="Grabacion de la charla"></a>Grabacion de la charla</h2><p>Aún no está disponible la grabación pero estaré actualizando este post en cuanto esté disponible.</p>
+<p>El código de la demo disponible en mi GitHub desde la dirección: <a href="https://github.com/stvansolano/csharp-sandbox/" target="_blank" rel="noopener">https://github.com/stvansolano/csharp-sandbox/</a> </p>
+<h2 id="Diapositivas-de-la-charla"><a href="#Diapositivas-de-la-charla" class="headerlink" title="Diapositivas de la charla"></a>Diapositivas de la charla</h2><p>Por acá el <a href="https://speakerd.s3.amazonaws.com/presentations/2a21c3c3e541446da2112cdea4d5128f/CSharp8_y_NET_5.pdf" target="_blank" rel="noopener">Link de descarga.</a></p>
+<p><br/></p>
+<script async class="speakerdeck-embed" data-id="2a21c3c3e541446da2112cdea4d5128f" data-ratio="1.29456384323641" src="//speakerdeck.com/assets/embed.js"></script>
+
+<h2 id="Agradecimiento"><a href="#Agradecimiento" class="headerlink" title="Agradecimiento"></a>Agradecimiento</h2><p>Muchas gracias a la comunidad Latino .NET Online por la difusión del contenido y a todos/as los que atendieron la actividad!</p>
+<p>Estaré actualizando este post con el resto del material utilizado, scripts y codigo que use en la presentacion. Te invito a suscribirte a mi blog <a href="https://stvansolano.github.io/taller/#suscribe">en este link</a> y a mantenernos en contacto.</p>
+  
+    </p>
+    <section class="post-footer">
+      <section class="row-fluid">
+    <ul class="pager" role="pagination">
+        
+        
+        <li class="previous">
+            <a href="/2020/07/20/Resumen-y-contenidos-Xamarin-Assemble-2020-Online/">
+                ← Resumen y contenidos - Xamari&hellip;
+            </a>
+        </li>
+        
+        
+        
+        
+        <li class="next">
+            <a href="/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/" class="btn info">
+                Resumen y contenidos charla D&hellip; →
+            </a>
+        </li>
+        
+    </ul>
+</section>
+      
+      <section class="row-fluid">
+        <h3>Share this post</h3>
+        
+ <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/&text=Guia de CSharp 8 y NET 5: primeros pasos y recomendaciones&via=stvansolano"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+     <span class="hidden">Twitter</span>
+ </a>
+ <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+     <span class="hidden">Facebook</span>
+ </a>
+ <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <span class="hidden">Google+</span>
+ </a>
+
+      </section>
+      
+      <ul class="list-inline"> 
+    <li>
+        <a href="/about">
+        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
+        </a>
+    </li>
+    <li>
+        <a href="https://www.planetxamarin.com" target="_blank">
+            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
+        </a>
+    </li>
+</ul>
+      <section class="row-fluid">
+    <h2>
+        <a href="/about">
+        Esteban Solano G.</a>
+    </h2>
+    <p>
+        Software Engineer at Microsoft | Former MVP, Certified developer
+        <br/>
+        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
+            @stvansolano
+        </a>
+        <br/>
+        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
+        <br/>
+        <a href="/about">More about me</a>
+    </p>    
+</section>
+    </section>
+  </article>
+</main>
+  
+  <footer class="col-xs-12 site-footer">
+  <div class="inner">
+     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
+     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
+  </div>
+</footer>
+</body>
+</html>
