@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>http://stvansolano.github.io/taller/primeros-pasos/index.html</loc>
+    
+    <lastmod>2020-12-26T04:34:55.848Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://stvansolano.github.io/taller/introduccion-xamarin/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.848Z</lastmod>
@@ -17,13 +24,6 @@
   
   <url>
     <loc>http://stvansolano.github.io/taller/recursos/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.848Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/primeros-pasos/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.848Z</lastmod>
     
@@ -44,6 +44,13 @@
   </url>
   
   <url>
+    <loc>http://stvansolano.github.io/dashboard/index.html</loc>
+    
+    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://stvansolano.github.io/bootflat/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.840Z</lastmod>
@@ -58,13 +65,6 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/dashboard/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://stvansolano.github.io/portfolio/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.840Z</lastmod>
@@ -72,7 +72,7 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/resume/experience.html</loc>
+    <loc>http://stvansolano.github.io/resume/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.840Z</lastmod>
     
@@ -86,7 +86,7 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/resume/index.html</loc>
+    <loc>http://stvansolano.github.io/resume/experience.html</loc>
     
     <lastmod>2020-12-26T04:34:55.840Z</lastmod>
     
@@ -170,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/</loc>
+    <loc>http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/</loc>
     
     <lastmod>2020-12-26T04:34:55.816Z</lastmod>
     
@@ -184,7 +184,7 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/</loc>
+    <loc>http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/</loc>
     
     <lastmod>2020-12-26T04:34:55.816Z</lastmod>
     
@@ -268,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.788Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://stvansolano.github.io/2020/11/14/Resumen-y-contenidos-charla-Mockeando-APIs-con-CSharp-y-Xamarin-DotNet-Conf-Latam/</loc>
     
     <lastmod>2020-12-26T04:34:55.788Z</lastmod>
@@ -283,6 +276,13 @@
   
   <url>
     <loc>http://stvansolano.github.io/2020/03/07/Resumen-y-contenidos-charla-Open-Data-Day-2020-Costa-Rica-Intro-Machine-Learning-en-la-nube-azure/</loc>
+    
+    <lastmod>2020-12-26T04:34:55.788Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/</loc>
     
     <lastmod>2020-12-26T04:34:55.788Z</lastmod>
     
@@ -324,14 +324,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/04/30/Resumen-Sesion-10-Build-Evolve-Comunidad-Xamarin-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2016/06/21/Resumen-Code-Camp-de-Xamarin-Forms-Patrones-de-navegacion-movil-Costa-Rica/</loc>
     
     <lastmod>2020-12-26T04:34:55.780Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/06/21/Resumen-Code-Camp-de-Xamarin-Forms-Patrones-de-navegacion-movil-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2016/04/30/Resumen-Sesion-10-Build-Evolve-Comunidad-Xamarin-Costa-Rica/</loc>
     
     <lastmod>2020-12-26T04:34:55.780Z</lastmod>
     
@@ -415,14 +415,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/06/03/Material-y-resumen-de-mi-charla-en-el-Azure-Developer-Camp-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2020/08/18/Mobile-Workshop-Online-Xamarin-Intro/</loc>
     
     <lastmod>2020-12-26T04:34:55.760Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/08/18/Mobile-Workshop-Online-Xamarin-Intro/</loc>
+    <loc>http://stvansolano.github.io/2019/06/03/Material-y-resumen-de-mi-charla-en-el-Azure-Developer-Camp-Costa-Rica/</loc>
     
     <lastmod>2020-12-26T04:34:55.760Z</lastmod>
     
