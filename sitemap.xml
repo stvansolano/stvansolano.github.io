@@ -44,7 +44,7 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/bootflat/index.html</loc>
+    <loc>http://stvansolano.github.io/blog/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.840Z</lastmod>
     
@@ -58,7 +58,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/blog/index.html</loc>
+    <loc>http://stvansolano.github.io/bootflat/index.html</loc>
+    
+    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/dashboard/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.840Z</lastmod>
     
@@ -80,13 +87,6 @@
   
   <url>
     <loc>http://stvansolano.github.io/resume/education.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/dashboard/index.html</loc>
     
     <lastmod>2020-12-26T04:34:55.840Z</lastmod>
     
@@ -142,14 +142,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2015/10/31/taller-de-introduccion-xamarin-primera-fecha/</loc>
+    <loc>http://stvansolano.github.io/2015/11/24/taller-de-introduccion-xamarin-2da-fecha/</loc>
     
     <lastmod>2020-12-26T04:34:55.824Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2015/11/24/taller-de-introduccion-xamarin-2da-fecha/</loc>
+    <loc>http://stvansolano.github.io/2015/10/31/taller-de-introduccion-xamarin-primera-fecha/</loc>
     
     <lastmod>2020-12-26T04:34:55.824Z</lastmod>
     
@@ -205,14 +205,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/</loc>
+    <loc>http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/</loc>
     
     <lastmod>2020-12-26T04:34:55.808Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/</loc>
+    <loc>http://stvansolano.github.io/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/</loc>
     
     <lastmod>2020-12-26T04:34:55.808Z</lastmod>
     
@@ -261,14 +261,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/10/14/Rumbo-al-AI-Tour-Latinoamerica-Change-the-World-you-See/</loc>
+    <loc>http://stvansolano.github.io/2018/02/17/Road-to-my-first-MVP-Summit-at-Microsoft-2018-See-you-in-Redmond/</loc>
     
     <lastmod>2020-12-26T04:34:55.792Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/02/17/Road-to-my-first-MVP-Summit-at-Microsoft-2018-See-you-in-Redmond/</loc>
+    <loc>http://stvansolano.github.io/2018/10/14/Rumbo-al-AI-Tour-Latinoamerica-Change-the-World-you-See/</loc>
     
     <lastmod>2020-12-26T04:34:55.792Z</lastmod>
     
@@ -310,13 +310,6 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/12/01/Resumen-Actividades-presenciales-y-en-linea-de-Noviembre-2019-Slides-videos-y-mas/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://stvansolano.github.io/2017/05/09/Recursos-gratuitos-para-aprender-Azure/</loc>
     
     <lastmod>2020-12-26T04:34:55.780Z</lastmod>
@@ -324,7 +317,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/06/21/Resumen-Code-Camp-de-Xamarin-Forms-Patrones-de-navegacion-movil-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2016/02/01/Resumen-Arquitectura-REST-y-servicios-moviles/</loc>
+    
+    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2019/12/01/Resumen-Actividades-presenciales-y-en-linea-de-Noviembre-2019-Slides-videos-y-mas/</loc>
     
     <lastmod>2020-12-26T04:34:55.780Z</lastmod>
     
@@ -338,14 +338,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/06/30/Resumen-actividades-junio-2019-Novedades-DotNetCore-Blazor-y-Xamarin/</loc>
+    <loc>http://stvansolano.github.io/2016/06/21/Resumen-Code-Camp-de-Xamarin-Forms-Patrones-de-navegacion-movil-Costa-Rica/</loc>
     
     <lastmod>2020-12-26T04:34:55.780Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/02/01/Resumen-Arquitectura-REST-y-servicios-moviles/</loc>
+    <loc>http://stvansolano.github.io/2019/06/30/Resumen-actividades-junio-2019-Novedades-DotNetCore-Blazor-y-Xamarin/</loc>
     
     <lastmod>2020-12-26T04:34:55.780Z</lastmod>
     
@@ -366,13 +366,6 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/09/05/Recap-del-taller-de-apps-conectadas-con-Xamarin-Costa-Rica/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.776Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://stvansolano.github.io/2016/05/15/Que-llevar-a-la-proxima-sesion-de-la-comunidad-Xamarin/</loc>
     
     <lastmod>2020-12-26T04:34:55.776Z</lastmod>
@@ -381,6 +374,13 @@
   
   <url>
     <loc>http://stvansolano.github.io/2016/11/23/Recap-del-primer-diplomado-de-Xamarin-Latinoamerica-de-Microsoft/</loc>
+    
+    <lastmod>2020-12-26T04:34:55.776Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2016/09/05/Recap-del-taller-de-apps-conectadas-con-Xamarin-Costa-Rica/</loc>
     
     <lastmod>2020-12-26T04:34:55.776Z</lastmod>
     
@@ -436,6 +436,13 @@
   </url>
   
   <url>
+    <loc>http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/</loc>
+    
+    <lastmod>2020-12-26T04:34:55.756Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://stvansolano.github.io/2016/08/07/Introduccion-a-Material-Design-Google/</loc>
     
     <lastmod>2020-12-26T04:34:55.756Z</lastmod>
@@ -444,13 +451,6 @@
   
   <url>
     <loc>http://stvansolano.github.io/2016/07/09/Invitacion-Bases-de-datos-moviles-Realm-como-alternativa-a-SQLite/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.756Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/</loc>
     
     <lastmod>2020-12-26T04:34:55.756Z</lastmod>
     
@@ -485,14 +485,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/</loc>
+    <loc>http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/</loc>
     
     <lastmod>2020-12-26T04:34:55.744Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/</loc>
+    <loc>http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/</loc>
     
     <lastmod>2020-12-26T04:34:55.744Z</lastmod>
     
@@ -513,14 +513,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/08/15/Getting-your-next-app--with-azure-mobile-apps/</loc>
+    <loc>http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/</loc>
     
     <lastmod>2020-12-26T04:34:55.740Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/</loc>
+    <loc>http://stvansolano.github.io/2016/08/15/Getting-your-next-app--with-azure-mobile-apps/</loc>
     
     <lastmod>2020-12-26T04:34:55.740Z</lastmod>
     
@@ -555,14 +555,14 @@
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/</loc>
+    <loc>http://stvansolano.github.io/2018/04/05/Busco-developers-y-trainers-en-Xamarin-en-espanol-para-Costa-Rica/</loc>
     
     <lastmod>2020-12-26T04:34:55.724Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/04/05/Busco-developers-y-trainers-en-Xamarin-en-espanol-para-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/</loc>
     
     <lastmod>2020-12-26T04:34:55.724Z</lastmod>
     
