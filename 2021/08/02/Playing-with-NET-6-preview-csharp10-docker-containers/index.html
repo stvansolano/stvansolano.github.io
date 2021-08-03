@@ -175,8 +175,19 @@
 <blockquote>
 <p>Important: If you are running it from GitHub Codespace, make sure you have dotnet in your $PATH</p>
 </blockquote>
-<p><code>export DOTNET_ROOT=$HOME/dotnet \
-    &amp;&amp; export PATH=$PATH:$HOME/dotnet</code></p>
+<p>`<br>export DOTNET_ROOT=$HOME/dotnet \<br>    &amp;&amp; export PATH=$PATH:$HOME/dotnet</p>
+<h1 id="Some-C-10-preview-features"><a href="#Some-C-10-preview-features" class="headerlink" title="Some C# 10 preview features"></a>Some C# 10 preview features</h1><h2 id="Global-usings"><a href="#Global-usings" class="headerlink" title="Global usings"></a>Global usings</h2><p>With C# you can your usings into a separate file (e.g Usings.cs)</p>
+<p><pre id="global-usings"></pre></p>
+<script>
+  var url = 'https://raw.githubusercontent.com/stvansolano/dotnet6-preview/main/src/WebApi-Swagger/Usings.cs';
+  fetch(url)
+  .then(res => res.text())
+  .then((out) => {
+    document.getElementById("global-usings").innerText = out
+  })
+  .catch(err => { throw err });
+</script>
+
 <h2 id="Getting-some-hands-on-GitHub-Actions-NET-6"><a href="#Getting-some-hands-on-GitHub-Actions-NET-6" class="headerlink" title="Getting some hands on GitHub Actions .NET 6"></a>Getting some hands on GitHub Actions .NET 6</h2><p>You can take advantage of the .NET 6 preview builds available as Docker images in Docker Hub. Both SDK and Runtime can be used accordingly:</p>
 <p><a href="https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml" target="_blank" rel="noopener">https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml</a></p>
 <p><pre id="github-action-1"></pre></p>
