@@ -2,612 +2,1315 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/</loc>
-    
-    <lastmod>2021-08-03T14:35:27.568Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/resume/index.html</loc>
-    
-    <lastmod>2021-01-16T20:10:06.322Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.848Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/introduccion-xamarin/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.848Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/primeros-pasos/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.848Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/recursos/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.848Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/blog/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/bootflat/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/dashboard/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/blog/links.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/community/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/resume/education.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/portfolio/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/resume/experience.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/answer/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/eventos/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/eventos/noviembre-2015/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/eventos/octubre-2015/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/taller/eventos/diciembre-2015/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2015/11/14/invitacion-comunidad-oficial-xamarin-costa-rica/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.824Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2015/11/24/taller-de-introduccion-xamarin-2da-fecha/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.824Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2015/10/31/taller-de-introduccion-xamarin-primera-fecha/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.824Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/about/index.html</loc>
-    
-    <lastmod>2020-12-26T04:34:55.824Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.820Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.820Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://stvansolano.github.io/2016/02/06/Xamarin-4-Workshop-code-now-available/</loc>
     
-    <lastmod>2020-12-26T04:34:55.816Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/03/18/Xamarin-Evolve-2016-Build-recap-Xamarin-for-everyone/</loc>
     
-    <lastmod>2020-12-26T04:34:55.816Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/</loc>
     
-    <lastmod>2020-12-26T04:34:55.816Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/</loc>
+    <loc>http://stvansolano.github.io/2015/12/01/Xamarin4-has-everything-you-need-to-create-great-mobile-apps/</loc>
     
-    <lastmod>2020-12-26T04:34:55.812Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/</loc>
+    <loc>http://stvansolano.github.io/2015/08/17/XamarinTestCloudSeries/</loc>
     
-    <lastmod>2020-12-26T04:34:55.808Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/</loc>
+    <loc>http://stvansolano.github.io/2015/11/14/invitacion-comunidad-oficial-xamarin-costa-rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.808Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2019/07/07/Se-viene-el-Xamarin-Developer-Summit-2019-Nos-vemos-alla/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.804Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2019/03/06/Sesiones-de-la-Cloud-Native-Computing-Foundation-ahora-en-Costa-Rica/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.804Z</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2018/09/21/Sharing-on-Friday-Visual-Studio-For-Mac-Intro/</loc>
     
-    <lastmod>2020-12-26T04:34:55.804Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/03/18/Rumbo-al-MVP-Summit-17-22-de-marzo-2019/</loc>
+    <loc>http://stvansolano.github.io/2022/03/24/Upgrading-dotnet-5-to-6-using-minimal-apis-and-github-codespaces/</loc>
     
-    <lastmod>2020-12-26T04:34:55.796Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/10/09/Resumen-y-contenidos-charla-practica-Serverless-Mobile-Dev-en-Brainstation/</loc>
+    <loc>http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/</loc>
     
-    <lastmod>2020-12-26T04:34:55.792Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2016/01/04/Workshop-de-Xamarin-4-en-BrainStation/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2019/11/02/Resumen-y-materiales-de-mi-charla-GDG-Pura-vida-DevFest-2019/</loc>
     
-    <lastmod>2020-12-26T04:34:55.792Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2018/02/17/Road-to-my-first-MVP-Summit-at-Microsoft-2018-See-you-in-Redmond/</loc>
     
-    <lastmod>2020-12-26T04:34:55.792Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2018/10/14/Rumbo-al-AI-Tour-Latinoamerica-Change-the-World-you-See/</loc>
     
-    <lastmod>2020-12-26T04:34:55.792Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/</loc>
+    <loc>http://stvansolano.github.io/2019/03/18/Rumbo-al-MVP-Summit-17-22-de-marzo-2019/</loc>
     
-    <lastmod>2020-12-26T04:34:55.788Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/11/14/Resumen-y-contenidos-charla-Mockeando-APIs-con-CSharp-y-Xamarin-DotNet-Conf-Latam/</loc>
+    <loc>http://stvansolano.github.io/2019/07/07/Se-viene-el-Xamarin-Developer-Summit-2019-Nos-vemos-alla/</loc>
     
-    <lastmod>2020-12-26T04:34:55.788Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/03/07/Resumen-y-contenidos-charla-Open-Data-Day-2020-Costa-Rica-Intro-Machine-Learning-en-la-nube-azure/</loc>
+    <loc>http://stvansolano.github.io/2019/03/06/Sesiones-de-la-Cloud-Native-Computing-Foundation-ahora-en-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.788Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2020/07/20/Resumen-y-contenidos-Xamarin-Assemble-2020-Online/</loc>
     
-    <lastmod>2020-12-26T04:34:55.784Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2017/05/09/Recursos-gratuitos-para-aprender-Azure/</loc>
+    <loc>http://stvansolano.github.io/2020/03/28/Resumen-y-contenidos-charla-DotNetConf-Latam-real-time-mobile-apps-xamarin-cosmosdb-signalr/</loc>
     
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/06/01/Recommended-Asp-Net-Core-Links-for-June-2016/</loc>
+    <loc>http://stvansolano.github.io/2020/11/14/Resumen-y-contenidos-charla-Mockeando-APIs-con-CSharp-y-Xamarin-DotNet-Conf-Latam/</loc>
     
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/12/01/Resumen-Actividades-presenciales-y-en-linea-de-Noviembre-2019-Slides-videos-y-mas/</loc>
+    <loc>http://stvansolano.github.io/2020/03/07/Resumen-y-contenidos-charla-Open-Data-Day-2020-Costa-Rica-Intro-Machine-Learning-en-la-nube-azure/</loc>
     
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/02/01/Resumen-Arquitectura-REST-y-servicios-moviles/</loc>
+    <loc>http://stvansolano.github.io/2019/10/09/Resumen-y-contenidos-charla-practica-Serverless-Mobile-Dev-en-Brainstation/</loc>
     
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2016/06/21/Resumen-Code-Camp-de-Xamarin-Forms-Patrones-de-navegacion-movil-Costa-Rica/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2016/04/30/Resumen-Sesion-10-Build-Evolve-Comunidad-Xamarin-Costa-Rica/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2019/06/30/Resumen-actividades-junio-2019-Novedades-DotNetCore-Blazor-y-Xamarin/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/</loc>
-    
-    <lastmod>2020-12-26T04:34:55.776Z</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2017/03/21/Proximas-actividades-Costa-Rica-LATAM-Moviles-Xamarin-LATAM-Azure-y-mas/</loc>
     
-    <lastmod>2020-12-26T04:34:55.776Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2018/06/19/Publicando-apps-en-las-tiendas-iOS-Google-Play-permisos-tips-y-problemas-frecuentes/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/05/15/Que-llevar-a-la-proxima-sesion-de-la-comunidad-Xamarin/</loc>
     
-    <lastmod>2020-12-26T04:34:55.776Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/11/23/Recap-del-primer-diplomado-de-Xamarin-Latinoamerica-de-Microsoft/</loc>
     
-    <lastmod>2020-12-26T04:34:55.776Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/09/05/Recap-del-taller-de-apps-conectadas-con-Xamarin-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.776Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/</loc>
+    <loc>http://stvansolano.github.io/2016/06/01/Recommended-Asp-Net-Core-Links-for-June-2016/</loc>
     
-    <lastmod>2020-12-26T04:34:55.768Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/05/10/Opened-discussion-Xamarin-Yeoman-generator-yo-xamarin-in-Xamarin-Forums/</loc>
+    <loc>http://stvansolano.github.io/2017/05/09/Recursos-gratuitos-para-aprender-Azure/</loc>
     
-    <lastmod>2020-12-26T04:34:55.768Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/09/07/Nos-vemos-en-Xamarin-Dev-Days-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2019/12/01/Resumen-Actividades-presenciales-y-en-linea-de-Noviembre-2019-Slides-videos-y-mas/</loc>
     
-    <lastmod>2020-12-26T04:34:55.764Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/10/03/Invitacion-Xamarin-Bootcamp-2016-en-Ulacit-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2016/02/01/Resumen-Arquitectura-REST-y-servicios-moviles/</loc>
     
-    <lastmod>2020-12-26T04:34:55.760Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/04/02/Llega-Visual-Studio-2019-Launch-event-lanzamiento-global/</loc>
+    <loc>http://stvansolano.github.io/2016/06/21/Resumen-Code-Camp-de-Xamarin-Forms-Patrones-de-navegacion-movil-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.760Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2019/06/03/Material-y-resumen-de-mi-charla-en-el-Azure-Developer-Camp-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2016/04/30/Resumen-Sesion-10-Build-Evolve-Comunidad-Xamarin-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.760Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2019/06/30/Resumen-actividades-junio-2019-Novedades-DotNetCore-Blazor-y-Xamarin/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2020/08/18/Mobile-Workshop-Online-Xamarin-Intro/</loc>
     
-    <lastmod>2020-12-26T04:34:55.760Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/07/09/Invitacion-Bases-de-datos-moviles-Realm-como-alternativa-a-SQLite/</loc>
+    <loc>http://stvansolano.github.io/2022/05/31/My-favorite-10-announcements-from-Microsoft-Build-2022/</loc>
     
-    <lastmod>2020-12-26T04:34:55.756Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/08/07/Introduccion-a-Material-Design-Google/</loc>
+    <loc>http://stvansolano.github.io/2016/09/07/Nos-vemos-en-Xamarin-Dev-Days-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.756Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/02/18/Invitacion-Charla-de-C-Sharp-Net-y-Xamarin-Universidad-Fidelitas-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2016/05/10/Opened-discussion-Xamarin-Yeoman-generator-yo-xamarin-in-Xamarin-Forums/</loc>
     
-    <lastmod>2020-12-26T04:34:55.756Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/</loc>
+    <loc>http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/</loc>
     
-    <lastmod>2020-12-26T04:34:55.756Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2020/12/03/Primer-vistazo-a-Net-Maui-con-codigo-Xamarin-Forms/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2019/09/08/Hola-WordPress-Resumen-de-mi-participacion-en-el-WordCamp-2019/</loc>
     
-    <lastmod>2020-12-26T04:34:55.752Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/05/27/I-m-now-Xamarin-MVP-Soy-Xamarin-MVP-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.752Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2015/10/17/Intro-Xamarin/</loc>
     
-    <lastmod>2020-12-26T04:34:55.752Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/</loc>
+    <loc>http://stvansolano.github.io/2016/08/07/Introduccion-a-Material-Design-Google/</loc>
     
-    <lastmod>2020-12-26T04:34:55.744Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/</loc>
+    <loc>http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/</loc>
     
-    <lastmod>2020-12-26T04:34:55.744Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/03/25/Guia-de-instalacion-MacOS-iOS-para-desarrollo-Net-ASP-Net-Core-y-Xamarin/</loc>
+    <loc>http://stvansolano.github.io/2016/07/09/Invitacion-Bases-de-datos-moviles-Realm-como-alternativa-a-SQLite/</loc>
     
-    <lastmod>2020-12-26T04:34:55.744Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/</loc>
+    <loc>http://stvansolano.github.io/2016/02/18/Invitacion-Charla-de-C-Sharp-Net-y-Xamarin-Universidad-Fidelitas-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.744Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/</loc>
+    <loc>http://stvansolano.github.io/2016/10/03/Invitacion-Xamarin-Bootcamp-2016-en-Ulacit-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.740Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/08/15/Getting-your-next-app--with-azure-mobile-apps/</loc>
+    <loc>http://stvansolano.github.io/2019/04/02/Llega-Visual-Studio-2019-Launch-event-lanzamiento-global/</loc>
     
-    <lastmod>2020-12-26T04:34:55.740Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2019/06/03/Material-y-resumen-de-mi-charla-en-el-Azure-Developer-Camp-Costa-Rica/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2022/09/22/Exam-passed-Microsoft-Azure-Data-Fundamentals-Certification/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/07/07/Ganadores-de-la-rifa-Reu-de-Xamarins-Semana-TICs-Ulatina/</loc>
     
-    <lastmod>2020-12-26T04:34:55.736Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/</loc>
+    <loc>http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/</loc>
     
-    <lastmod>2020-12-26T04:34:55.732Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/07/19/Enhorabuena-Renovado-como-Microsoft-MVP-por-tercer-ano-consecutivo/</loc>
+    <loc>http://stvansolano.github.io/2016/08/15/Getting-your-next-app--with-azure-mobile-apps/</loc>
     
-    <lastmod>2020-12-26T04:34:55.732Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2020/02/22/Grabacion-Nicaragua-TechJam-2020-Xamarin-Mobile-Backends-con-Docker/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2020/04/11/Guia-de-CSharp-8-9-y-NET-5-primeros-pasos-y-recomendaciones/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2018/03/25/Guia-de-instalacion-MacOS-iOS-para-desarrollo-Net-ASP-Net-Core-y-Xamarin/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2018/08/30/Guia-de-instalacion-Xamarin-y-herramientas-recomendadas/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2022/06/20/Creating-a-react-app-with-AspNet-Minimal-APIs-and-MongoDb-CosmosDb/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/</loc>
     
-    <lastmod>2020-12-26T04:34:55.728Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/04/05/Busco-developers-y-trainers-en-Xamarin-en-espanol-para-Costa-Rica/</loc>
+    <loc>http://stvansolano.github.io/2020/11/30/Creating-your-first-GitHub-codespace-for-F-Sharp-and-Net/</loc>
     
-    <lastmod>2020-12-26T04:34:55.724Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/</loc>
+    <loc>http://stvansolano.github.io/2023/03/24/El-futuro-del-trabajo-presentando-M365-copilot/</loc>
     
-    <lastmod>2020-12-26T04:34:55.724Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2018/11/19/Compartiendo-mi-experiencia-como-trabajador-remoto-mentor-software-freelancer/</loc>
+    <loc>http://stvansolano.github.io/2018/07/19/Enhorabuena-Renovado-como-Microsoft-MVP-por-tercer-ano-consecutivo/</loc>
     
-    <lastmod>2020-12-26T04:34:55.724Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2021/11/20/Exam-passed-Microsoft-Artificial-Intelligence-Fundamentals-AI-900-certification/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2018/10/06/Actividades-Octubre-2018-Git-DevOps-Xamarin-App-Center/</loc>
     
-    <lastmod>2020-12-26T04:34:55.720Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2019/05/06/Actividades-mayo-2019-para-developers-presenciales-y-en-linea/</loc>
     
-    <lastmod>2020-12-26T04:34:55.720Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2017/01/23/Anunciando-Continua-XamarinDiplomado-Intermediate-Xamarin-en-espa%C3%B1ol-gratuito/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://stvansolano.github.io/2016/02/09/Asp-Net-Core-1-0-Talks-Costa-Rica-Invitacion/</loc>
     
-    <lastmod>2020-12-26T04:34:55.720Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/2017/01/23/Anunciando-Continua-XamarinDiplomado-Intermediate-Xamarin-en-espa%25C3%25B1ol-gratuito/</loc>
+    <loc>http://stvansolano.github.io/2018/04/05/Busco-developers-y-trainers-en-Xamarin-en-espanol-para-Costa-Rica/</loc>
     
-    <lastmod>2020-12-26T04:34:55.720Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://stvansolano.github.io/XamarinDiplomado/index.html</loc>
+    <loc>http://stvansolano.github.io/2016/10/31/Como-desplegar-apps-para-Android-en-tu-dispositivo-fisico/</loc>
     
-    <lastmod>2020-12-26T04:34:55.716Z</lastmod>
+    <lastmod>2023-03-25</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/2018/11/19/Compartiendo-mi-experiencia-como-trabajador-remoto-mentor-software-freelancer/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/index.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/links.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/community/index.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/courses/index.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/portfolio/index.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/resume/index.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/courses/xamarin-maui/curso-xamarin-maui-espanol.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/courses/xamarin-maui/index.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/about/index.html</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>http://stvansolano.github.io/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Xamarin/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/DotNet/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Spanish-Espanol/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Productividad/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Open-Source/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Microsoft/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/AppCenter/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/DevOps/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Speaking/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Conferences/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Google/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Docker/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Kubernetes/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/XamarinDiplomado/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/ASP-NET/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Web-Apps/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Yeoman/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/HTML5/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/REST/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Web-API/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Meetup/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Freelance/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Android/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Mobile/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/CodeMentor/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/OSS/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/containers/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Codespaces/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Github/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/React/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/MVVM/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/iOS/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/FSharp/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/ChatGPT/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/M365/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/AI/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/MVP/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Comunidad/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Azure/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Exam/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Certification/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Data/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Rifa/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Markdown/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/GitHub/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Backend/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Online/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/WebAPI/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/MacOS/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Asp-Net-Core/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Taller/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Charla/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Git/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/WordPress/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Spanish-English/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/UX-UI/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Realm/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Bootcamp/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Productivity/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/VisualStudio/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Contenedores/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/MAUI/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/NET/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Serverless/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/AspNet/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/DevDays/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Maui/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Workshop/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/XamarinForms/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Cloud/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/NetCore/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/SignalR/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/CosmosDB/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/MachineLearning/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Python/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/MVPSummit/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/YouTube/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/VS4Mac/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Linux/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Windows/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/Career/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/OpenSource/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://stvansolano.github.io/blog/tags/TestCloud/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
   
 </urlset>
