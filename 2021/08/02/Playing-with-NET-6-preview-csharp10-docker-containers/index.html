@@ -1,165 +1,62 @@
 <!DOCTYPE html>
-<html ng-app="MainApp">
+<html lang="en">
+  <head><link rel="canonical" href="https://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers"/><link rel="publisher" href="https://twitter.com/stvansolano"/><link rel="author" href="https://twitter.com/stvansolano"/><link rel="alternate" type="application/rss+xml" title="Esteban Solano&#x27;s Blog" href="/atom.xml"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="keywords" itemProp="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker"/><title>Playing with .NET 6 preview, C# 10 and Docker</title><meta name="title" content="Playing with .NET 6 preview, C# 10 and Docker"/><meta name="description" content=".NET 6 is coming on November 2021! Here are some and some interesting links to keep an eye on from recent announcements from Microsot Build 2021 Conference. A lot of great stuff coming up!"/><meta property="og:type" content="website"/><meta property="og:url" content="https://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers"/><meta property="og:title" content="Playing with .NET 6 preview, C# 10 and Docker"/><meta property="og:description" content=".NET 6 is coming on November 2021! Here are some and some interesting links to keep an eye on from recent announcements from Microsot Build 2021 Conference. A lot of great stuff coming up!"/><meta property="og:image" itemProp="image" content="https://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.png"/><meta property="og:site_name" content="stvansolano | Welcome to my blog"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers"/><meta name="twitter:title" content="Playing with .NET 6 preview, C# 10 and Docker"/><meta name="twitter:description" content=".NET 6 is coming on November 2021! Here are some and some interesting links to keep an eye on from recent announcements from Microsot Build 2021 Conference. A lot of great stuff coming up!"/><meta name="twitter:image" content="https://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.png"/><meta name="twitter:site" content="@stvansolano"/><meta name="twitter:creator" content="@stvansolano"/><link itemProp="thumbnailUrl" href="https://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.png"/><meta property="og:image:width" content="600"/><meta property="og:image:height" content="300"/><meta property="article:publisher" content="https://twitter.com/stvansolano"/><meta property="article:section" content="Blog"/><meta property="article:published_time" content="1627862400000"/><meta http-equiv="Content-Type" content="text/html" charSet="UTF-8"/><meta name="generator" content="stvansolano | Welcome to my blog"/><link async="" rel="stylesheet" type="text/css" href="/main.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QNLS5Q61WF"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<head>
-  <link rel="canonical" href="http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/" />
-  <link rel="publisher" href="https://twitter.com/stvansolano"/>
-  <link rel="author" href="https://twitter.com/stvansolano" />
-  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Playing with .NET 6 preview, C# 10 and Docker | Esteban Solano G.</title>
-  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
-  
- 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Playing with .NET 6 preview, C# 10 and Docker" />
-  <meta property="og:description" content="" />
-  <meta property="og:url" content="http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/" />
-  <meta property="og:site_name" content="Playing with .NET 6 preview, C# 10 and Docker" />
-  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.png" />
-  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.png"> 
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="300" />
-  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
-  <meta property="article:tag" content="Xamarin Platform" />
-  <meta property="article:section" content="Blog" />
-  <meta property="article:published_time" content="Mon Aug 02 2021 00:00:00 GMT+0000" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.png" />
-  <meta name="twitter:url" content="http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/" />
-  <meta name="twitter:site" content="@stvansolano">
-  <meta name="twitter:creator" content="@stvansolano">
-  <meta name="twitter:title" content="Playing with .NET 6 preview, C# 10 and Docker" />
-  <meta name="twitter:description" content="" />
-
-  <meta name="generator" content="Esteban Solano G.">
-  <link rel="stylesheet" type="text/css" href="/base.css" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme.css" />
-  <link rel="stylesheet" type="text/css" href="/overrides.css" />
-  <script async type="text/javascript" src="/script.min.js"></script>
-
-  
-  
-  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
-  
-  
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64743742-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-  <base href="/" />
-</head>
-<body data-ng-controller="default">
-  <header class="">
-    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
-      <h1 class="text-center">
-          /stvansolano
-      </h1>
-      <section class="social-links text-center">
-        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
-        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
-        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
-        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
-        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
-      </section>
-      <div class="text-center">
-        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
-        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
-          
-          Blog
-          <span class="caret"></span>
-        </button>
-      </div>
-    </nav>
-</header>
-  <section class="col-md-2" data-ng-hide="isCollapsed">
-    <nav class="list-group box-shadow">
-        <a class="list-group-item" href="/">
-            <i class="fa fa-home">&nbsp;</i>
-            Home
-        </a>
-        <a class="list-group-item" href="/blog">
-           <p class="list-group-item-text">
-              <i class="fa fa-bookmark">&nbsp;</i>
-              Blog
-          </p>
-        </a>
-        <a class="list-group-item" href="/community">
-           <p class="list-group-item-text">
-              <i class="fa fa-users">&nbsp;</i>
-              Community
-          </p>
-        </a>
-        <a class="list-group-item" href="/about">
-          <p class="list-group-item-text">
-              <i class="fa fa-code">&nbsp;</i>
-              About    
-          </p>
-        </a>    
-    </nav>
-</section>
-  
-  
-    
-
-
-<main class="content col-sm-10" role="main">
-  <article>
-    <span class="post-meta">
-
-</span>
-    <h1 class="post-title">
-      Playing with .NET 6 preview, C# 10 and Docker
-    </h1>
-    <p class="content">
-      <p>Long time, no blogging! I’m having a great time and fun since I joined Microsoft, so there is always room to come back to my notes and share with the community. This time, .NET 6 stuff!</p>
-<a id="more"></a>
-<p>ICYM: Here is the link to my previous post on joining Microsoft: <a href="https://stvansolano.github.io/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/">2020/12/07/Work at an awesome place. I’m joining Microsoft!</a></p>
-<p> <img src="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.png" alt="Play with dotnet 6 and docker" title="Play with dotnet 6 and docker"></p>
-<h2 id="Let’s-get-started"><a href="#Let’s-get-started" class="headerlink" title="Let’s get started."></a>Let’s get started.</h2><p>As you may know, .NET 6 is coming on November 2020 this year and since //Build 2021 announcements the SDK &amp; runtime previews are getting a a lot of great stuff coming. Here are some and some interesting links to keep an eye on:</p>
+      gtag('config', 'G-QNLS5Q61WF');
+    </script><base href="/"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/></head>
+  <link rel="stylesheet" href="/_astro/_...slug_.7126134a.css" /><body>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="ZPL9Pi" component-url="/_astro/Nav.4a132ef2.js" component-export="default" renderer-url="/_astro/client.c401bd7c.js" props="{&quot;title&quot;:[0,&quot;Playing with .NET 6 preview, C# 10 and Docker&quot;],&quot;page&quot;:[0,{&quot;path&quot;:[0,&quot;/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers&quot;],&quot;canonical_path&quot;:[0,&quot;&quot;],&quot;navigationTitle&quot;:[0,&quot;&quot;],&quot;lang&quot;:[0,&quot;en&quot;],&quot;title&quot;:[0,&quot;Playing with .NET 6 preview, C# 10 and Docker&quot;],&quot;layout&quot;:[0,null],&quot;date&quot;:[0,&quot;2021-08-02T00:00:00.000Z&quot;],&quot;header&quot;:[0,{&quot;description&quot;:[0,&quot;.NET 6 is coming on November 2021! Here are some and some interesting links to keep an eye on from recent announcements from Microsot Build 2021 Conference. A lot of great stuff coming up!&quot;],&quot;optimizedImage&quot;:[0,&quot;~/preview.webp&quot;]}],&quot;tags&quot;:[1,&quot;[]&quot;],&quot;posts&quot;:[0,null],&quot;tag&quot;:[0,null],&quot;slug&quot;:[0,&quot;2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers&quot;],&quot;prev&quot;:[0,null],&quot;next&quot;:[0,null],&quot;raw&quot;:[0,null],&quot;content&quot;:[0,null],&quot;useLegacyLayout&quot;:[0,null],&quot;rawMarkdown&quot;:[0,null],&quot;thumbnail&quot;:[0,&quot;~/preview.png&quot;],&quot;excerpt&quot;:[0,&quot;.NET 6 is coming on November 2021! Here are some and some interesting links to keep an eye on from recent announcements from Microsot Build 2021 Conference. A lot of great stuff coming up!&quot;],&quot;permalink&quot;:[0,&quot;https://stvansolano.github.io2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers&quot;]}],&quot;config&quot;:[0,{&quot;title&quot;:[0,&quot;stvansolano | Welcome to my blog&quot;],&quot;subtitle&quot;:[0,&quot;&quot;],&quot;root&quot;:[0,&quot;&quot;],&quot;author&quot;:[0,&quot;Esteban Solano Granados&quot;],&quot;email&quot;:[0,&quot;stvansolano@outlook.com&quot;],&quot;twitter&quot;:[0,&quot;stvansolano&quot;],&quot;parentSite&quot;:[0,&quot;/&quot;],&quot;sitePermalink&quot;:[0,&quot;https://stvansolano.github.io&quot;]}]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:true}" await-children=""><nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top row"><span class="navbar-brand col-md-5"><a class="" href="/"><span><i class="social fa fa-2x fa-code navbar-icon"></i> stvansolano</span></a><a class="social fa fa-2x fa-twitter" rel="noreferrer" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a><a class="social fa fa-2x fa-linkedin" rel="noreferrer" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a><a class="social fa fa-2x fa-github" rel="noreferrer" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a><a class="social fa fa-2x fa-youtube" rel="noreferrer" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a><i class="social fa fa-2x fa-bars fa-bars-icon d-md-none visible"></i></span><ul class="navbar-nav col-md-8 collapse"><li class="nav-item"><a class="nav-link" href="/"><i class="fa fa-home"> </i>Home</a></li><li class="nav-item"><a class="nav-link" href="/blog"><i class="fa fa-bookmark"> </i>Blog</a></li><li class="nav-item"><a class="nav-link" href="/community"><i class="fa fa-users"> </i>Commmunity</a></li><li class="nav-item"><a class="nav-link" href="/about"><i class="fa fa-code"> </i>About</a></li></ul><span class="col-xs-12 hidden"><i class="social fa fa-2x collapse-icon d-md-none fa-angle-up"> </i></span></nav></astro-island>
+    <div class="row after-header">
+        <main class="content col-md-8" role="main">
+            <article class="row">
+                <div class="row"><section class="col-md-8"><div class="article-info-left"><div><a href="/about" class="profile-avatar" alt="Esteban Solano Granados - stvansolano"><img class="decorated" data-src="/about/stvansolano_circle.webp" height="40" width="40" alt="Esteban Solano Granados" src="/about/stvansolano_circle.webp"/></a></div><section><div class="username">By <a href="/about">Esteban Solano Granados</a></div><div><span class="date" data-theme="">Published・<!-- -->August 02, 2021</span><span class="read-time"></span></div></section></div></section><section class="col-md-4" style="margin-bottom:0.5rem"><h5>Share this post</h5><a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers&amp;text=Playing with .NET 6 preview, C# 10 and Docker&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers"><span class="hidden">Facebook</span></a></section></div><h1>Playing with .NET 6 preview, C# 10 and Docker</h1><span class="post-meta" style="margin-bottom:0.5rem"></span>
+                <p>.NET 6 is coming on November 2021! Here are some and some interesting links to keep an eye on from recent announcements from Microsot Build 2021 Conference. A lot of great stuff coming up!</p>
+<!-- more -->
+<h2 id="long-time-no-blogging">Long time, no blogging!</h2>
+<p>It has been a while from last time I blogged. I’m really having a great time and fun since I joined Microsoft to work remotely, and it’s always great to take some time back on my notes to share some cool tech with the community. This time, .NET 6 stuff!</p>
+<blockquote>
+<p>ICYMI: Here is the link to my previous post on joining Microsoft: <a href="https://stvansolano.github.io/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/">2020/12/07/Work at an awesome place. I’m joining Microsoft!</a></p>
+</blockquote>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/preview.webp" alt="Play with dotnet 6 and docker" title="Play with dotnet 6 and docker">
+<h2 id="lets-get-started">Let’s get started.</h2>
+<p>Here is a summary of what’s coming with .NET 6 tooling:</p>
 <ul>
 <li>C# 10 preview features</li>
 <li>Minimal APIs support</li>
-<li>Linq &amp; EF Core 6 previews</li>
+<li>Linq &#x26; EF Core 6 previews</li>
 <li>.NET MAUI</li>
-<li>And more</li>
+<li>And more to come</li>
 </ul>
-<p>At the time of publishing this post, we got 6 released previews of .NET 6 (with Preview 7 going out soon!). The good thing is that tooling is going pretty much the same (VS Code support, dotnet build, run, etc), Hot Reload is coming across .NET and Visual Studio 2022 on 64bit is now on Preview!</p>
-<p>If you want to give it a try, I took some time to put it altogether in a new GitHub repo, which can be used with GitHub Codespaces and Docker so you don’t have to install locally in your machine! </p>
-<p><a href="https://github.com/stvansolano/dotnet6-preview/" target="_blank" rel="noopener">https://github.com/stvansolano/dotnet6-preview/</a></p>
-<p><a href="https://github.com/stvansolano/dotnet6-preview" target="_blank" rel="noopener"><img src="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/dotnet6-preview-repo.png" alt=".NET 6 preview repo"></a></p>
+<p>At the time of publishing this post, there are 6 official previews released of .NET 6 (with Preview 7 going out soon!). The good thing is that tooling is going pretty much the same across those (VS Code support, dotnet build, run, etc) while Hot Reload is coming across .NET and Visual Studio 2022 on 64bit is now on Preview!</p>
+<p>If you want to give it a try, I took some time to put it altogether in a new GitHub repo, which can be used with GitHub Codespaces and Docker so you don’t have to install locally in your machine!</p>
+<p><a href="https://github.com/stvansolano/dotnet6-preview/">https://github.com/stvansolano/dotnet6-preview/</a></p>
+<p><a href="https://github.com/stvansolano/dotnet6-preview"><img src="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/dotnet6-preview-repo.png" alt="NET 6 preview repo link -Image"></a></p>
 <p>There are two ways for using the repo:</p>
-<p>1) <strong>GitHub Codespaces</strong>: If you have GitHub account with Codespaces support(public preview available, going GA soon!), you can just open it from “Code” button, then &gt; “Open with Codespaces”. <strong>Tip:</strong> You can use the repo as a template for creating your own repo!<br>2) <strong> Fork/clone locally</strong>: You can use VSCode with the repo and install the <em>Visual Studio Code Remote Development</em> extension, Docker and open the folder in container. </p>
-<p>More details: <a href="https://code.visualstudio.com/docs/remote/containers" target="_blank" rel="noopener">Visual Studio Code Remote Development</a></p>
+<ol>
+<li><strong>GitHub Codespaces</strong>: If you have GitHub account with Codespaces support (public preview available, going GA soon!), you can just open it from “Code” button, then > “Open with Codespaces”. <strong>Tip:</strong> You can use the repo as a template for creating your own repo!</li>
+<li>** Fork/clone locally**: You can use VSCode with the repo and install the <em>Visual Studio Code Remote Development</em> extension, Docker and open the folder in container.</li>
+</ol>
+<p>More details: <a href="https://code.visualstudio.com/docs/remote/containers">Visual Studio Code Remote Development</a></p>
 <blockquote>
 <p>By opening from GitHub either VS Code (latest version preferarly) you would be ready to go!</p>
 </blockquote>
-<h2 id="Project-structure-amp-samples"><a href="#Project-structure-amp-samples" class="headerlink" title="Project structure &amp; samples"></a>Project structure &amp; samples</h2><ul>
+<h2 id="project-structure--samples">Project structure &#x26; samples</h2>
+<ul>
 <li>/ConsoleApp (Minimal Console app with C# 10 / .NET 6 support)</li>
 <li>/ConsoleApp.EntityFramework (.NET 6 + EF with SQLite)</li>
 <li>/ConsoleApp.Linq (Some new LINQ coming features, no EF)</li>
 <li>/WebApi (Minimal Web API with C# 9 / .NET 6)</li>
 <li>/WebApi-Swagger (Minimal Web API with swagger support)</li>
-<li><a href="https://github.com/stvansolano/dotnet6-preview/blob/main/src/ci.Dockerfile" target="_blank" rel="noopener">CI Dockerfile</a> (yes! We have NuGet support and Docker SDK and Runtime images available!)</li>
-<li><a href="https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml" target="_blank" rel="noopener">GitHub Actions with .NET 6</a> </li>
+<li><a href="https://github.com/stvansolano/dotnet6-preview/blob/main/src/ci.Dockerfile">CI Dockerfile</a> (yes! We have NuGet support and Docker SDK and Runtime images available!)</li>
+<li><a href="https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml">GitHub Actions with .NET 6</a></li>
 </ul>
-<h2 id="Creating-a-new-Minimal-Web-API"><a href="#Creating-a-new-Minimal-Web-API" class="headerlink" title="Creating a new Minimal Web API"></a>Creating a new Minimal Web API</h2><p><code>dotnet new web -o src/WebApi</code></p>
+<h2 id="creating-a-new-minimal-web-api">Creating a new Minimal Web API</h2>
+<p><code>dotnet new web -o src/WebApi</code></p>
 <p>Here is how the Program.cs file looks like:</p>
-<p><pre id="minimal-web-api"></pre></p>
+<pre id="minimal-web-api"></pre>
 <script>
   var url = 'https://raw.githubusercontent.com/stvansolano/dotnet6-preview/main/src/WebApi/Program.cs';
   fetch(url)
@@ -169,16 +66,15 @@
   })
   .catch(err => { throw err });
 </script>
-
 <p>Then Run it</p>
 <p><code>dotnet run --project WebApi/WebApi.csproj</code></p>
 <blockquote>
 <p>Important: If you are running it from GitHub Codespace, make sure you have dotnet in your $PATH</p>
 </blockquote>
-<p><code>export DOTNET_ROOT=$HOME/dotnet \
-    &amp;&amp; export PATH=$PATH:$HOME/dotnet</code></p>
-<h1 id="Some-C-10-preview-features"><a href="#Some-C-10-preview-features" class="headerlink" title="Some C# 10 preview features"></a>Some C# 10 preview features</h1><h2 id="Global-usings"><a href="#Global-usings" class="headerlink" title="Global usings"></a>Global usings</h2><p>With C# you can your usings into a separate file (e.g Usings.cs)</p>
-<p><pre id="global-usings"></pre></p>
+<p><code>export DOTNET_ROOT=$HOME/dotnet \     &#x26;&#x26; export PATH=$PATH:$HOME/dotnet</code></p>
+<h2 id="c-10-global-usings">C# 10 Global usings</h2>
+<p>With C# 10 you can place usings into a separate file (e.g Usings.cs) and keep the compiler happy across your clases. Event better, duplicated using statements can be removed and put them in 1 single file:</p>
+<pre id="global-usings"></pre>
 <script>
   var url = 'https://raw.githubusercontent.com/stvansolano/dotnet6-preview/main/src/WebApi-Swagger/Usings.cs';
   fetch(url)
@@ -188,10 +84,10 @@
   })
   .catch(err => { throw err });
 </script>
-
-<h2 id="Getting-some-hands-on-GitHub-Actions-NET-6"><a href="#Getting-some-hands-on-GitHub-Actions-NET-6" class="headerlink" title="Getting some hands on GitHub Actions .NET 6"></a>Getting some hands on GitHub Actions .NET 6</h2><p>You can take advantage of the .NET 6 preview builds available as Docker images in Docker Hub. Both SDK and Runtime can be used accordingly:</p>
-<p><a href="https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml" target="_blank" rel="noopener">https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml</a></p>
-<p><pre id="github-action-1"></pre></p>
+<h2 id="getting-some-hands-on-github-actions-net-6">Getting some hands on GitHub Actions .NET 6</h2>
+<p>You can take advantage of the .NET 6 preview builds and use them as Docker images from Docker Hub. Both SDK and Runtime can be used accordingly:</p>
+<p><a href="https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml">https://github.com/stvansolano/dotnet6-preview/blob/main/.github/workflows/dotnet6-docker-build.yml</a></p>
+<pre id="github-action-1"></pre>
 <script>
   var url = 'https://raw.githubusercontent.com/stvansolano/dotnet6-preview/main/src/ci.Dockerfile';
   fetch(url)
@@ -201,117 +97,53 @@
   })
   .catch(err => { throw err });
 </script>
-
-<h2 id="Running-the-GitHub-action"><a href="#Running-the-GitHub-action" class="headerlink" title="Running the GitHub action"></a>Running the GitHub action</h2><p>Make sure to put it under /.github/workflows folder so it can be executed automatically on every push on the repo. </p>
-<p>Here is my dotnet6-docker-build.yml file output:</p>
-<p><a href="https://github.com/stvansolano/dotnet6-preview/actions/workflows/dotnet6-docker-build.yml" target="_blank" rel="noopener"><img src="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/github-action-1.png" alt="GitHub Action 1"></a></p>
-<h2 id="Must-check-links"><a href="#Must-check-links" class="headerlink" title="Must-check links"></a>Must-check links</h2><ul>
-<li>.NET 6 preview</li>
-<li>EF Core 6 preview: <a href="https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-6-0-preview-5-compiled-models/" target="_blank" rel="noopener">https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-6-0-preview-5-compiled-models/</a></li>
-<li>.NET MAUI: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/" target="_blank" rel="noopener">https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/</a></li>
-<li>ASP.NET 6 preview: <a href="https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-preview-5/" target="_blank" rel="noopener">https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-preview-5/</a></li>
-</ul>
-<h3 id="More-C-awesome-links"><a href="#More-C-awesome-links" class="headerlink" title="More C# awesome links"></a>More C# awesome links</h3><ul>
-<li>C# 10 what’s new: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10</a></li>
-<li>C# 9 &amp; preview: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9</a></li>
-<li>C# guide: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/dotnet/csharp/</a></li>
-<li>C# Language Versioning: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version</a></li>
-</ul>
-<h3 id="NET-6-Preview-blogs"><a href="#NET-6-Preview-blogs" class="headerlink" title=".NET 6 Preview blogs:"></a>.NET 6 Preview blogs:</h3><ul>
+<h2 id="running-the-github-action">Running the GitHub action</h2>
+<p>Make sure to put it under /.github/workflows folder so it can be executed automatically on every push on the repo.</p>
+<p>Here is my <code>dotnet6-docker-build.yml</code> file output:</p>
+<p><a href="https://github.com/stvansolano/dotnet6-preview/actions/workflows/dotnet6-docker-build.yml"><img src="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/github-action-1.png" alt="GitHub action -Image"></a></p>
+<h3 id="net-6-preview-blogs">.NET 6 Preview blogs:</h3>
+<ul>
 <li>Preview 7: (Coming soon)</li>
-<li>Preview 6: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-6/" target="_blank" rel="noopener">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-6/</a></li>
-<li>Preview 5: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-5/" target="_blank" rel="noopener">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-5/</a></li>
-<li>Preview 4: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-4/" target="_blank" rel="noopener">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-4/</a></li>
-<li>Preview 3: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-3/" target="_blank" rel="noopener">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-3/</a></li>
+<li>Preview 6: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-6/">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-6/</a></li>
+<li>Preview 5: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-5/">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-5/</a></li>
+<li>Preview 4: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-4/">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-4/</a></li>
+<li>Preview 3: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-3/">https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-3/</a></li>
+<li>EF Core 6 preview: <a href="https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-6-0-preview-5-compiled-models/">https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-6-0-preview-5-compiled-models/</a></li>
+<li>.NET MAUI: <a href="https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/">https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/</a></li>
+<li>ASP.NET 6 preview: <a href="https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-preview-5/">https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-preview-5/</a></li>
 </ul>
-<p>Don’t forget to open issues if something needs ny attention, and give it a star. Happy coding! </p>
-<p>P.D: I would be making progress and introduce changes in the repo as new previews got out. So stay refreshing/F5-ing! </p>
+<h3 id="more-c-awesome-links">More C# awesome links</h3>
+<ul>
+<li>C# 10 what’s new: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10">https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10</a></li>
+<li>C# 9 &#x26; preview: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9">https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9</a></li>
+<li>C# guide: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/">https://docs.microsoft.com/en-us/dotnet/csharp/</a></li>
+<li>C# Language Versioning: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version">https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version</a></li>
+</ul>
+<p>Don’t forget to open issues in the <a href="https://github.com/stvansolano/dotnet6-preview">stvansolano/dotnet6-preview repo</a> in case something may need ny attention, and if you like it, give it a star. Happy coding!</p>
+<p>P.D: I would be making progress and introduce changes in the repo as new previews got out. So stay refreshing/F5-ing!</p>
 <p>-Esteban</p>
-  
-    </p>
-    <section class="post-footer">
-      <section class="row-fluid">
-    <ul class="pager" role="pagination">
-        
-        
-        
-        
-        
-        <li class="next">
-            <a href="/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft/" class="btn info">
-                Work at an awesome place. I'm&hellip; →
-            </a>
-        </li>
-        
-    </ul>
-</section>
-      
-      <section class="row-fluid">
-        <h3>Share this post</h3>
-        
- <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/&text=Playing with .NET 6 preview, C# 10 and Docker&via=stvansolano"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-     <span class="hidden">Twitter</span>
- </a>
- <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-     <span class="hidden">Facebook</span>
- </a>
- <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers/"
-    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-     <span class="hidden">Google+</span>
- </a>
+            </article>
+            <div class="col-xs-6">
+                <section class="pull-right">
+                    <h5>Share this post</h5>
+                    <a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers&amp;text=Playing with .NET 6 preview, C# 10 and Docker&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers"><span class="hidden">Facebook</span></a>
+                </section>
+            </div>
+            <div class="col-xs-6">
+                <ul class="list-inline"><li><a href="/about" alt="About"><img class="blog-logo img-responsive" width="75" height="89" src="/about/stvansolano_card.webp" alt="My photo"/></a></li><li><a href="/about" alt="About MS MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/ms-mvp-logo.webp" alt="MS MVP logo"/></a></li><li><a href="/about" alt="About Xamarin MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/mvp-logo.webp" alt="MVP logo"/></a></li></ul>
+            </div>
 
-      </section>
-      
-      <ul class="list-inline"> 
-    <li>
-        <a href="/about">
-        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
-        </a>
-    </li>
-    <li>
-        <a href="https://www.planetxamarin.com" target="_blank">
-            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
-        </a>
-    </li>
-</ul>
-      <section class="row-fluid">
-    <h2>
-        <a href="/about">
-        Esteban Solano G.</a>
-    </h2>
-    <p>
-        Software Engineer at Microsoft | Former MVP, Certified developer
-        <br/>
-        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
-            @stvansolano
-        </a>
-        <br/>
-        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
-        <br/>
-        <a href="/about">More about me</a>
-    </p>    
-</section>
-    </section>
-  </article>
-</main>
-  
-  <footer class="col-xs-12 site-footer">
-  <div class="inner">
-     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
-     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
-  </div>
-</footer>
-</body>
-</html>
+            <section class="col-xs-12"><h2><a class="article-author" href="/about">Esteban Solano Granados</a></h2><p><br/><a href="https://twitter.com/stvansolano">@<!-- -->stvansolano</a><br/><a href="/about">More about me</a></p></section>
+        </main>
+        <section class="col-md-4">
+            <section class="card">
+                <ul class="list-group" data-theme=""><li class="list-group-item list-group-item-info"><h5 class="list-group-item-heading"><i class="fa fa fa-bookmark-o"> </i>Recent posts</h5></li><li class="list-group-item"><a href="/2023/11/18/Resumen-noviembre-2023-Ignite-GitHub-dotNetConf">Resumen - Novedades Microsoft Ignite, GitHub Universe y .NET Conf 2023!</a></li><li class="list-group-item"><a href="/2023/03/24/El-futuro-del-trabajo-presentando-M365-copilot">El futuro del trabajo en 2023 - Presentando Microsoft 365 Copilot</a></li><li class="list-group-item"><a href="/2023/03/24/The-future-of-work-introducing-microsoft-365-copilot">The future of work - Introducing Microsoft 365 Copilot 🤖</a></li><li class="list-group-item"><a href="/2022/09/22/Exam-passed-Microsoft-Azure-Data-Fundamentals-Certification">Exam passed! DP-900: Microsoft Azure Data Fundamentals Certification</a></li><li class="list-group-item"><a href="/2022/06/20/Creating-a-react-app-with-AspNet-Minimal-APIs-and-MongoDb-CosmosDb">Create a React-based app with ASP.NET Minimal APIs and MongoDB storage</a></li><li class="list-group-item"><a href="/2022/05/31/My-favorite-10-announcements-from-Microsoft-Build-2022">My favorite 10 DEV+Cloud announcements from Microsoft Build 2022</a></li><li class="list-group-item"><a href="/2022/03/24/Upgrading-dotnet-5-to-6-using-minimal-apis-and-github-codespaces">Upgrading .NET 5 -&gt; 6 using Minimal APIs, MySQL and GitHub Codespaces</a></li><li class="list-group-item"><a href="/2021/11/20/Exam-passed-Microsoft-Artificial-Intelligence-Fundamentals-AI-900-certification">Exam passed! Microsoft AI Fundamentals AI-900 Certification</a></li><li class="list-group-item"><a href="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers">Playing with .NET 6 preview, C# 10 and Docker</a></li><li class="list-group-item"><a href="/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft">Work at an awesome place. I&#x27;m joining Microsoft!</a></li><li class="list-group-item"><a href="/blog">Read more...</a></li></ul>
+            </section>
+            <section class="card">
+                <section class="card list-group" data-theme=""><a href="#" class="list-group-item active"><h5 class="list-group-item-heading"><i class="fa fa fa-tag"> </i>Browse by tag</h5></a><section class="list-group-item"><a href="/blog/tags/Windows" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Windows</p></a> <a href="/blog/tags/Productividad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productividad</p></a> <a href="/blog/tags/M365" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>M365</p></a> <a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p></a> <a href="/blog/tags/AI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AI</p></a> <a href="/blog/tags/DotNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DotNet</p></a> <a href="/blog/tags/GitHub" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>GitHub</p></a> <a href="/blog/tags/ChatGPT" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ChatGPT</p></a> <a href="/blog/tags/Azure" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Azure</p></a> <a href="/blog/tags/Data" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Data</p></a> <a href="/blog/tags/Exam" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Exam</p></a> <a href="/blog/tags/Certification" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Certification</p></a> <a href="/blog/tags/OSS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OSS</p></a> <a href="/blog/tags/Docker" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Docker</p></a> <a href="/blog/tags/containers" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>containers</p></a> <a href="/blog/tags/REST" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>REST</p></a> <a href="/blog/tags/Codespaces" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Codespaces</p></a> <a href="/blog/tags/React" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>React</p></a> <a href="/blog/tags/Xamarin" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Xamarin</p></a> <a href="/blog/tags/MAUI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MAUI</p></a> <a href="/blog/tags/Kubernetes" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Kubernetes</p></a> <a href="/blog/tags/.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>.NET</p></a> <a href="/blog/tags/Serverless" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Serverless</p></a> <a href="/blog/tags/AspNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AspNet</p></a> <a href="/blog/tags/Conferences" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Conferences</p></a> <a href="/blog/tags/Microsoft" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Microsoft</p></a> <a href="/blog/tags/Career" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Career</p></a> <a href="/blog/tags/FSharp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>FSharp</p></a> <a href="/blog/tags/Speaking" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Speaking</p></a> <a href="/blog/tags/SignalR" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>SignalR</p></a> <a href="/blog/tags/Online" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Online</p></a> <a href="/blog/tags/Comunidad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Comunidad</p></a> <a href="/blog/tags/WebAPI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WebAPI</p></a> <a href="/blog/tags/Mobile" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Mobile</p></a> <a href="/blog/tags/CosmosDB" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CosmosDB</p></a> <a href="/blog/tags/MachineLearning" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MachineLearning</p></a> <a href="/blog/tags/Python" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Python</p></a> <a href="/blog/tags/VisualStudio" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VisualStudio</p></a> <a href="/blog/tags/NetCore" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>NetCore</p></a> <a href="/blog/tags/Google" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Google</p></a> <a href="/blog/tags/DevOps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevOps</p></a> <a href="/blog/tags/WordPress" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WordPress</p></a> <a href="/blog/tags/Productivity" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productivity</p></a> <a href="/blog/tags/Contenedores" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Contenedores</p></a> <a href="/blog/tags/MVPSummit" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVPSummit</p></a> <a href="/blog/tags/Cloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Cloud</p></a> <a href="/blog/tags/OpenSource" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OpenSource</p></a> <a href="/blog/tags/CodeMentor" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CodeMentor</p></a> <a href="/blog/tags/AppCenter" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AppCenter</p></a> <a href="/blog/tags/YouTube" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>YouTube</p></a> <a href="/blog/tags/VS4Mac" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VS4Mac</p></a> <a href="/blog/tags/Taller" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Taller</p></a> <a href="/blog/tags/Charla" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Charla</p></a> <a href="/blog/tags/Git" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Git</p></a> <a href="/blog/tags/MVP" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVP</p></a> <a href="/blog/tags/iOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>iOS</p></a> <a href="/blog/tags/Android" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Android</p></a> <a href="/blog/tags/Freelance" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Freelance</p></a> <a href="/blog/tags/Linux" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Linux</p></a> <a href="/blog/tags/MacOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MacOS</p></a> <a href="/blog/tags/Asp.Net Core" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Asp.Net Core</p></a> <a href="/blog/tags/XamarinDiplomado" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinDiplomado</p></a> <a href="/blog/tags/MVVM" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVVM</p></a> <a href="/blog/tags/Backend" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Backend</p></a> <a href="/blog/tags/Spanish/English" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/English</p></a> <a href="/blog/tags/Meetup" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Meetup</p></a> <a href="/blog/tags/Bootcamp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Bootcamp</p></a> <a href="/blog/tags/DevDays" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevDays</p></a> <a href="/blog/tags/UX / UI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>UX / UI</p></a> <a href="/blog/tags/Realm" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Realm</p></a> <a href="/blog/tags/Rifa" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Rifa</p></a> <a href="/blog/tags/Open Source" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Open Source</p></a> <a href="/blog/tags/ASP.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ASP.NET</p></a> <a href="/blog/tags/Web Apps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web Apps</p></a> <a href="/blog/tags/Web API" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web API</p></a> <a href="/blog/tags/Workshop" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Workshop</p></a> <a href="/blog/tags/XamarinForms" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinForms</p></a> <a href="/blog/tags/Yeoman" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Yeoman</p></a> <a href="/blog/tags/HTML5" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>HTML5</p></a> <a href="/blog/tags/TestCloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>TestCloud</p></a> <a href="/blog/tags/Markdown" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Markdown</p></a> </section></section>
+                <div class="col-md-3 card"><h2>Archives</h2><section><ul class="list-group box-shadow" data-theme=""><li class="list-group-item"><a href="/blog/archives/2022"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2022</p></a></li><li class="list-group-item"><a href="/blog/archives/2021"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2021</p></a></li><li class="list-group-item"><a href="/blog/archives/2020"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2020</p></a></li><li class="list-group-item"><a href="/blog/archives/2019"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2019</p></a></li><li class="list-group-item"><a href="/blog/archives/2018"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2018</p></a></li><li class="list-group-item"><a href="/blog/archives/2017"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2017</p></a></li><li class="list-group-item"><a href="/blog/archives/2016"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2016</p></a></li><li class="list-group-item"><a href="/blog/archives/2015"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2015</p></a></li></ul></section></div>
+            </section>
+        </section>
+    </div>
+    <footer data-theme="" class="col-xs-12 site-footer text-center"><div class="inner"><section class="copyright">Copyright <a href="/about">Esteban Solano Granados</a> © <!-- -->2023<!-- --> • All rights reserved.</section><section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section></div></footer>
+  </body></html>

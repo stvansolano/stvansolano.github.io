@@ -1,216 +1,116 @@
 <!DOCTYPE html>
-<html ng-app="MainApp">
+<html lang="en">
+  <head><link rel="canonical" href="https://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown"/><link rel="publisher" href="https://twitter.com/stvansolano"/><link rel="author" href="https://twitter.com/stvansolano"/><link rel="alternate" type="application/rss+xml" title="Esteban Solano&#x27;s Blog" href="/atom.xml"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="keywords" itemProp="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker"/><title>Getting Started With Markdown</title><meta name="title" content="Getting Started With Markdown"/><meta name="description" content=""/><meta property="og:type" content="website"/><meta property="og:url" content="https://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown"/><meta property="og:title" content="Getting Started With Markdown"/><meta property="og:description" content=""/><meta property="og:image" itemProp="image" content="https://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/images/markdown.jpg"/><meta property="og:site_name" content="stvansolano | Welcome to my blog"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown"/><meta name="twitter:title" content="Getting Started With Markdown"/><meta name="twitter:description" content=""/><meta name="twitter:image" content="https://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/images/markdown.jpg"/><meta name="twitter:site" content="@stvansolano"/><meta name="twitter:creator" content="@stvansolano"/><link itemProp="thumbnailUrl" href="https://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/images/markdown.jpg"/><meta property="og:image:width" content="600"/><meta property="og:image:height" content="300"/><meta property="article:publisher" content="https://twitter.com/stvansolano"/><meta property="article:section" content="Blog"/><meta property="article:published_time" content="1434758400000"/><meta http-equiv="Content-Type" content="text/html" charSet="UTF-8"/><meta name="generator" content="stvansolano | Welcome to my blog"/><link async="" rel="stylesheet" type="text/css" href="/main.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QNLS5Q61WF"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<head>
-  <link rel="canonical" href="http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/" />
-  <link rel="publisher" href="https://twitter.com/stvansolano"/>
-  <link rel="author" href="https://twitter.com/stvansolano" />
-  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Getting Started With Markdown | Esteban Solano G.</title>
-  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
-  
- 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Getting Started With Markdown" />
-  <meta property="og:description" content="New to Markdown? You might take a look on those links to get started" />
-  <meta property="og:url" content="http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/" />
-  <meta property="og:site_name" content="Getting Started With Markdown" />
-  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown//images/markdown.jpg" />
-  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown//images/markdown.jpg"> 
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="300" />
-  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
-  <meta property="article:tag" content="Xamarin Platform" />
-  <meta property="article:section" content="Blog" />
-  <meta property="article:published_time" content="Sat Jun 20 2015 00:00:00 GMT+0000" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown//images/markdown.jpg" />
-  <meta name="twitter:url" content="http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/" />
-  <meta name="twitter:site" content="@stvansolano">
-  <meta name="twitter:creator" content="@stvansolano">
-  <meta name="twitter:title" content="Getting Started With Markdown" />
-  <meta name="twitter:description" content="New to Markdown? You might take a look on those links to get started" />
-
-  <meta name="generator" content="Esteban Solano G.">
-  <link rel="stylesheet" type="text/css" href="/base.css" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme.css" />
-  <link rel="stylesheet" type="text/css" href="/overrides.css" />
-  <script async type="text/javascript" src="/script.min.js"></script>
-
-  
-  
-  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
-  
-  
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64743742-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-  <base href="/" />
-</head>
-<body data-ng-controller="default">
-  <header class="">
-    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
-      <h1 class="text-center">
-          /stvansolano
-      </h1>
-      <section class="social-links text-center">
-        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
-        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
-        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
-        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
-        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
-      </section>
-      <div class="text-center">
-        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
-        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
-          
-          Blog
-          <span class="caret"></span>
-        </button>
-      </div>
-    </nav>
-</header>
-  <section class="col-md-2" data-ng-hide="isCollapsed">
-    <nav class="list-group box-shadow">
-        <a class="list-group-item" href="/">
-            <i class="fa fa-home">&nbsp;</i>
-            Home
-        </a>
-        <a class="list-group-item" href="/blog">
-           <p class="list-group-item-text">
-              <i class="fa fa-bookmark">&nbsp;</i>
-              Blog
-          </p>
-        </a>
-        <a class="list-group-item" href="/community">
-           <p class="list-group-item-text">
-              <i class="fa fa-users">&nbsp;</i>
-              Community
-          </p>
-        </a>
-        <a class="list-group-item" href="/about">
-          <p class="list-group-item-text">
-              <i class="fa fa-code">&nbsp;</i>
-              About    
-          </p>
-        </a>    
-    </nav>
-</section>
-  
-  
-    
-
-
-<main class="content col-sm-10" role="main">
-  <article>
-    <span class="post-meta">
-
-    
-    
-        <a href="/blog/tags/Markdown/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Markdown</p>
-        </a>
-    
-        <a href="/blog/tags/GitHub/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>GitHub</p>
-        </a>
-    
-
-</span>
-    <h1 class="post-title">
-      Getting Started With Markdown
-    </h1>
-    <p class="content">
-      <p>New to Markdown? You might take a look on those links to get started:</p>
-<a id="more"></a>
-<p><a href="https://help.github.com/articles/markdown-basics/" target="_blank" rel="noopener">GitHub</a><br><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank" rel="noopener">Markdown cheat sheet</a></p>
-<h1 id="Span-Elements"><a href="#Span-Elements" class="headerlink" title="Span Elements"></a>Span Elements</h1><p>These elements occur within a line of text.  So, for example font changes or links.</p>
-<h2 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h2><p>Markdown treats * (asterisk) and _ (underscores) as emphasis markers. </p>
+      gtag('config', 'G-QNLS5Q61WF');
+    </script><base href="/"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/></head>
+  <link rel="stylesheet" href="/_astro/_...slug_.7126134a.css" /><body>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="1aBLJT" component-url="/_astro/Nav.4a132ef2.js" component-export="default" renderer-url="/_astro/client.c401bd7c.js" props="{&quot;title&quot;:[0,&quot;Getting Started With Markdown&quot;],&quot;page&quot;:[0,{&quot;path&quot;:[0,&quot;/2015/06/20/Getting-Started-With-Markdown&quot;],&quot;canonical_path&quot;:[0,&quot;&quot;],&quot;navigationTitle&quot;:[0,&quot;&quot;],&quot;lang&quot;:[0,&quot;en&quot;],&quot;title&quot;:[0,&quot;Getting Started With Markdown&quot;],&quot;layout&quot;:[0,null],&quot;date&quot;:[0,&quot;2015-06-20T00:00:00.000Z&quot;],&quot;header&quot;:[0,{&quot;description&quot;:[0,&quot;&quot;],&quot;optimizedImage&quot;:[0,&quot;&quot;]}],&quot;tags&quot;:[1,&quot;[[0,{\&quot;name\&quot;:[0,\&quot;Markdown\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Markdown\&quot;],\&quot;title\&quot;:[0,\&quot;Markdown\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;GitHub\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/GitHub\&quot;],\&quot;title\&quot;:[0,\&quot;GitHub\&quot;]}]]&quot;],&quot;posts&quot;:[0,null],&quot;tag&quot;:[0,null],&quot;slug&quot;:[0,&quot;2015/06/20/Getting-Started-With-Markdown&quot;],&quot;prev&quot;:[0,null],&quot;next&quot;:[0,null],&quot;raw&quot;:[0,null],&quot;content&quot;:[0,null],&quot;useLegacyLayout&quot;:[0,null],&quot;rawMarkdown&quot;:[0,null],&quot;thumbnail&quot;:[0,&quot;/images/markdown.jpg&quot;],&quot;excerpt&quot;:[0,null],&quot;permalink&quot;:[0,&quot;https://stvansolano.github.io2015/06/20/Getting-Started-With-Markdown&quot;]}],&quot;config&quot;:[0,{&quot;title&quot;:[0,&quot;stvansolano | Welcome to my blog&quot;],&quot;subtitle&quot;:[0,&quot;&quot;],&quot;root&quot;:[0,&quot;&quot;],&quot;author&quot;:[0,&quot;Esteban Solano Granados&quot;],&quot;email&quot;:[0,&quot;stvansolano@outlook.com&quot;],&quot;twitter&quot;:[0,&quot;stvansolano&quot;],&quot;parentSite&quot;:[0,&quot;/&quot;],&quot;sitePermalink&quot;:[0,&quot;https://stvansolano.github.io&quot;]}]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:true}" await-children=""><nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top row"><span class="navbar-brand col-md-5"><a class="" href="/"><span><i class="social fa fa-2x fa-code navbar-icon"></i> stvansolano</span></a><a class="social fa fa-2x fa-twitter" rel="noreferrer" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a><a class="social fa fa-2x fa-linkedin" rel="noreferrer" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a><a class="social fa fa-2x fa-github" rel="noreferrer" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a><a class="social fa fa-2x fa-youtube" rel="noreferrer" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a><i class="social fa fa-2x fa-bars fa-bars-icon d-md-none visible"></i></span><ul class="navbar-nav col-md-8 collapse"><li class="nav-item"><a class="nav-link" href="/"><i class="fa fa-home"> </i>Home</a></li><li class="nav-item"><a class="nav-link" href="/blog"><i class="fa fa-bookmark"> </i>Blog</a></li><li class="nav-item"><a class="nav-link" href="/community"><i class="fa fa-users"> </i>Commmunity</a></li><li class="nav-item"><a class="nav-link" href="/about"><i class="fa fa-code"> </i>About</a></li></ul><span class="col-xs-12 hidden"><i class="social fa fa-2x collapse-icon d-md-none fa-angle-up"> </i></span></nav></astro-island>
+    <div class="row after-header">
+        <main class="content col-md-8" role="main">
+            <article class="row">
+                <div class="row"><section class="col-md-8"><div class="article-info-left"><div><a href="/about" class="profile-avatar" alt="Esteban Solano Granados - stvansolano"><img class="decorated" data-src="/about/stvansolano_circle.webp" height="40" width="40" alt="Esteban Solano Granados" src="/about/stvansolano_circle.webp"/></a></div><section><div class="username">By <a href="/about">Esteban Solano Granados</a></div><div><span class="date" data-theme="">Published・<!-- -->June 20, 2015</span><span class="read-time"></span></div></section></div></section><section class="col-md-4" style="margin-bottom:0.5rem"><h5>Share this post</h5><a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2015/06/20/Getting-Started-With-Markdown"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2015/06/20/Getting-Started-With-Markdown&amp;text=Getting Started With Markdown&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2015/06/20/Getting-Started-With-Markdown"><span class="hidden">Facebook</span></a></section></div><h1>Getting Started With Markdown</h1><span class="post-meta" style="margin-bottom:0.5rem"><a href="/blog/tags/Markdown" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Markdown</p> </a><a href="/blog/tags/GitHub" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>GitHub</p> </a></span>
+                <p>New to Markdown? You might take a look on those links to get started:</p>
+<!-- more -->
+<p><a href="https://help.github.com/articles/markdown-basics/">GitHub</a>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown cheat sheet</a></p>
+<h1 id="span-elements">Span Elements</h1>
+<p>These elements occur within a line of text.  So, for example font changes or links.</p>
+<h2 id="emphasis">Emphasis</h2>
+<p>Markdown treats * (asterisk) and _ (underscores) as emphasis markers.</p>
 <p><em>single asterisks</em></p>
 <p><em>single underscores</em></p>
 <p><strong>double asterisks</strong></p>
 <p><strong>double underscores</strong></p>
 <p>All are created from this:</p>
-<pre><code>*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
-</code></pre><p>You must use the same character must be used to open and close an emphasis span. Emphasis can be used in the mi<em>dd</em>le of a word.</p>
-<pre><code>Emphasis can be used in the mi*dd*le of a word.
-</code></pre><p>But if you surround an * or _ with spaces, itâ€™ll be treated as a literal asterisk or underscore.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">*single asterisks*</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">_single underscores_</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">**double asterisks**</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">__double underscores__</span></span></code></pre>
+<p>You must use the same character must be used to open and close an emphasis span. Emphasis can be used in the mi<em>dd</em>le of a word.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">Emphasis can be used in the mi*dd*le of a word.</span></span></code></pre>
+<p>But if you surround an * or _ with spaces, itâ€™ll be treated as a literal asterisk or underscore.</p>
 <p>To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:</p>
-<pre><code>\*this text is surrounded by literal asterisks\*
-</code></pre><h2 id="Preformatted-code"><a href="#Preformatted-code" class="headerlink" title="Preformatted code"></a>Preformatted code</h2><p>To indicate a span of code, wrap it with <code>`</code> (backtick). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">\*this text is surrounded by literal asterisks\*</span></span></code></pre>
+<h2 id="preformatted-code">Preformatted code</h2>
+<p>To indicate a span of code, wrap it with <code>`</code> (backtick). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
 <p>Use the <code>printf()</code> function.</p>
 <p>is produced from:</p>
-<pre><code>Use the `printf()` function.
-</code></pre><p>To include a literal backtick character within a code span, you can use multiple backticks as the opening and closing delimiters:</p>
-<p><code>There is a literal backtick (`) here.</code>    </p>
-<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><p>Markdown supports inline and reference links. In both styles, the link text is delimited by [square brackets]. To create an inline link, use this syntax:</p>
-<pre><code>[ Text for the link ](URL)
-</code></pre><p>So an inline link to <a href="http://www.yahoo.com" target="_blank" rel="noopener">Yahoo</a> looks like this:</p>
-<pre><code>So an inline link to [Yahoo](http://www.yahoo.com) looks like this:
-</code></pre><p>Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:</p>
-<pre><code>This is [an example][id] reference-style link.
-</code></pre><p>Which gives you a link like this:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">Use the `printf()` function.</span></span></code></pre>
+<p>To include a literal backtick character within a code span, you can use multiple backticks as the opening and closing delimiters:</p>
+<p><code>There is a literal backtick (`) here.</code></p>
+<h2 id="links">Links</h2>
+<p>Markdown supports inline and reference links. In both styles, the link text is delimited by [square brackets]. To create an inline link, use this syntax:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">[ Text for the link ](URL)</span></span></code></pre>
+<p>So an inline link to <a href="http://www.yahoo.com">Yahoo</a> looks like this:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">So an inline link to [Yahoo](http://www.yahoo.com) looks like this:</span></span></code></pre>
+<p>Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">This is [an example][id] reference-style link.</span></span></code></pre>
+<p>Which gives you a link like this:</p>
 <p>This is [an example][id] reference-style link.</p>
 <p>Elsewhere in the document, usually at the bottom of the file, you define your link label on a line by itself:</p>
-<pre><code>[id]: http://example.com/  &quot;Optional Title Here&quot;
-</code></pre><p>Links can get pretty fancy, so if you want the long form version, visit the<br> official [Markdown][fireball] docs.</p>
-<h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><p>Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference. Images appear like this:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">[id]: http://example.com/  "Optional Title Here"</span></span></code></pre>
+<p>Links can get pretty fancy, so if you want the long form version, visit the
+official [Markdown][fireball] docs.</p>
+<h2 id="images">Images</h2>
+<p>Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference. Images appear like this:</p>
 <p><img src="http://www.addictedtoibiza.com/wp-content/uploads/2012/12/example.png" alt="Alt text"></p>
-<pre><code>![Alt text](http://www.addictedtoibiza.com/wp-content/uploads/2012/12/example.png)
-
-![Alt text](http://www.addictedtoibiza.com/wp-content/uploads/2012/12/example.png &quot;Optional title&quot;)
-</code></pre><hr>
-<h1 id="Block-Elements"><a href="#Block-Elements" class="headerlink" title="Block Elements"></a>Block Elements</h1><p>These are elements that are a single or multiple lines in length</p>
-<h2 id="Headings"><a href="#Headings" class="headerlink" title="Headings"></a>Headings</h2><p>You can create Atx-style headings by prefixing with a # (hash mark)</p>
-<h1 id="Heading-1-markup-Heading-1"><a href="#Heading-1-markup-Heading-1" class="headerlink" title="Heading 1 markup  # Heading 1"></a>Heading 1 markup  <code># Heading 1</code></h1><p># </p>
-<h2 id="Heading-2-markup-Heading-2"><a href="#Heading-2-markup-Heading-2" class="headerlink" title="Heading 2 markup  ## Heading 2"></a>Heading 2 markup  <code>## Heading 2</code></h2><p>## </p>
-<h3 id="Heading-3-markup-Heading-3"><a href="#Heading-3-markup-Heading-3" class="headerlink" title="Heading 3 markup   ### Heading 3"></a>Heading 3 markup   <code>### Heading 3</code></h3><p>### </p>
-<h4 id="Heading-4-markup-Heading-4"><a href="#Heading-4-markup-Heading-4" class="headerlink" title="Heading 4 markup  #### Heading 4"></a>Heading 4 markup  <code>#### Heading 4</code></h4><p>#### </p>
-<h5 id="Heading-5-markup-Heading-5"><a href="#Heading-5-markup-Heading-5" class="headerlink" title="Heading 5 markup  ##### Heading 5"></a>Heading 5 markup  <code>##### Heading 5</code></h5><p>##### </p>
-<h6 id="Heading-6-markup-Heading-6"><a href="#Heading-6-markup-Heading-6" class="headerlink" title="Heading 6 markup  ###### Heading 6"></a>Heading 6 markup  <code>###### Heading 6</code></h6><p>######<br>You can also create Setext-style headings which have two levels.</p>
-<h1 id="Level-1-markup-use-an-equal-sign-equal-sign"><a href="#Level-1-markup-use-an-equal-sign-equal-sign" class="headerlink" title="Level 1 markup use an equal sign = (equal sign) "></a>Level 1 markup use an equal sign = (equal sign) </h1><pre><code>Level 1 markup use an equal sign = (equal sign)        
-==============================
-</code></pre><h2 id="Level-2-markup-uses-dashes"><a href="#Level-2-markup-uses-dashes" class="headerlink" title="Level 2 markup uses - (dashes) "></a>Level 2 markup uses - (dashes) </h2><pre><code>Level 2 markup uses - (dashes) 
--------------
-</code></pre><h2 id="PARAGRAPHS-and-BLOCKQUOTES"><a href="#PARAGRAPHS-and-BLOCKQUOTES" class="headerlink" title="PARAGRAPHS and BLOCKQUOTES"></a>PARAGRAPHS and BLOCKQUOTES</h2><p>A paragraph is one or more consecutive lines of text separated by one or more<br>blank lines. A blank line contains nothing but spaces or tabs. Do not indent<br>normal paragraphs with spaces or tabs.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">![Alt text](http://www.addictedtoibiza.com/wp-content/uploads/2012/12/example.png)</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">![Alt text](http://www.addictedtoibiza.com/wp-content/uploads/2012/12/example.png "Optional title")</span></span></code></pre>
+<hr>
+<h1 id="block-elements">Block Elements</h1>
+<p>These are elements that are a single or multiple lines in length</p>
+<h2 id="headings">Headings</h2>
+<p>You can create Atx-style headings by prefixing with a # (hash mark)</p>
+<h1 id="heading-1-markup---heading-1">Heading 1 markup  <code># Heading 1</code></h1>
+<h1 id=""></h1>
+<h2 id="heading-2-markup---heading-2">Heading 2 markup  <code>## Heading 2</code></h2>
+<h2 id="-1"></h2>
+<h3 id="heading-3-markup----heading-3">Heading 3 markup   <code>### Heading 3</code></h3>
+<h3 id="-2"></h3>
+<h4 id="heading-4-markup---heading-4">Heading 4 markup  <code>#### Heading 4</code></h4>
+<h4 id="-3"></h4>
+<h5 id="heading-5-markup---heading-5">Heading 5 markup  <code>##### Heading 5</code></h5>
+<h5 id="-4"></h5>
+<h6 id="heading-6-markup---heading-6">Heading 6 markup  <code>###### Heading 6</code></h6>
+<h6 id="-5"></h6>
+<p>You can also create Setext-style headings which have two levels.</p>
+<h1 id="level-1-markup-use-an-equal-sign--equal-sign">Level 1 markup use an equal sign = (equal sign)</h1>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9"> Level 1 markup use an equal sign = (equal sign)   	 </span></span>
+<span class="line"><span style="color: #c9d1d9"> ==============================</span></span>
+<span class="line"><span style="color: #c9d1d9"> </span></span></code></pre>
+<h2 id="level-2-markup-uses---dashes">Level 2 markup uses - (dashes)</h2>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">Level 2 markup uses - (dashes) </span></span>
+<span class="line"><span style="color: #c9d1d9">-------------</span></span></code></pre>
+<h2 id="paragraphs-and-blockquotes">PARAGRAPHS and BLOCKQUOTES</h2>
+<p>A paragraph is one or more consecutive lines of text separated by one or more
+blank lines. A blank line contains nothing but spaces or tabs. Do not indent
+normal paragraphs with spaces or tabs.</p>
 <p>This is one paragraph.</p>
 <p>This is a second.</p>
-<pre><code>This is one paragraph.
-
-This is a second.
-</code></pre><p>Markdown uses email-style &gt; (greater than) characters for blockquoting. If youâ€™re familiar with quoting passages of text in an email message, then you know how to create a blockquote in Markdown. It looks best if you hard wrap the text and put a &gt; before every line:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">This is one paragraph.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">This is a second.</span></span></code></pre>
+<p>Markdown uses email-style > (greater than) characters for blockquoting. If youâ€™re familiar with quoting passages of text in an email message, then you know how to create a blockquote in Markdown. It looks best if you hard wrap the text and put a > before every line:</p>
 <blockquote>
-<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</p>
-<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>id sem consectetuer libero luctus adipiscing.</p>
+<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</p>
+<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.</p>
 </blockquote>
-<pre><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-&gt; 
-&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-&gt; id sem consectetuer libero luctus adipiscing.
-</code></pre><p>Blockquotes can be nested (i.e. a blockquote-in-a-blockquote):</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span></span>
+<span class="line"><span style="color: #c9d1d9">> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span></span>
+<span class="line"><span style="color: #c9d1d9">> </span></span>
+<span class="line"><span style="color: #c9d1d9">> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span></span>
+<span class="line"><span style="color: #c9d1d9">> id sem consectetuer libero luctus adipiscing.</span></span></code></pre>
+<p>Blockquotes can be nested (i.e. a blockquote-in-a-blockquote):</p>
 <blockquote>
 <p>This is the first level of quoting.</p>
 <blockquote>
@@ -218,322 +118,285 @@ This is a second.
 </blockquote>
 <p>Back to the first level.</p>
 </blockquote>
-<pre><code>&gt; This is the first level of quoting.
-&gt;
-&gt; &gt; This is nested blockquote.
-&gt;
-&gt; Back to the first level.
-</code></pre><p>Blockquotes can contain other Markdown elements, including headers, lists, and code blocks:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">> This is the first level of quoting.</span></span>
+<span class="line"><span style="color: #c9d1d9">></span></span>
+<span class="line"><span style="color: #c9d1d9">> > This is nested blockquote.</span></span>
+<span class="line"><span style="color: #c9d1d9">></span></span>
+<span class="line"><span style="color: #c9d1d9">> Back to the first level.</span></span></code></pre>
+<p>Blockquotes can contain other Markdown elements, including headers, lists, and code blocks:</p>
 <blockquote>
-<h2 id="This-is-a-header"><a href="#This-is-a-header" class="headerlink" title="This is a header."></a>This is a header.</h2><ol>
+<h2 id="this-is-a-header">This is a header.</h2>
+<ol>
 <li>This is the first list item.</li>
 <li>This is the second list item.</li>
 </ol>
 <p>Here’s some example code:</p>
-<pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);
-</code></pre></blockquote>
-<pre><code>&gt; ## This is a header.
-&gt; 
-&gt; 1.   This is the first list item.
-&gt; 2.   This is the second list item.
-&gt; 
-&gt; Here&apos;s some example code:
-&gt; 
-&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
-</code></pre><h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><p>Markdown supports ordered (numbered) and unordered (bulleted) lists.  List markers typically start at the left margin, but may be indented by up to three spaces. List markers must be followed by one or more spaces or a tab.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">return shell_exec("echo $input | $markdown_script");</span></span></code></pre>
+</blockquote>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">> ## This is a header.</span></span>
+<span class="line"><span style="color: #c9d1d9">> </span></span>
+<span class="line"><span style="color: #c9d1d9">> 1.   This is the first list item.</span></span>
+<span class="line"><span style="color: #c9d1d9">> 2.   This is the second list item.</span></span>
+<span class="line"><span style="color: #c9d1d9">> </span></span>
+<span class="line"><span style="color: #c9d1d9">> Here's some example code:</span></span>
+<span class="line"><span style="color: #c9d1d9">> </span></span>
+<span class="line"><span style="color: #c9d1d9">>     return shell_exec("echo $input | $markdown_script");</span></span></code></pre>
+<h2 id="lists">Lists</h2>
+<p>Markdown supports ordered (numbered) and unordered (bulleted) lists.  List markers typically start at the left margin, but may be indented by up to three spaces. List markers must be followed by one or more spaces or a tab.</p>
 <p>Form bulleted lists with any of * (asterisk), + (plus), or - (dash). You can one or any or mix of these to form a list:</p>
 <ul>
-<li>Red </li>
+<li>Red</li>
 </ul>
 <ul>
-<li>Green </li>
+<li>Green</li>
 </ul>
 <ul>
-<li>Blue</li>
+<li>
+<p>Blue</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">  * Red</span></span>
+<span class="line"><span style="color: #c9d1d9">  + Green</span></span>
+<span class="line"><span style="color: #c9d1d9">  - Blue</span></span></code></pre>
+</li>
 </ul>
-<pre><code>* Red
-+ Green
-- Blue
-</code></pre><p>Ordered lists require a numeric character followed by a . (period).</p>
+<p>Ordered lists require a numeric character followed by a . (period).</p>
 <ol>
-<li>Item one</li>
-<li>Item two </li>
-<li><p>Item three</p>
-<pre><code>1. Item one
-1. Item two 
-1. Item three
-</code></pre></li>
+<li>
+<p>Item one</p>
+</li>
+<li>
+<p>Item two</p>
+</li>
+<li>
+<p>Item three</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9"> 1. Item one</span></span>
+<span class="line"><span style="color: #c9d1d9"> 1. Item two </span></span>
+<span class="line"><span style="color: #c9d1d9"> 1. Item three</span></span></code></pre>
+</li>
 </ol>
 <p>Notice the actual value of the number doesn’t matter in the list result. However, for readability better to use this markup:</p>
-<pre><code>1. Item one
-2. Item two 
-3. Item three
-</code></pre><p>Lists can be embedded in lists. List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">	1. Item one</span></span>
+<span class="line"><span style="color: #c9d1d9">	2. Item two </span></span>
+<span class="line"><span style="color: #c9d1d9">	3. Item three</span></span>
+<span class="line"><span style="color: #c9d1d9">	</span></span></code></pre>
+<p>Lists can be embedded in lists. List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:</p>
 <ul>
-<li>Red </li>
+<li>Red</li>
 </ul>
 <ul>
-<li>Green <ul>
-<li>dark  green </li>
-<li>lime    </li>
+<li>Green
+<ul>
+<li>dark  green</li>
+<li>lime</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p>Blue        </p>
+<li>Blue
 <ol>
-<li>Item one<ol>
-<li>subitem 1 </li>
+<li>
+<p>Item one</p>
+<ol>
+<li>subitem 1</li>
 <li>subitem 2</li>
 </ol>
 </li>
-<li><p>Item two </p>
-<p> This is is a first paragraph. </p>
+<li>
+<p>Item two</p>
+<p>This is is a first paragraph.</p>
 <ul>
-<li>Green </li>
-<li><p>Blue</p>
+<li>Green</li>
+<li>Blue</li>
+</ul>
 <p>This is a second paragraph.</p>
 </li>
-</ul>
-</li>
-<li><p>Item three</p>
+<li>
+<p>Item three</p>
 </li>
 </ol>
 </li>
 </ul>
 <p>The code for these embedded lists or paragraphs is:</p>
-<pre><code>* Red 
-+ Green 
-    * dark  green 
-    * lime    
-- Blue        
-    1. Item one
-        1. subitem 1
-        1. subitem 2
-    1. Item two 
-
-        This is is a first paragraph. 
-
-        * Green 
-        * Blue
-
-        This is a second paragraph.
-
-    1. Item three
-</code></pre><p>You can also embed blockquotes in a list.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">		* Red </span></span>
+<span class="line"><span style="color: #c9d1d9">		+ Green </span></span>
+<span class="line"><span style="color: #c9d1d9">			* dark  green </span></span>
+<span class="line"><span style="color: #c9d1d9">			* lime	</span></span>
+<span class="line"><span style="color: #c9d1d9">		- Blue		</span></span>
+<span class="line"><span style="color: #c9d1d9">			1. Item one</span></span>
+<span class="line"><span style="color: #c9d1d9">				1. subitem 1</span></span>
+<span class="line"><span style="color: #c9d1d9">				1. subitem 2</span></span>
+<span class="line"><span style="color: #c9d1d9">			1. Item two </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">				This is is a first paragraph. </span></span>
+<span class="line"><span style="color: #c9d1d9">	</span></span>
+<span class="line"><span style="color: #c9d1d9">				* Green </span></span>
+<span class="line"><span style="color: #c9d1d9">				* Blue</span></span>
+<span class="line"><span style="color: #c9d1d9">	</span></span>
+<span class="line"><span style="color: #c9d1d9">				This is a second paragraph.</span></span>
+<span class="line"><span style="color: #c9d1d9">	</span></span>
+<span class="line"><span style="color: #c9d1d9">			1. Item three</span></span></code></pre>
+<p>You can also embed blockquotes in a list.</p>
 <ul>
-<li>Green<blockquote>
+<li>Green</li>
+</ul>
+<blockquote>
 <p>What is this?  It is embedded blockquote.  Mix ‘em and match ‘em.</p>
 </blockquote>
+<ul>
+<li>
+<p>Blue</p>
 </li>
-<li>Blue</li>
-<li><p>Red</p>
-<pre><code>* Green
-&gt; What is this?  It is embedded blockquote.  Mix &apos;em and match &apos;em.
-* Blue
-* Red
-</code></pre></li>
+<li>
+<p>Red</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">  * Green</span></span>
+<span class="line"><span style="color: #c9d1d9">  > What is this?  It is embedded blockquote.  Mix 'em and match 'em.</span></span>
+<span class="line"><span style="color: #c9d1d9">  * Blue</span></span>
+<span class="line"><span style="color: #c9d1d9">  * Red</span></span></code></pre>
+</li>
 </ul>
-<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><p>Bitbucket does not support <code>&lt;html&gt;</code> so you need to use the - (dash) and the | (pipe) symbols to construct a table. The first line contains column headers. Separate columns with the pipe symbol.</p>
+<h2 id="tables">Tables</h2>
+<p>Bitbucket does not support <code>&#x3C;html></code> so you need to use the - (dash) and the | (pipe) symbols to construct a table. The first line contains column headers. Separate columns with the pipe symbol.</p>
 <p>The  second line must be a mandatory separator line between the headers and the content. Subsequent lines are table rows. Columns are always separated by the pipe (|) character.  For example this table:</p>
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody>
-</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>First Header</th><th>Second Header</th></tr></thead><tbody><tr><td>Content Cell</td><td>Content Cell</td></tr><tr><td>Content Cell</td><td>Content Cell</td></tr></tbody></table>
 <p>Comes from this code:</p>
-<pre><code>First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-</code></pre><p>You can only put simple lines in a table.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">First Header  | Second Header</span></span>
+<span class="line"><span style="color: #c9d1d9">------------- | -------------</span></span>
+<span class="line"><span style="color: #c9d1d9">Content Cell  | Content Cell</span></span>
+<span class="line"><span style="color: #c9d1d9">Content Cell  | Content Cell</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span></code></pre>
+<p>You can only put simple lines in a table.</p>
 <p>You can specify alignment for each column by adding colons to separator lines. A colon at the left of the separator line, left-aligns the column. A colon on the right, right-aligns the column. Add colons to both sides to center the column is center-aligned.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">Right</th>
-<th style="text-align:left">Left</th>
-<th style="text-align:center">Center </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">Computer</td>
-<td style="text-align:left">$1600</td>
-<td style="text-align:center">one</td>
-</tr>
-<tr>
-<td style="text-align:right">Phone</td>
-<td style="text-align:left">$12</td>
-<td style="text-align:center">three</td>
-</tr>
-<tr>
-<td style="text-align:right">Pipe</td>
-<td style="text-align:left">$1</td>
-<td style="text-align:center">eleven</td>
-</tr>
-</tbody>
-</table>
-<pre><code>Right     | Left   | Center 
----------:| :----- |:-----:
-Computer  |  $1600 | one
-Phone     |    $12 | three
-Pipe      |     $1 | eleven
-</code></pre><p>You can apply inline formatting (span-level changes such as fonts or links) to the content of each cell using regular Markdown syntax:</p>
-<table>
-<thead>
-<tr>
-<th>Function name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>help()</code></td>
-<td>Display the <strong>help</strong> window.</td>
-</tr>
-<tr>
-<td><code>destroy()</code></td>
-<td><strong>Destroy your computer!</strong></td>
-</tr>
-</tbody>
-</table>
-<pre><code>| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the __help__ window.   |
-| `destroy()`   | **Destroy your computer!**     |
-</code></pre><hr>
-<h2 id="Code-and-Syntax-highlighting"><a href="#Code-and-Syntax-highlighting" class="headerlink" title="Code and Syntax highlighting"></a>Code and Syntax highlighting</h2><p>Pre-formatted code blocks are used for writing about programming or markup source code. Rather than forming normal paragraphs, the code block linesare interpreted literally.  Markdown wraps a code block in both <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="right">Right</th><th align="left">Left</th><th align="center">Center</th></tr></thead><tbody><tr><td align="right">Computer</td><td align="left">$1600</td><td align="center">one</td></tr><tr><td align="right">Phone</td><td align="left">$12</td><td align="center">three</td></tr><tr><td align="right">Pipe</td><td align="left">$1</td><td align="center">eleven</td></tr></tbody></table>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">Right     | Left   | Center </span></span>
+<span class="line"><span style="color: #c9d1d9">---------:| :----- |:-----:</span></span>
+<span class="line"><span style="color: #c9d1d9">Computer  |  $1600 | one</span></span>
+<span class="line"><span style="color: #c9d1d9">Phone     |    $12 | three</span></span>
+<span class="line"><span style="color: #c9d1d9">Pipe      |     $1 | eleven</span></span></code></pre>
+<p>You can apply inline formatting (span-level changes such as fonts or links) to the content of each cell using regular Markdown syntax:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Function name</th><th>Description</th></tr></thead><tbody><tr><td><code>help()</code></td><td>Display the <strong>help</strong> window.</td></tr><tr><td><code>destroy()</code></td><td><strong>Destroy your computer!</strong></td></tr></tbody></table>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">| Function name | Description                    |</span></span>
+<span class="line"><span style="color: #c9d1d9">| ------------- | ------------------------------ |</span></span>
+<span class="line"><span style="color: #c9d1d9">| `help()`      | Display the __help__ window.   |</span></span>
+<span class="line"><span style="color: #c9d1d9">| `destroy()`   | **Destroy your computer!**     |</span></span></code></pre>
+<hr>
+<h2 id="code-and-syntax-highlighting">Code and Syntax highlighting</h2>
+<p>Pre-formatted code blocks are used for writing about programming or markup source code. Rather than forming normal paragraphs, the code block linesare interpreted literally.  Markdown wraps a code block in both <code>&#x3C;pre></code> and <code>&#x3C;code></code> tags.</p>
 <p>To produce a code block in Markdown, indent every line of the block by at least 4 spaces or 1 tab. For :</p>
 <p>This is a normal paragraph:</p>
-<pre><code>This is a code block.
-</code></pre><p>The code reveals the indentation.</p>
-<pre><code>This is a normal paragraph:
-
-    This is a code block.
-</code></pre><p>A code block continues until it reaches a line that is not indented (or the end of the page).</p>
-<p>Within a code block, &amp; (ampersands) and &lt; &gt; (angle brackets) are automatically converted into HTML entities. This makes it very easy to include example HTML source code using Markdown â€” just paste it and indent it. Markdown will handle the hassle of encoding the ampersands and angle brackets. For example, this:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">This is a code block.</span></span></code></pre>
+<p>The code reveals the indentation.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">	This is a normal paragraph:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">		This is a code block.</span></span></code></pre>
+<p>A code block continues until it reaches a line that is not indented (or the end of the page).</p>
+<p>Within a code block, &#x26; (ampersands) and &#x3C; > (angle brackets) are automatically converted into HTML entities. This makes it very easy to include example HTML source code using Markdown â€” just paste it and indent it. Markdown will handle the hassle of encoding the ampersands and angle brackets. For example, this:</p>
 <p>Here is an example of AppleScript:</p>
-
-<pre><code>&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;
-</code></pre><p>To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">&#x3C;p>Here is an example of AppleScript:&#x3C;/p></span></span></code></pre>
+<p>To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:</p>
 <p>You can also highlight snippets of text (Bitbucket uses the excellent [Pygments][] library) to allow you to use code highlighting  Here’s an example of some Python code:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!python</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wiki_rocks</span><span class="params">(text)</span>:</span> formatter = <span class="keyword">lambda</span> t: <span class="string">"funky"</span>+t <span class="keyword">return</span> formatter(text)</span><br></pre></td></tr></table></figure>
-<p>To do this, do not indent the block. Start the block with <code>``</code> ` three ticks. Then, provide the comment with the type of syntax you are using.  There is a [the vast library of Pygment lexers][lexers]. Bitbucket accepts the ‘short name’ or the ‘mimetype’ of anything in there.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">#!python</span></span>
+<span class="line"><span style="color: #c9d1d9">#</span></span>
+<span class="line"><span style="color: #c9d1d9">def wiki_rocks(text): formatter = lambda t: "funky"+t return formatter(text) 		</span></span></code></pre>
+<p>To do this, do not indent the block. Start the block with <code>```</code> three ticks. Then, provide the comment with the type of syntax you are using.  There is a [the vast library of Pygment lexers][lexers]. Bitbucket accepts the ‘short name’ or the ‘mimetype’ of anything in there.</p>
 <p>You can also use a fence style for code.</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This <span class="built_in">is</span> a code <span class="built_in">block</span>, fenced-<span class="built_in">style</span></span><br></pre></td></tr></table></figure>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">This is a code block, fenced-style</span></span></code></pre>
 <p>Which you create with this code:</p>
-<pre><code><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This <span class="built_in">is</span> a code <span class="built_in">block</span>, fenced-<span class="built_in">style</span></span><br></pre></td></tr></table></figure>
-</code></pre><p>See [Michel Fortin’s blog][extra] to try out more examples of this coding style. Not everything he demos is guaranteed to work though.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">~~~~</span></span>
+<span class="line"><span style="color: #c9d1d9">This is a code block, fenced-style</span></span>
+<span class="line"><span style="color: #c9d1d9">~~~~</span></span></code></pre>
+<p>See [Michel Fortin’s blog][extra] to try out more examples of this coding style. Not everything he demos is guaranteed to work though.</p>
 <hr>
-<h1 id="Horizontal-Rules"><a href="#Horizontal-Rules" class="headerlink" title="Horizontal Rules"></a>Horizontal Rules</h1><p>You can produce a horizontal line with any of the following codes:</p>
-<pre><code>* * *
+<h1 id="horizontal-rules">Horizontal Rules</h1>
+<p>You can produce a horizontal line with any of the following codes:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">* * *</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">***</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">*****</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">- - - -</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">-----------------------</span></span></code></pre>
+            </article>
+            <div class="col-xs-6">
+                <section class="pull-right">
+                    <h5>Share this post</h5>
+                    <a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2015/06/20/Getting-Started-With-Markdown"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2015/06/20/Getting-Started-With-Markdown&amp;text=Getting Started With Markdown&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2015/06/20/Getting-Started-With-Markdown"><span class="hidden">Facebook</span></a>
+                </section>
+            </div>
+            <div class="col-xs-6">
+                <ul class="list-inline"><li><a href="/about" alt="About"><img class="blog-logo img-responsive" width="75" height="89" src="/about/stvansolano_card.webp" alt="My photo"/></a></li><li><a href="/about" alt="About MS MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/ms-mvp-logo.webp" alt="MS MVP logo"/></a></li><li><a href="/about" alt="About Xamarin MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/mvp-logo.webp" alt="MVP logo"/></a></li></ul>
+            </div>
 
-***
-
-*****
-
-- - - -
-
------------------------
-</code></pre>  
-    </p>
-    <section class="post-footer">
-      <section class="row-fluid">
-    <ul class="pager" role="pagination">
-        
-        
-        <li class="previous">
-            <a href="/2015/08/17/XamarinTestCloudSeries/">
-                ← Get started with Xamarin Test&hellip;
-            </a>
-        </li>
-        
-        
-        
-        
-    </ul>
-</section>
-      
-      <section class="row-fluid">
-        <h3>Share this post</h3>
-        
- <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/&text=Getting Started With Markdown&via=stvansolano"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-     <span class="hidden">Twitter</span>
- </a>
- <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-     <span class="hidden">Facebook</span>
- </a>
- <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2015/06/20/Getting-Started-With-Markdown/"
-    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-     <span class="hidden">Google+</span>
- </a>
-
-      </section>
-      
-      <ul class="list-inline"> 
-    <li>
-        <a href="/about">
-        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
-        </a>
-    </li>
-    <li>
-        <a href="https://www.planetxamarin.com" target="_blank">
-            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
-        </a>
-    </li>
-</ul>
-      <section class="row-fluid">
-    <h2>
-        <a href="/about">
-        Esteban Solano G.</a>
-    </h2>
-    <p>
-        Software Engineer at Microsoft | Former MVP, Certified developer
-        <br/>
-        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
-            @stvansolano
-        </a>
-        <br/>
-        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
-        <br/>
-        <a href="/about">More about me</a>
-    </p>    
-</section>
-    </section>
-  </article>
-</main>
-  
-  <footer class="col-xs-12 site-footer">
-  <div class="inner">
-     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
-     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
-  </div>
-</footer>
-</body>
-</html>
+            <section class="col-xs-12"><h2><a class="article-author" href="/about">Esteban Solano Granados</a></h2><p><br/><a href="https://twitter.com/stvansolano">@<!-- -->stvansolano</a><br/><a href="/about">More about me</a></p></section>
+        </main>
+        <section class="col-md-4">
+            <section class="card">
+                <ul class="list-group" data-theme=""><li class="list-group-item list-group-item-info"><h5 class="list-group-item-heading"><i class="fa fa fa-bookmark-o"> </i>Recent posts</h5></li><li class="list-group-item"><a href="/2023/11/18/Resumen-noviembre-2023-Ignite-GitHub-dotNetConf">Resumen - Novedades Microsoft Ignite, GitHub Universe y .NET Conf 2023!</a></li><li class="list-group-item"><a href="/2023/03/24/El-futuro-del-trabajo-presentando-M365-copilot">El futuro del trabajo en 2023 - Presentando Microsoft 365 Copilot</a></li><li class="list-group-item"><a href="/2023/03/24/The-future-of-work-introducing-microsoft-365-copilot">The future of work - Introducing Microsoft 365 Copilot 🤖</a></li><li class="list-group-item"><a href="/2022/09/22/Exam-passed-Microsoft-Azure-Data-Fundamentals-Certification">Exam passed! DP-900: Microsoft Azure Data Fundamentals Certification</a></li><li class="list-group-item"><a href="/2022/06/20/Creating-a-react-app-with-AspNet-Minimal-APIs-and-MongoDb-CosmosDb">Create a React-based app with ASP.NET Minimal APIs and MongoDB storage</a></li><li class="list-group-item"><a href="/2022/05/31/My-favorite-10-announcements-from-Microsoft-Build-2022">My favorite 10 DEV+Cloud announcements from Microsoft Build 2022</a></li><li class="list-group-item"><a href="/2022/03/24/Upgrading-dotnet-5-to-6-using-minimal-apis-and-github-codespaces">Upgrading .NET 5 -&gt; 6 using Minimal APIs, MySQL and GitHub Codespaces</a></li><li class="list-group-item"><a href="/2021/11/20/Exam-passed-Microsoft-Artificial-Intelligence-Fundamentals-AI-900-certification">Exam passed! Microsoft AI Fundamentals AI-900 Certification</a></li><li class="list-group-item"><a href="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers">Playing with .NET 6 preview, C# 10 and Docker</a></li><li class="list-group-item"><a href="/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft">Work at an awesome place. I&#x27;m joining Microsoft!</a></li><li class="list-group-item"><a href="/blog">Read more...</a></li></ul>
+            </section>
+            <section class="card">
+                <section class="card list-group" data-theme=""><a href="#" class="list-group-item active"><h5 class="list-group-item-heading"><i class="fa fa fa-tag"> </i>Browse by tag</h5></a><section class="list-group-item"><a href="/blog/tags/Windows" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Windows</p></a> <a href="/blog/tags/Productividad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productividad</p></a> <a href="/blog/tags/M365" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>M365</p></a> <a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p></a> <a href="/blog/tags/AI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AI</p></a> <a href="/blog/tags/DotNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DotNet</p></a> <a href="/blog/tags/GitHub" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>GitHub</p></a> <a href="/blog/tags/ChatGPT" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ChatGPT</p></a> <a href="/blog/tags/Azure" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Azure</p></a> <a href="/blog/tags/Data" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Data</p></a> <a href="/blog/tags/Exam" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Exam</p></a> <a href="/blog/tags/Certification" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Certification</p></a> <a href="/blog/tags/OSS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OSS</p></a> <a href="/blog/tags/Docker" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Docker</p></a> <a href="/blog/tags/containers" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>containers</p></a> <a href="/blog/tags/REST" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>REST</p></a> <a href="/blog/tags/Codespaces" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Codespaces</p></a> <a href="/blog/tags/React" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>React</p></a> <a href="/blog/tags/Xamarin" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Xamarin</p></a> <a href="/blog/tags/MAUI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MAUI</p></a> <a href="/blog/tags/Kubernetes" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Kubernetes</p></a> <a href="/blog/tags/.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>.NET</p></a> <a href="/blog/tags/Serverless" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Serverless</p></a> <a href="/blog/tags/AspNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AspNet</p></a> <a href="/blog/tags/Conferences" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Conferences</p></a> <a href="/blog/tags/Microsoft" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Microsoft</p></a> <a href="/blog/tags/Career" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Career</p></a> <a href="/blog/tags/FSharp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>FSharp</p></a> <a href="/blog/tags/Speaking" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Speaking</p></a> <a href="/blog/tags/SignalR" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>SignalR</p></a> <a href="/blog/tags/Online" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Online</p></a> <a href="/blog/tags/Comunidad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Comunidad</p></a> <a href="/blog/tags/WebAPI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WebAPI</p></a> <a href="/blog/tags/Mobile" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Mobile</p></a> <a href="/blog/tags/CosmosDB" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CosmosDB</p></a> <a href="/blog/tags/MachineLearning" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MachineLearning</p></a> <a href="/blog/tags/Python" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Python</p></a> <a href="/blog/tags/VisualStudio" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VisualStudio</p></a> <a href="/blog/tags/NetCore" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>NetCore</p></a> <a href="/blog/tags/Google" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Google</p></a> <a href="/blog/tags/DevOps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevOps</p></a> <a href="/blog/tags/WordPress" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WordPress</p></a> <a href="/blog/tags/Productivity" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productivity</p></a> <a href="/blog/tags/Contenedores" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Contenedores</p></a> <a href="/blog/tags/MVPSummit" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVPSummit</p></a> <a href="/blog/tags/Cloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Cloud</p></a> <a href="/blog/tags/OpenSource" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OpenSource</p></a> <a href="/blog/tags/CodeMentor" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CodeMentor</p></a> <a href="/blog/tags/AppCenter" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AppCenter</p></a> <a href="/blog/tags/YouTube" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>YouTube</p></a> <a href="/blog/tags/VS4Mac" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VS4Mac</p></a> <a href="/blog/tags/Taller" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Taller</p></a> <a href="/blog/tags/Charla" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Charla</p></a> <a href="/blog/tags/Git" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Git</p></a> <a href="/blog/tags/MVP" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVP</p></a> <a href="/blog/tags/iOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>iOS</p></a> <a href="/blog/tags/Android" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Android</p></a> <a href="/blog/tags/Freelance" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Freelance</p></a> <a href="/blog/tags/Linux" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Linux</p></a> <a href="/blog/tags/MacOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MacOS</p></a> <a href="/blog/tags/Asp.Net Core" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Asp.Net Core</p></a> <a href="/blog/tags/XamarinDiplomado" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinDiplomado</p></a> <a href="/blog/tags/MVVM" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVVM</p></a> <a href="/blog/tags/Backend" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Backend</p></a> <a href="/blog/tags/Spanish/English" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/English</p></a> <a href="/blog/tags/Meetup" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Meetup</p></a> <a href="/blog/tags/Bootcamp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Bootcamp</p></a> <a href="/blog/tags/DevDays" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevDays</p></a> <a href="/blog/tags/UX / UI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>UX / UI</p></a> <a href="/blog/tags/Realm" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Realm</p></a> <a href="/blog/tags/Rifa" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Rifa</p></a> <a href="/blog/tags/Open Source" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Open Source</p></a> <a href="/blog/tags/ASP.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ASP.NET</p></a> <a href="/blog/tags/Web Apps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web Apps</p></a> <a href="/blog/tags/Web API" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web API</p></a> <a href="/blog/tags/Workshop" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Workshop</p></a> <a href="/blog/tags/XamarinForms" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinForms</p></a> <a href="/blog/tags/Yeoman" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Yeoman</p></a> <a href="/blog/tags/HTML5" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>HTML5</p></a> <a href="/blog/tags/TestCloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>TestCloud</p></a> <a href="/blog/tags/Markdown" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Markdown</p></a> </section></section>
+                <div class="col-md-3 card"><h2>Archives</h2><section><ul class="list-group box-shadow" data-theme=""><li class="list-group-item"><a href="/blog/archives/2022"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2022</p></a></li><li class="list-group-item"><a href="/blog/archives/2021"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2021</p></a></li><li class="list-group-item"><a href="/blog/archives/2020"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2020</p></a></li><li class="list-group-item"><a href="/blog/archives/2019"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2019</p></a></li><li class="list-group-item"><a href="/blog/archives/2018"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2018</p></a></li><li class="list-group-item"><a href="/blog/archives/2017"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2017</p></a></li><li class="list-group-item"><a href="/blog/archives/2016"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2016</p></a></li><li class="list-group-item"><a href="/blog/archives/2015"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2015</p></a></li></ul></section></div>
+            </section>
+        </section>
+    </div>
+    <footer data-theme="" class="col-xs-12 site-footer text-center"><div class="inner"><section class="copyright">Copyright <a href="/about">Esteban Solano Granados</a> © <!-- -->2023<!-- --> • All rights reserved.</section><section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section></div></footer>
+  </body></html>

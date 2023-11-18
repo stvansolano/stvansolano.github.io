@@ -1,168 +1,36 @@
 <!DOCTYPE html>
-<html ng-app="MainApp">
+<html lang="en">
+  <head><link rel="canonical" href="https://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps"/><link rel="publisher" href="https://twitter.com/stvansolano"/><link rel="author" href="https://twitter.com/stvansolano"/><link rel="alternate" type="application/rss+xml" title="Esteban Solano&#x27;s Blog" href="/atom.xml"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="keywords" itemProp="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker"/><title>Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)</title><meta name="title" content="Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)"/><meta name="description" content="¿Eres nuevo en Azure? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con Azure Mobile Apps."/><meta property="og:type" content="website"/><meta property="og:url" content="https://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps"/><meta property="og:title" content="Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)"/><meta property="og:description" content="¿Eres nuevo en Azure? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con Azure Mobile Apps."/><meta property="og:image" itemProp="image" content="https://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview-colored.png"/><meta property="og:site_name" content="stvansolano | Welcome to my blog"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps"/><meta name="twitter:title" content="Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)"/><meta name="twitter:description" content="¿Eres nuevo en Azure? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con Azure Mobile Apps."/><meta name="twitter:image" content="https://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview-colored.png"/><meta name="twitter:site" content="@stvansolano"/><meta name="twitter:creator" content="@stvansolano"/><link itemProp="thumbnailUrl" href="https://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview-colored.png"/><meta property="og:image:width" content="600"/><meta property="og:image:height" content="300"/><meta property="article:publisher" content="https://twitter.com/stvansolano"/><meta property="article:section" content="Blog"/><meta property="article:published_time" content="1480550400000"/><meta http-equiv="Content-Type" content="text/html" charSet="UTF-8"/><meta name="generator" content="stvansolano | Welcome to my blog"/><link async="" rel="stylesheet" type="text/css" href="/main.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QNLS5Q61WF"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<head>
-  <link rel="canonical" href="http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/" />
-  <link rel="publisher" href="https://twitter.com/stvansolano"/>
-  <link rel="author" href="https://twitter.com/stvansolano" />
-  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido) | Esteban Solano G.</title>
-  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
-  
- 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)" />
-  <meta property="og:description" content="¿Eres nuevo en Azure? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con Azure Mobile Apps." />
-  <meta property="og:url" content="http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/" />
-  <meta property="og:site_name" content="Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)" />
-  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview-colored.png" />
-  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview-colored.png"> 
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="300" />
-  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
-  <meta property="article:tag" content="Xamarin Platform" />
-  <meta property="article:section" content="Blog" />
-  <meta property="article:published_time" content="Thu Dec 01 2016 00:00:00 GMT+0000" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview-colored.png" />
-  <meta name="twitter:url" content="http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/" />
-  <meta name="twitter:site" content="@stvansolano">
-  <meta name="twitter:creator" content="@stvansolano">
-  <meta name="twitter:title" content="Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)" />
-  <meta name="twitter:description" content="¿Eres nuevo en Azure? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con Azure Mobile Apps." />
-
-  <meta name="generator" content="Esteban Solano G.">
-  <link rel="stylesheet" type="text/css" href="/base.css" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme.css" />
-  <link rel="stylesheet" type="text/css" href="/overrides.css" />
-  <script async type="text/javascript" src="/script.min.js"></script>
-
-  
-  
-  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
-  
-  
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64743742-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-  <base href="/" />
-</head>
-<body data-ng-controller="default">
-  <header class="">
-    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
-      <h1 class="text-center">
-          /stvansolano
-      </h1>
-      <section class="social-links text-center">
-        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
-        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
-        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
-        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
-        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
-      </section>
-      <div class="text-center">
-        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
-        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
-          
-          Blog
-          <span class="caret"></span>
-        </button>
-      </div>
-    </nav>
-</header>
-  <section class="col-md-2" data-ng-hide="isCollapsed">
-    <nav class="list-group box-shadow">
-        <a class="list-group-item" href="/">
-            <i class="fa fa-home">&nbsp;</i>
-            Home
-        </a>
-        <a class="list-group-item" href="/blog">
-           <p class="list-group-item-text">
-              <i class="fa fa-bookmark">&nbsp;</i>
-              Blog
-          </p>
-        </a>
-        <a class="list-group-item" href="/community">
-           <p class="list-group-item-text">
-              <i class="fa fa-users">&nbsp;</i>
-              Community
-          </p>
-        </a>
-        <a class="list-group-item" href="/about">
-          <p class="list-group-item-text">
-              <i class="fa fa-code">&nbsp;</i>
-              About    
-          </p>
-        </a>    
-    </nav>
-</section>
-  
-  
-    
-
-
-<main class="content col-sm-10" role="main">
-  <article>
-    <span class="post-meta">
-
-    
-    
-        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
-        </a>
-    
-        <a href="/blog/tags/REST/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>REST</p>
-        </a>
-    
-        <a href="/blog/tags/Mobile/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Mobile</p>
-        </a>
-    
-        <a href="/blog/tags/Azure/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Azure</p>
-        </a>
-    
-        <a href="/blog/tags/Backend/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Backend</p>
-        </a>
-    
-
-</span>
-    <h1 class="post-title">
-      Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)
-    </h1>
-    <p class="content">
-      <p>¿Eres nuevo en <em>Azure</em>? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con <em>Azure Mobile Apps</em>.<br><a id="more"></a></p>
+      gtag('config', 'G-QNLS5Q61WF');
+    </script><base href="/"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/></head>
+  <link rel="stylesheet" href="/_astro/_...slug_.7126134a.css" /><body>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="tS1xK" component-url="/_astro/Nav.4a132ef2.js" component-export="default" renderer-url="/_astro/client.c401bd7c.js" props="{&quot;title&quot;:[0,&quot;Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)&quot;],&quot;page&quot;:[0,{&quot;path&quot;:[0,&quot;/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps&quot;],&quot;canonical_path&quot;:[0,&quot;&quot;],&quot;navigationTitle&quot;:[0,&quot;&quot;],&quot;lang&quot;:[0,&quot;en&quot;],&quot;title&quot;:[0,&quot;Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)&quot;],&quot;layout&quot;:[0,null],&quot;date&quot;:[0,&quot;2016-12-01T00:00:00.000Z&quot;],&quot;header&quot;:[0,{&quot;description&quot;:[0,&quot;¿Eres nuevo en Azure? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con Azure Mobile Apps.&quot;],&quot;optimizedImage&quot;:[0,&quot;~/preview-colored.png&quot;]}],&quot;tags&quot;:[1,&quot;[[0,{\&quot;name\&quot;:[0,\&quot;Azure\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Azure\&quot;],\&quot;title\&quot;:[0,\&quot;Azure\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;Mobile\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Mobile\&quot;],\&quot;title\&quot;:[0,\&quot;Mobile\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;Backend\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Backend\&quot;],\&quot;title\&quot;:[0,\&quot;Backend\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;REST\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/REST\&quot;],\&quot;title\&quot;:[0,\&quot;REST\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;Spanish/Español\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Spanish/Español\&quot;],\&quot;title\&quot;:[0,\&quot;Spanish/Español\&quot;]}]]&quot;],&quot;posts&quot;:[0,null],&quot;tag&quot;:[0,null],&quot;slug&quot;:[0,&quot;2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps&quot;],&quot;prev&quot;:[0,null],&quot;next&quot;:[0,null],&quot;raw&quot;:[0,null],&quot;content&quot;:[0,null],&quot;useLegacyLayout&quot;:[0,null],&quot;rawMarkdown&quot;:[0,null],&quot;thumbnail&quot;:[0,&quot;~/preview-colored.png&quot;],&quot;excerpt&quot;:[0,&quot;¿Eres nuevo en Azure? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con Azure Mobile Apps.&quot;],&quot;permalink&quot;:[0,&quot;https://stvansolano.github.io2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps&quot;]}],&quot;config&quot;:[0,{&quot;title&quot;:[0,&quot;stvansolano | Welcome to my blog&quot;],&quot;subtitle&quot;:[0,&quot;&quot;],&quot;root&quot;:[0,&quot;&quot;],&quot;author&quot;:[0,&quot;Esteban Solano Granados&quot;],&quot;email&quot;:[0,&quot;stvansolano@outlook.com&quot;],&quot;twitter&quot;:[0,&quot;stvansolano&quot;],&quot;parentSite&quot;:[0,&quot;/&quot;],&quot;sitePermalink&quot;:[0,&quot;https://stvansolano.github.io&quot;]}]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:true}" await-children=""><nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top row"><span class="navbar-brand col-md-5"><a class="" href="/"><span><i class="social fa fa-2x fa-code navbar-icon"></i> stvansolano</span></a><a class="social fa fa-2x fa-twitter" rel="noreferrer" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a><a class="social fa fa-2x fa-linkedin" rel="noreferrer" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a><a class="social fa fa-2x fa-github" rel="noreferrer" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a><a class="social fa fa-2x fa-youtube" rel="noreferrer" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a><i class="social fa fa-2x fa-bars fa-bars-icon d-md-none visible"></i></span><ul class="navbar-nav col-md-8 collapse"><li class="nav-item"><a class="nav-link" href="/"><i class="fa fa-home"> </i>Home</a></li><li class="nav-item"><a class="nav-link" href="/blog"><i class="fa fa-bookmark"> </i>Blog</a></li><li class="nav-item"><a class="nav-link" href="/community"><i class="fa fa-users"> </i>Commmunity</a></li><li class="nav-item"><a class="nav-link" href="/about"><i class="fa fa-code"> </i>About</a></li></ul><span class="col-xs-12 hidden"><i class="social fa fa-2x collapse-icon d-md-none fa-angle-up"> </i></span></nav></astro-island>
+    <div class="row after-header">
+        <main class="content col-md-8" role="main">
+            <article class="row">
+                <div class="row"><section class="col-md-8"><div class="article-info-left"><div><a href="/about" class="profile-avatar" alt="Esteban Solano Granados - stvansolano"><img class="decorated" data-src="/about/stvansolano_circle.webp" height="40" width="40" alt="Esteban Solano Granados" src="/about/stvansolano_circle.webp"/></a></div><section><div class="username">By <a href="/about">Esteban Solano Granados</a></div><div><span class="date" data-theme="">Published・<!-- -->December 01, 2016</span><span class="read-time"></span></div></section></div></section><section class="col-md-4" style="margin-bottom:0.5rem"><h5>Share this post</h5><a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps&amp;text=Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps"><span class="hidden">Facebook</span></a></section></div><h1>Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)</h1><span class="post-meta" style="margin-bottom:0.5rem"><a href="/blog/tags/Azure" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Azure</p> </a><a href="/blog/tags/Mobile" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Mobile</p> </a><a href="/blog/tags/Backend" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Backend</p> </a><a href="/blog/tags/REST" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>REST</p> </a><a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p> </a></span>
+                <p>¿Eres nuevo en <em>Azure</em>? ¿Necesitas un backend para tu aplicación móvil? Aquí hay algunas consideraciones clave y consejos para comenzar a desarrollar aplicaciones para móviles con <em>Azure Mobile Apps</em>.</p>
+<!-- more -->
 <p>En un mundo de dispositivos conectados a dispositivos móviles, uno de los componentes principales de la aplicación es el <em>backend</em>, que proporciona seguridad, disponibilidad y escalabilidad de acuerdo con sus necesidades, audiencia y/o capacidades de almacenamiento. En lugar de hacerlo todo en el dispositivo del usuario, tu aplicación puede optar por confiar ciertas responsabilidades como procesos de negocio complejos y tareas que consumen mucho tiempo sin comprometer la seguridad del usuario y la memoria del dispositivo.</p>
-<h2 id="Conoce-Azure-Mobile-Apps"><a href="#Conoce-Azure-Mobile-Apps" class="headerlink" title="Conoce Azure Mobile Apps:"></a>Conoce Azure Mobile Apps:</h2><p><em>Azure Mobile Apps</em> es un conjunto de servicios en la nube que le permite construir y ejecutar rápidamente backends móviles mediante REST y OData a través de un conjunto de SDKs para conectar diferentes tipos de aplicaciones desarrolladas en plataformas y lenguajes de programacion tales como JavaScript, C#, Objective-C, Swift, Cordova y otros mas, de manera que ofrece un amplio abanico de desarrollo en las plataformas web, híbridas y nativo.</p>
-<p><img src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview.png" alt="Azure Apps" title="Azure Mobile Apps"></p>
+<h2 id="conoce-azure-mobile-apps">Conoce Azure Mobile Apps:</h2>
+<p><em>Azure Mobile Apps</em> es un conjunto de servicios en la nube que le permite construir y ejecutar rápidamente backends móviles mediante REST y OData a través de un conjunto de SDKs para conectar diferentes tipos de aplicaciones desarrolladas en plataformas y lenguajes de programacion tales como JavaScript, C#, Objective-C, Swift, Cordova y otros mas, de manera que ofrece un amplio abanico de desarrollo en las plataformas web, híbridas y nativo.</p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/preview.webp" alt="Azure Mobile Apps" title="Azure Mobile Apps">
 <p>Esto es extremadamente importante para las organizaciones que se mueven de entornos <em>on-premises</em> a servicios en la nube y nuevas oportunidades de aplicaciones que requieren soluciones en la nube altamente disponibles y funcionalidades móviles comunes, entre ellas:</p>
 <ul>
 <li>Push notifications</li>
 <li>Disponibilidad fuera de línea</li>
 <li>Integración a redes sociales</li>
 <li>Sincronización fuera de línea</li>
-<li>Autenticación.<br>Y más.</li>
+<li>Autenticación.
+Y más.</li>
 </ul>
-<h2 id="Aplicaciones-conectadas-y-sincronizacion-fuera-de-linea"><a href="#Aplicaciones-conectadas-y-sincronizacion-fuera-de-linea" class="headerlink" title="Aplicaciones conectadas y sincronización fuera de línea."></a>Aplicaciones conectadas y sincronización fuera de línea.</h2><p>Manejar situaciones de dispositivos sin acceso temporal a internet es una característica importante para evitar que tus aplicaciones dejen de funcionar y se vuelvan inútiles para tus usuarios cuando el dispositivo esté desconectado. Aún mejor, un backend poderoso le permite a las aplicaciones ser conscientes de la pérdida de conectividad y sincronizar con su backend cuando la conexión está de vuelta. </p>
-<p>Existen varios productos de la nube que apoyan esta característica incluyendo <a href="http://www.couchbase.com/nosql-databases/couchbase-mobile" target="_blank" rel="noopener">Mobile</a> de CouchBase, Google <a href="https://www.firebase.com/" target="_blank" rel="noopener">Firebase</a>, Amazon <a href="https://aws.amazon.com/es/cognito/" target="_blank" rel="noopener">Cognito</a> y Azure también mediante Mobile Apps, con lo que puedes puede aprovechar las características anteriores y obtener:</p>
+<h2 id="aplicaciones-conectadas-y-sincronización-fuera-de-línea">Aplicaciones conectadas y sincronización fuera de línea.</h2>
+<p>Manejar situaciones de dispositivos sin acceso temporal a internet es una característica importante para evitar que tus aplicaciones dejen de funcionar y se vuelvan inútiles para tus usuarios cuando el dispositivo esté desconectado. Aún mejor, un backend poderoso le permite a las aplicaciones ser conscientes de la pérdida de conectividad y sincronizar con su backend cuando la conexión está de vuelta.</p>
+<p>Existen varios productos de la nube que apoyan esta característica incluyendo <a href="http://www.couchbase.com/nosql-databases/couchbase-mobile">Mobile</a> de CouchBase, Google <a href="https://www.firebase.com/">Firebase</a>, Amazon <a href="https://aws.amazon.com/es/cognito/">Cognito</a> y Azure también mediante Mobile Apps, con lo que puedes puede aprovechar las características anteriores y obtener:</p>
 <ul>
 <li>Sistemas basados en <em>JavaScript / .Net</em> de punta a punta.</li>
 <li>Backends altamente extensibles con <em>Asp.Net Core</em> / <em>NodeJS</em> y sus más recientes características.</li>
@@ -170,165 +38,207 @@
 <li>Extensibilidad local hacia la nube.</li>
 <li>Entre otros.</li>
 </ul>
-<p><strong>Nota:</strong><br>Azure Mobile Apps era anteriormente conocida como <em>Azure Mobile Services</em>, el cual ha cambiado de nombre de estos días para la transición a <em>Azure App Service</em>. Si ya has utilizado Azure Mobile Services, te recomiendo checkear las notas de transición <a href="https://azure.microsoft.com/en-us/blog/transition-of-azure-mobile-services/" target="_blank" rel="noopener">aquí</a>.</p>
-<h2 id="Comenzando-con-Azure-mobile-Apps"><a href="#Comenzando-con-Azure-mobile-Apps" class="headerlink" title="Comenzando con Azure mobile Apps."></a>Comenzando con Azure mobile Apps.</h2><p>Con <em>Azure Mobile Apps</em> puedes crear backends en 2 formas:</p>
+<p><strong>Nota:</strong>
+Azure Mobile Apps era anteriormente conocida como <em>Azure Mobile Services</em>, el cual ha cambiado de nombre de estos días para la transición a <em>Azure App Service</em>. Si ya has utilizado Azure Mobile Services, te recomiendo checkear las notas de transición <a href="https://azure.microsoft.com/en-us/blog/transition-of-azure-mobile-services/">aquí</a>.</p>
+<h2 id="comenzando-con-azure-mobile-apps">Comenzando con Azure mobile Apps.</h2>
+<p>Con <em>Azure Mobile Apps</em> puedes crear backends en 2 formas:</p>
 <ul>
 <li><em>Easy Tables (APIs sin codificación)</em></li>
 <li>Backends completos de <em>Azure Mobile Apps (NodeJS/.Net)</em></li>
 </ul>
 <p>Por acá los pasos para empezar a usar <em>Easy Tables</em> y configurar fácilmente un backend móvil en minutos:</p>
-<h3 id="1-Configura-la-aplicacion-para-moviles-desde-el-portal-de-Azure"><a href="#1-Configura-la-aplicacion-para-moviles-desde-el-portal-de-Azure" class="headerlink" title="1. Configura la aplicación para móviles desde el portal de Azure."></a>1. Configura la aplicación para móviles desde el portal de Azure.</h3><p>Desde Azure Portal puedes ir a <strong> New -&gt; Web + Mobile -&gt; Mobile App </strong> para comenzar a crear tu backend móvil y elegir la URL de Azure pública a utilizar desde tu aplicacion móvil:</p>
-<p><a href="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/1.setup.png"><img src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/1.setup.png" alt="1.setup"></a></p>
-<h3 id="2-Definir-tu-esquema-con-Easy-Tables"><a href="#2-Definir-tu-esquema-con-Easy-Tables" class="headerlink" title="2. Definir tu esquema con Easy Tables."></a>2. Definir tu esquema con <em>Easy Tables</em>.</h3><p>Desde el portal Azure puedes configurar el esquema de tabla rápidamente y definir los campos a ser almacenados:</p>
-<p><a href="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/2.tableSchema.png"><img src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/2.NewTableSettings.png" alt="2.tableSchema"></a></p>
+<h3 id="1-configura-la-aplicación-para-móviles-desde-el-portal-de-azure">1. Configura la aplicación para móviles desde el portal de Azure.</h3>
+<p>Desde Azure Portal puedes ir a ** New -> Web + Mobile -> Mobile App ** para comenzar a crear tu backend móvil y elegir la URL de Azure pública a utilizar desde tu aplicacion móvil:</p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/1.setup.png" alt="The setup" title="The setup">
+<h3 id="2-definir-tu-esquema-con-easy-tables">2. Definir tu esquema con <em>Easy Tables</em>.</h3>
+<p>Desde el portal Azure puedes configurar el esquema de tabla rápidamente y definir los campos a ser almacenados:</p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/2.tableSchema.png" alt="The table schema" title="The table schema">
 <p>Por defecto, las APIs sin código se basan en su propia base de datos, que puedes intercambiar en cualquier otra persistencia <em>SQL/NoSQL</em> de tu elección compatible con Azure.</p>
-<h3 id="3-Utilizacion-mediante-REST"><a href="#3-Utilizacion-mediante-REST" class="headerlink" title="3. Utilizacion mediante REST ."></a>3. Utilizacion mediante <em>REST</em> .</h3><p>Una vez configurado el backend, puedes utilizar tu herramienta de depuración <em>REST</em> favorita para probar tu API sin código y comenzar a usar los verbos <em>GET, PUT, UPDATE y DELETE</em> sobre el backend inmediatamente.</p>
-<p><a href="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/3.PostJSON.png"><img src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/3.PostJSON.png" alt="3.PostJSON"></a></p>
-<p>Asegúrate de incluir el encabezado <em>ZUMO-API-VERSION </em> con la versión correcta (2.0.0) a la herramienta de depuración REST de su elección (yo utilice <em>Postman</em> en este caso).</p>
-<h2 id="Tips-para-conectar-el-backend-con-tu-aplicacion-movil"><a href="#Tips-para-conectar-el-backend-con-tu-aplicacion-movil" class="headerlink" title="Tips para conectar el backend con tu aplicacion movil"></a>Tips para conectar el backend con tu aplicacion movil</h2><ol>
+<h3 id="3-utilizacion-mediante-rest">3. Utilizacion mediante <em>REST</em> .</h3>
+<p>Una vez configurado el backend, puedes utilizar tu herramienta de depuración <em>REST</em> favorita para probar tu API sin código y comenzar a usar los verbos <em>GET, PUT, UPDATE y DELETE</em> sobre el backend inmediatamente.</p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/3.PostJSON.png" alt="The PostJSON" title="The PostJSON">
+<p>Asegúrate de incluir el encabezado *ZUMO-API-VERSION * con la versión correcta (2.0.0) a la herramienta de depuración REST de su elección (yo utilice <em>Postman</em> en este caso).</p>
+<h2 id="tips-para-conectar-el-backend-con-tu-aplicacion-movil">Tips para conectar el backend con tu aplicacion movil</h2>
+<ol>
 <li>Incorporar el SDK adecuado segun la plataforma (<em>Swift</em>, <em>Java</em>, <em>Cordova</em>, <em>Xamarin</em>)</li>
 <li>Configura la instancia de cliente y mapear tus DTO <em>(Data-Transfer Objects u objetos de transferencia de datos)</em></li>
 <li>¡Comienza a usarlo!</li>
 </ol>
-<h3 id="Incorporar-el-SDK-adecuado-segun-la-plataforma"><a href="#Incorporar-el-SDK-adecuado-segun-la-plataforma" class="headerlink" title="- Incorporar el SDK adecuado segun la plataforma"></a>- Incorporar el SDK adecuado segun la plataforma</h3><p><a href="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/package.png"><img src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/package.png" alt="package"></a></p>
-<h3 id="Configura-la-aplicacion-cliente-y-mapear-tus-DTOs"><a href="#Configura-la-aplicacion-cliente-y-mapear-tus-DTOs" class="headerlink" title="- Configura la aplicacion cliente y mapear tus DTOs"></a>- Configura la aplicacion cliente y mapear tus <em>DTOs</em></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> YourNextMobileApp</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">using</span> Microsoft.WindowsAzure.MobileServices;</span><br><span class="line">    <span class="keyword">using</span> Newtonsoft.Json;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Contact</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">    	[JsonProperty]</span><br><span class="line">    	<span class="keyword">public</span> <span class="built_in">string</span> Id &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    	[JsonProperty]</span><br><span class="line">    	<span class="keyword">public</span> <span class="built_in">string</span> Name &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    	[JsonProperty]</span><br><span class="line">    	<span class="keyword">public</span> <span class="built_in">string</span> Phone &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    	[Version] </span><br><span class="line">    	<span class="keyword">public</span> <span class="built_in">string</span> Version &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Tip-Puedes-abstraer-el-uso-de-Azure-Mobile-Apps-con-tu-propia-interfaz-ICloudService-y-utilizarlo-a-traves-de-tu-aplicacion"><a href="#Tip-Puedes-abstraer-el-uso-de-Azure-Mobile-Apps-con-tu-propia-interfaz-ICloudService-y-utilizarlo-a-traves-de-tu-aplicacion" class="headerlink" title="- Tip: Puedes abstraer el uso de Azure Mobile Apps con tu propia interfaz ICloudService y utilizarlo a traves de tu aplicación."></a>- Tip: Puedes abstraer el uso de <em>Azure Mobile Apps</em> con tu propia interfaz <em>ICloudService</em> y utilizarlo a traves de tu aplicación.</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> interface ICloudService</span><br><span class="line">&#123;</span><br><span class="line">    Repository&lt;Contact&gt; Contacts &#123; <span class="built_in">get</span>; &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Initialize</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AzureCloudService</span> :</span> ICloudService</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> IMobileServiceClient _client;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Repository&lt;Contact&gt; Contacts &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Initialize</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        _client = <span class="keyword">new</span> MobileServiceClient(APP.KEYS.BACKEND_URL);</span><br><span class="line"></span><br><span class="line">        Contacts = <span class="keyword">new</span> Repository&lt;Contact&gt;(_client);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="--incorporar-el-sdk-adecuado-segun-la-plataforma">- Incorporar el SDK adecuado segun la plataforma</h3>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/package.png" alt="The package" title="The package">
+<h3 id="--configura-la-aplicacion-cliente-y-mapear-tus-dtos">- Configura la aplicacion cliente y mapear tus <em>DTOs</em></h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">namespace</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">YourNextMobileApp</span></span>
+<span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">using</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Microsoft</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">WindowsAzure</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">MobileServices</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">using</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Newtonsoft</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">Json</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">class</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Contact</span></span>
+<span class="line"><span style="color: #C9D1D9">    {</span></span>
+<span class="line"><span style="color: #C9D1D9">    	[</span><span style="color: #FFA657">JsonProperty</span><span style="color: #C9D1D9">]</span></span>
+<span class="line"><span style="color: #C9D1D9">    	</span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">string</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Id</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; </span><span style="color: #FF7B72">set</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    	[</span><span style="color: #FFA657">JsonProperty</span><span style="color: #C9D1D9">]</span></span>
+<span class="line"><span style="color: #C9D1D9">    	</span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">string</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Name</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; </span><span style="color: #FF7B72">set</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    	[</span><span style="color: #FFA657">JsonProperty</span><span style="color: #C9D1D9">]</span></span>
+<span class="line"><span style="color: #C9D1D9">    	</span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">string</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Phone</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; </span><span style="color: #FF7B72">set</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    	[</span><span style="color: #FFA657">Version</span><span style="color: #C9D1D9">] </span></span>
+<span class="line"><span style="color: #C9D1D9">    	</span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">string</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Version</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; </span><span style="color: #FF7B72">set</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"><span style="color: #C9D1D9">    }</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<h3 id="--tip-puedes-abstraer-el-uso-de-azure-mobile-apps-con-tu-propia-interfaz-icloudservice-y-utilizarlo-a-traves-de-tu-aplicación">- Tip: Puedes abstraer el uso de <em>Azure Mobile Apps</em> con tu propia interfaz <em>ICloudService</em> y utilizarlo a traves de tu aplicación.</h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">interface</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">ICloudService</span></span>
+<span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FFA657">Repository</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">Contact</span><span style="color: #C9D1D9">> </span><span style="color: #FFA657">Contacts</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">void</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">Initialize</span><span style="color: #C9D1D9">();</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span></span>
+<span class="line"><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">class</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">AzureCloudService</span><span style="color: #C9D1D9"> : </span><span style="color: #FFA657">ICloudService</span></span>
+<span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">private</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">IMobileServiceClient</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">_client</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Repository</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">Contact</span><span style="color: #C9D1D9">> </span><span style="color: #FFA657">Contacts</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; </span><span style="color: #FF7B72">set</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    </span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">void</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">Initialize</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">    {</span></span>
+<span class="line"><span style="color: #C9D1D9">        _client </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">MobileServiceClient</span><span style="color: #C9D1D9">(APP.KEYS.BACKEND_URL);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">        Contacts </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Repository</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">Contact</span><span style="color: #C9D1D9">>(_client);</span></span>
+<span class="line"><span style="color: #C9D1D9">    }</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
 <p>Al abstraer el uso de Azure se hace mas fácil simular y reducir dependencias del mismo en tu aplicacion.</p>
-<h3 id="Ampliando-el-uso-del-Patron-Repository"><a href="#Ampliando-el-uso-del-Patron-Repository" class="headerlink" title="- Ampliando el uso del Patron Repository"></a>- Ampliando el uso del Patron <em>Repository</em></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> YourNextMobileApp</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">using</span> Microsoft.WindowsAzure.MobileServices;</span><br><span class="line">    <span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line">    <span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line">    <span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Repository</span>&lt;T&gt;</span></span><br><span class="line"><span class="class">    	<span class="title">where</span> <span class="title">T</span> :</span> <span class="class"><span class="keyword">class</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        IMobileServiceClient _proxy;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">protected</span> IMobileServiceTable&lt;T&gt; Table &#123; <span class="built_in">get</span>; <span class="keyword">private</span> <span class="built_in">set</span>; &#125;</span><br><span class="line">        <span class="keyword">protected</span> Logger Logger &#123; <span class="built_in">get</span>; <span class="built_in">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Repository</span><span class="params">(IMobileServiceClient proxy)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            _proxy = proxy;</span><br><span class="line">            Table = _proxy.GetTable&lt;T&gt;();</span><br><span class="line"></span><br><span class="line">            Logger = <span class="keyword">new</span> Logger();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> async <span class="built_in">Task</span>&lt;IEnumerable&lt;T&gt;&gt; <span class="title">Get</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            var empty = <span class="keyword">new</span> T[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> await Table.ToEnumerableAsync();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                Logger.Trace(ex);</span><br><span class="line">                <span class="keyword">return</span> empty;</span><br><span class="line">            &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="--ampliando-el-uso-del-patron-repository">- Ampliando el uso del Patron <em>Repository</em></h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">namespace</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">YourNextMobileApp</span></span>
+<span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">using</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Microsoft</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">WindowsAzure</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">MobileServices</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">using</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">System</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">Collections</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">Generic</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">using</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">System</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">Threading</span><span style="color: #C9D1D9">.</span><span style="color: #FFA657">Tasks</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">using</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">System</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    </span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">class</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Repository</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">T</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    	</span><span style="color: #FF7B72">where</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">T</span><span style="color: #C9D1D9"> : </span><span style="color: #FF7B72">class</span></span>
+<span class="line"><span style="color: #C9D1D9">    {</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FFA657">IMobileServiceClient</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">_proxy</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">protected</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">IMobileServiceTable</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">T</span><span style="color: #C9D1D9">> </span><span style="color: #FFA657">Table</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; </span><span style="color: #FF7B72">private</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">set</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">protected</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Logger</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Logger</span><span style="color: #C9D1D9"> { </span><span style="color: #FF7B72">get</span><span style="color: #C9D1D9">; </span><span style="color: #FF7B72">set</span><span style="color: #C9D1D9">; }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">        </span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">Repository</span><span style="color: #C9D1D9">(</span><span style="color: #FFA657">IMobileServiceClient</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">proxy</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"><span style="color: #C9D1D9">        {</span></span>
+<span class="line"><span style="color: #C9D1D9">            _proxy </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> proxy;</span></span>
+<span class="line"><span style="color: #C9D1D9">            Table </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> _proxy.</span><span style="color: #D2A8FF">GetTable</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">T</span><span style="color: #C9D1D9">>();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">            Logger </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Logger</span><span style="color: #C9D1D9">();</span></span>
+<span class="line"><span style="color: #C9D1D9">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">public</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">async</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">Task</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">IEnumerable</span><span style="color: #C9D1D9">&#x3C;</span><span style="color: #FFA657">T</span><span style="color: #C9D1D9">>> </span><span style="color: #D2A8FF">Get</span><span style="color: #C9D1D9">() </span></span>
+<span class="line"><span style="color: #C9D1D9">        {</span></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FF7B72">var</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">empty</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">T</span><span style="color: #C9D1D9">[</span><span style="color: #79C0FF">0</span><span style="color: #C9D1D9">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FF7B72">try</span></span>
+<span class="line"><span style="color: #C9D1D9">            {</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #FF7B72">return</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">await</span><span style="color: #C9D1D9"> Table.</span><span style="color: #D2A8FF">ToEnumerableAsync</span><span style="color: #C9D1D9">();</span></span>
+<span class="line"><span style="color: #C9D1D9">            }</span></span>
+<span class="line"><span style="color: #C9D1D9">            </span><span style="color: #FF7B72">catch</span><span style="color: #C9D1D9"> (</span><span style="color: #FFA657">Exception</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">ex</span><span style="color: #C9D1D9">)</span></span>
+<span class="line"><span style="color: #C9D1D9">            {</span></span>
+<span class="line"><span style="color: #C9D1D9">                Logger.</span><span style="color: #D2A8FF">Trace</span><span style="color: #C9D1D9">(ex);</span></span>
+<span class="line"><span style="color: #C9D1D9">                </span><span style="color: #FF7B72">return</span><span style="color: #C9D1D9"> empty;</span></span>
+<span class="line"><span style="color: #C9D1D9">            }</span></span>
+<span class="line"><span style="color: #C9D1D9">       }</span></span>
+<span class="line"><span style="color: #C9D1D9">    }</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
 <p>Con esto puedes heredar hacia classes <em>Repository</em> para utilizar sus instancias a lo largo de tu aplicación y de una manera ordenada.</p>
-<h3 id="Tip-Manteniendo-tus-apps-respondiendo-con-llamadas-async-asincronas"><a href="#Tip-Manteniendo-tus-apps-respondiendo-con-llamadas-async-asincronas" class="headerlink" title="- Tip: Manteniendo tus apps respondiendo con llamadas async (asincronas)"></a>- Tip: Manteniendo tus apps respondiendo con llamadas <em>async</em> (asincronas)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> async <span class="keyword">void</span> <span class="title">FetchAsync</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    var result = await Repository.Get();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (result.Any())</span><br><span class="line">    &#123;</span><br><span class="line">    	foreach (Contact singleItem in result)</span><br><span class="line">    	&#123;</span><br><span class="line">            _observable.Add(<span class="keyword">new</span> ContactViewModel (singleItem));</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Demo-Obteniendo-los-datos-Android-Google-Maps"><a href="#Demo-Obteniendo-los-datos-Android-Google-Maps" class="headerlink" title="- Demo: Obteniendo los datos (Android / Google Maps)"></a>- Demo: Obteniendo los datos (Android / Google Maps)</h3><p><a href="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/demo.png"><img src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/demo.png" alt="demo"></a></p>
-<h2 id="Easy-Tables-vrs-Azure-Mobile-Apps-Cuando-elegir"><a href="#Easy-Tables-vrs-Azure-Mobile-Apps-Cuando-elegir" class="headerlink" title="Easy Tables vrs. Azure Mobile Apps - Cuando elegir?"></a><em>Easy Tables vrs. Azure Mobile Apps</em> - Cuando elegir?</h2><p>Mientras las <em>Easy Tables</em> de Azure son rápidas y poderosas, el backend obtenido usualmente es una implementación <em>NodeJS</em>, la cual no debe preocuparte a menos que quieras extenderla utilizando <em>JavaScript</em>. Alternativamente, puedes proveer tu propio backend basado en C# utilizando el SDK respectivo y las herramientas de Azure para extender la implementación de tu API segun lo necesites. </p>
+<h3 id="--tip-manteniendo-tus-apps-respondiendo-con-llamadas-async-asincronas">- Tip: Manteniendo tus apps respondiendo con llamadas <em>async</em> (asincronas)</h3>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">private</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">async</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">void</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">FetchAsync</span><span style="color: #C9D1D9">()</span></span>
+<span class="line"><span style="color: #C9D1D9">{</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">var</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">result</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">await</span><span style="color: #C9D1D9"> Repository.</span><span style="color: #D2A8FF">Get</span><span style="color: #C9D1D9">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">if</span><span style="color: #C9D1D9"> (result.</span><span style="color: #D2A8FF">Any</span><span style="color: #C9D1D9">())</span></span>
+<span class="line"><span style="color: #C9D1D9">    {</span></span>
+<span class="line"><span style="color: #C9D1D9">    	</span><span style="color: #FF7B72">foreach</span><span style="color: #C9D1D9"> (</span><span style="color: #FFA657">Contact</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">singleItem</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">in</span><span style="color: #C9D1D9"> result)</span></span>
+<span class="line"><span style="color: #C9D1D9">    	{</span></span>
+<span class="line"><span style="color: #C9D1D9">            _observable.</span><span style="color: #D2A8FF">Add</span><span style="color: #C9D1D9">(</span><span style="color: #FF7B72">new</span><span style="color: #C9D1D9"> </span><span style="color: #FFA657">ContactViewModel</span><span style="color: #C9D1D9"> (singleItem));</span></span>
+<span class="line"><span style="color: #C9D1D9">    	}</span></span>
+<span class="line"><span style="color: #C9D1D9">    }</span></span>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<h3 id="--demo-obteniendo-los-datos-android--google-maps">- Demo: Obteniendo los datos (Android / Google Maps)</h3>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/demo.png" alt="Demo" title="Demo">
+<h2 id="easy-tables-vrs-azure-mobile-apps---cuando-elegir"><em>Easy Tables vrs. Azure Mobile Apps</em> - Cuando elegir?</h2>
+<p>Mientras las <em>Easy Tables</em> de Azure son rápidas y poderosas, el backend obtenido usualmente es una implementación <em>NodeJS</em>, la cual no debe preocuparte a menos que quieras extenderla utilizando <em>JavaScript</em>. Alternativamente, puedes proveer tu propio backend basado en C# utilizando el SDK respectivo y las herramientas de Azure para extender la implementación de tu API segun lo necesites.</p>
 <p>Por aqui algunas consideraciones clave para elegir entre Azure Easy Tables y Azure Mobile Apps con un backend de .Net / NodeJS:</p>
-<h3 id="Los-“Pros”-de-usar-Easy-Tables"><a href="#Los-“Pros”-de-usar-Easy-Tables" class="headerlink" title="+ Los “Pros” de usar Easy Tables:"></a>+ Los “Pros” de usar Easy Tables:</h3><ul>
+<h3 id="-los-pros-de-usar-easy-tables">+ Los “Pros” de usar Easy Tables:</h3>
+<ul>
 <li>Se basan en la nube de Azure con mínima configuración y codificación.</li>
 <li>Backends rápidos en marcha en cuestion de minutos.</li>
 <li>Rapidamente puedes salta a codificar con el SDK y obtener mas funcionalidades en tu lenguaje de programacion favorito.</li>
 <li>Recomendado para scenarios <em>App-first</em> para enfocarte en el producto primero con dependencias minimas.</li>
 </ul>
-<h3 id="Los-“Contras”-de-usar-Easy-Tables"><a href="#Los-“Contras”-de-usar-Easy-Tables" class="headerlink" title="- Los “Contras” de usar Easy Tables:"></a>- Los “Contras” de usar Easy Tables:</h3><ul>
+<h3 id="--los-contras-de-usar-easy-tables">- Los “Contras” de usar Easy Tables:</h3>
+<ul>
 <li>Poca o nula codificación y lógica mínima personalizable.</li>
 <li>Podria hacer tu aplicacion con alto procesamiento del lado del cliente.</li>
 <li>Relaciones entre los objetos no pueden (ni deberían) ser manejadas con Easy Tables.</li>
 <li>Si necesitas operaciones extra o personalizar la logica podran requerir ajustes en el backend NodeJS (<em>JavaScript</em>).</li>
 </ul>
 <p>Por otro lado, un backend de Azure Mobile App te permite traer capas de lógica adicionales que se pueden ampliar con su propio código de backend con mediante <em>NodeJS / Asp.Net Core</em> y hospedarlo de igual forma en Azure.</p>
-<h3 id="Los-“Pros”-de-las-implementaciones-moviles-con-Azure"><a href="#Los-“Pros”-de-las-implementaciones-moviles-con-Azure" class="headerlink" title="+ Los “Pros” de las implementaciones móviles con Azure:"></a>+ Los “Pros” de las implementaciones móviles con Azure:</h3><ul>
+<h3 id="-los-pros-de-las-implementaciones-móviles-con-azure">+ Los “Pros” de las implementaciones móviles con Azure:</h3>
+<ul>
 <li>Permite construir tu propio backend con todo el poder de la nube de Azure.</li>
 <li>Soporta las últimas características de Asp.Net Core / NodeJS fuera de la caja.</li>
 <li>Servicios integrados y extensibles en la nube.</li>
 </ul>
-<h3 id="Los-“Contras”-de-las-implementaciones-de-Azure-en-backends-moviles"><a href="#Los-“Contras”-de-las-implementaciones-de-Azure-en-backends-moviles" class="headerlink" title="- Los “Contras” de las implementaciones de Azure en backends móviles:"></a>- Los “Contras” de las implementaciones de Azure en backends móviles:</h3><ul>
+<h3 id="--los-contras-de-las-implementaciones-de-azure-en-backends-móviles">- Los “Contras” de las implementaciones de Azure en backends móviles:</h3>
+<ul>
 <li>Algunas funcionalidades de los SDKs estan sujetas a codificacion o cambios segun la version de los SDKs (<em>breaking changes</em>)</li>
 <li>Pueden requerir un entendimiento más profundo de los componentes de Azure.</li>
 </ul>
-<h2 id="Recapitulando"><a href="#Recapitulando" class="headerlink" title="Recapitulando."></a>Recapitulando.</h2><p>Hasta ahora, hemos explorado algunos de los aspectos básicos de la incorporación de Azure Mobile Services en su próxima aplicación móvil. Como vimos, puedes comenzar con <em>Easy Tables</em> en minutos como una forma de configurar un backend móvil directamente desde la puerta directamente desde Azure Portal y comenzar a usarlo mediante <em>REST / OData</em> directamente desde tu aplicación.</p>
-<p>Además, hemos examinado algunos de los escenarios en los que podría necesitar o no su propio backend codificado, y algunas consideraciones clave antes de la transición de <em>Easy Tables</em> a un completo <em>Azure Mobile Ap </em> backend en caso que sea necesario.</p>
+<h2 id="recapitulando">Recapitulando.</h2>
+<p>Hasta ahora, hemos explorado algunos de los aspectos básicos de la incorporación de Azure Mobile Services en su próxima aplicación móvil. Como vimos, puedes comenzar con <em>Easy Tables</em> en minutos como una forma de configurar un backend móvil directamente desde la puerta directamente desde Azure Portal y comenzar a usarlo mediante <em>REST / OData</em> directamente desde tu aplicación.</p>
+<p>Además, hemos examinado algunos de los escenarios en los que podría necesitar o no su propio backend codificado, y algunas consideraciones clave antes de la transición de <em>Easy Tables</em> a un completo *Azure Mobile Ap * backend en caso que sea necesario.</p>
 <p>Mediante el uso de uno u otro, puedes tomar ventaja de los <em>Azure Mobile SDKs</em> disponibles para su diferentes lenguajes de programación y empezarlos a utilizar de forma inmediata las carasterísticas que trae fuera de la caja para aplicaciones móviles, incluyendo sincronización fuera de línea e integración a redes sociales.</p>
 <p>Ojalá estos consejos te ayuden a sacar ventaja de las características Azure y a decidirte por utilizar Azure para su próxima aplicación móvil o no.</p>
 <p><em>Happy coding!</em></p>
-<h2 id="Recursos-recomendados"><a href="#Recursos-recomendados" class="headerlink" title="Recursos recomendados:"></a>Recursos recomendados:</h2><h3 id="Xamarin-Mobile-apps-con-Net-and-Azure"><a href="#Xamarin-Mobile-apps-con-Net-and-Azure" class="headerlink" title="Xamarin - Mobile apps con .Net and Azure"></a>Xamarin - Mobile apps con .Net and Azure</h3><ul>
+<h2 id="recursos-recomendados">Recursos recomendados:</h2>
+<h3 id="xamarin---mobile-apps-con-net-and-azure">Xamarin - Mobile apps con .Net and Azure</h3>
+<ul>
 <li><a href="/2015/08/17/XamarinTestCloudSeries/">Get started with Xamarin Test Cloud</a></li>
-<li><a href="https://blog.xamarin.com/getting-started-azure-mobile-apps-easy-tables/" target="_blank" rel="noopener">Getting started with Azure Easy Tables</a></li>
-<li><a href="https://blog.xamarin.com/add-a-backend-to-your-app-in-10-minutes/" target="_blank" rel="noopener">Add a backend to your app in 10 minutes</a></li>
-<li><a href="https://developer.xamarin.com/guides/cross-platform/azure/" target="_blank" rel="noopener">Azure + Xamarin documentation</a></li>
+<li><a href="https://blog.xamarin.com/getting-started-azure-mobile-apps-easy-tables/">Getting started with Azure Easy Tables</a></li>
+<li><a href="https://blog.xamarin.com/add-a-backend-to-your-app-in-10-minutes/">Add a backend to your app in 10 minutes</a></li>
+<li><a href="https://developer.xamarin.com/guides/cross-platform/azure/">Azure + Xamarin documentation</a></li>
 </ul>
-<h3 id="Links-de-la-documentacion-de-Azure"><a href="#Links-de-la-documentacion-de-Azure" class="headerlink" title="Links de la documentacion de Azure"></a>Links de la documentacion de Azure</h3><ul>
-<li><a href="https://azure.microsoft.com/es-es/documentation/services/app-service/" target="_blank" rel="noopener">https://azure.microsoft.com/es-es/documentation/services/app-service/</a></li>
-<li><a href="https://azure.microsoft.com/es-es/documentation/learning-paths/appservice-mobileapps/" target="_blank" rel="noopener">https://azure.microsoft.com/es-es/documentation/learning-paths/appservice-mobileapps/</a></li>
-<li><a href="https://azure.microsoft.com/es-es/documentation/articles/app-service-value-prop-what-is/" target="_blank" rel="noopener">https://azure.microsoft.com/es-es/documentation/articles/app-service-value-prop-what-is/</a></li>
+<h3 id="links-de-la-documentacion-de-azure">Links de la documentacion de Azure</h3>
+<ul>
+<li><a href="https://azure.microsoft.com/es-es/documentation/services/app-service/">https://azure.microsoft.com/es-es/documentation/services/app-service/</a></li>
+<li><a href="https://azure.microsoft.com/es-es/documentation/learning-paths/appservice-mobileapps/">https://azure.microsoft.com/es-es/documentation/learning-paths/appservice-mobileapps/</a></li>
+<li><a href="https://azure.microsoft.com/es-es/documentation/articles/app-service-value-prop-what-is/">https://azure.microsoft.com/es-es/documentation/articles/app-service-value-prop-what-is/</a></li>
 </ul>
-  
-    </p>
-    <section class="post-footer">
-      <section class="row-fluid">
-    <ul class="pager" role="pagination">
-        
-        
-        <li class="previous">
-            <a href="/2016/12/08/Creating-a-shared-UI-app-for-Android-and-iOS-with-C-Sharp-and-MVVM/">
-                ← Creating a shared UI app for &hellip;
-            </a>
-        </li>
-        
-        
-        
-        
-        <li class="next">
-            <a href="/2016/11/23/Recap-del-primer-diplomado-de-Xamarin-Latinoamerica-de-Microsoft/" class="btn info">
-                Recap: Primer diplomado de Xa&hellip; →
-            </a>
-        </li>
-        
-    </ul>
-</section>
-      
-      <section class="row-fluid">
-        <h3>Share this post</h3>
-        
- <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/&text=Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)&via=stvansolano"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-     <span class="hidden">Twitter</span>
- </a>
- <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-     <span class="hidden">Facebook</span>
- </a>
- <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps/"
-    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-     <span class="hidden">Google+</span>
- </a>
+            </article>
+            <div class="col-xs-6">
+                <section class="pull-right">
+                    <h5>Share this post</h5>
+                    <a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps&amp;text=Introducción a las aplicaciones móviles conectadas con Azure Mobile Apps (traducido)&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2016/12/01/Introduccion-a-las-aplicaciones-moviles-conectadas-con-Azure-Mobile-Apps"><span class="hidden">Facebook</span></a>
+                </section>
+            </div>
+            <div class="col-xs-6">
+                <ul class="list-inline"><li><a href="/about" alt="About"><img class="blog-logo img-responsive" width="75" height="89" src="/about/stvansolano_card.webp" alt="My photo"/></a></li><li><a href="/about" alt="About MS MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/ms-mvp-logo.webp" alt="MS MVP logo"/></a></li><li><a href="/about" alt="About Xamarin MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/mvp-logo.webp" alt="MVP logo"/></a></li></ul>
+            </div>
 
-      </section>
-      
-      <ul class="list-inline"> 
-    <li>
-        <a href="/about">
-        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
-        </a>
-    </li>
-    <li>
-        <a href="https://www.planetxamarin.com" target="_blank">
-            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
-        </a>
-    </li>
-</ul>
-      <section class="row-fluid">
-    <h2>
-        <a href="/about">
-        Esteban Solano G.</a>
-    </h2>
-    <p>
-        Software Engineer at Microsoft | Former MVP, Certified developer
-        <br/>
-        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
-            @stvansolano
-        </a>
-        <br/>
-        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
-        <br/>
-        <a href="/about">More about me</a>
-    </p>    
-</section>
-    </section>
-  </article>
-</main>
-  
-  <footer class="col-xs-12 site-footer">
-  <div class="inner">
-     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
-     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
-  </div>
-</footer>
-</body>
-</html>
+            <section class="col-xs-12"><h2><a class="article-author" href="/about">Esteban Solano Granados</a></h2><p><br/><a href="https://twitter.com/stvansolano">@<!-- -->stvansolano</a><br/><a href="/about">More about me</a></p></section>
+        </main>
+        <section class="col-md-4">
+            <section class="card">
+                <ul class="list-group" data-theme=""><li class="list-group-item list-group-item-info"><h5 class="list-group-item-heading"><i class="fa fa fa-bookmark-o"> </i>Recent posts</h5></li><li class="list-group-item"><a href="/2023/11/18/Resumen-noviembre-2023-Ignite-GitHub-dotNetConf">Resumen - Novedades Microsoft Ignite, GitHub Universe y .NET Conf 2023!</a></li><li class="list-group-item"><a href="/2023/03/24/El-futuro-del-trabajo-presentando-M365-copilot">El futuro del trabajo en 2023 - Presentando Microsoft 365 Copilot</a></li><li class="list-group-item"><a href="/2023/03/24/The-future-of-work-introducing-microsoft-365-copilot">The future of work - Introducing Microsoft 365 Copilot 🤖</a></li><li class="list-group-item"><a href="/2022/09/22/Exam-passed-Microsoft-Azure-Data-Fundamentals-Certification">Exam passed! DP-900: Microsoft Azure Data Fundamentals Certification</a></li><li class="list-group-item"><a href="/2022/06/20/Creating-a-react-app-with-AspNet-Minimal-APIs-and-MongoDb-CosmosDb">Create a React-based app with ASP.NET Minimal APIs and MongoDB storage</a></li><li class="list-group-item"><a href="/2022/05/31/My-favorite-10-announcements-from-Microsoft-Build-2022">My favorite 10 DEV+Cloud announcements from Microsoft Build 2022</a></li><li class="list-group-item"><a href="/2022/03/24/Upgrading-dotnet-5-to-6-using-minimal-apis-and-github-codespaces">Upgrading .NET 5 -&gt; 6 using Minimal APIs, MySQL and GitHub Codespaces</a></li><li class="list-group-item"><a href="/2021/11/20/Exam-passed-Microsoft-Artificial-Intelligence-Fundamentals-AI-900-certification">Exam passed! Microsoft AI Fundamentals AI-900 Certification</a></li><li class="list-group-item"><a href="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers">Playing with .NET 6 preview, C# 10 and Docker</a></li><li class="list-group-item"><a href="/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft">Work at an awesome place. I&#x27;m joining Microsoft!</a></li><li class="list-group-item"><a href="/blog">Read more...</a></li></ul>
+            </section>
+            <section class="card">
+                <section class="card list-group" data-theme=""><a href="#" class="list-group-item active"><h5 class="list-group-item-heading"><i class="fa fa fa-tag"> </i>Browse by tag</h5></a><section class="list-group-item"><a href="/blog/tags/Windows" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Windows</p></a> <a href="/blog/tags/Productividad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productividad</p></a> <a href="/blog/tags/M365" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>M365</p></a> <a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p></a> <a href="/blog/tags/AI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AI</p></a> <a href="/blog/tags/DotNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DotNet</p></a> <a href="/blog/tags/GitHub" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>GitHub</p></a> <a href="/blog/tags/ChatGPT" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ChatGPT</p></a> <a href="/blog/tags/Azure" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Azure</p></a> <a href="/blog/tags/Data" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Data</p></a> <a href="/blog/tags/Exam" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Exam</p></a> <a href="/blog/tags/Certification" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Certification</p></a> <a href="/blog/tags/OSS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OSS</p></a> <a href="/blog/tags/Docker" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Docker</p></a> <a href="/blog/tags/containers" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>containers</p></a> <a href="/blog/tags/REST" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>REST</p></a> <a href="/blog/tags/Codespaces" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Codespaces</p></a> <a href="/blog/tags/React" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>React</p></a> <a href="/blog/tags/Xamarin" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Xamarin</p></a> <a href="/blog/tags/MAUI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MAUI</p></a> <a href="/blog/tags/Kubernetes" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Kubernetes</p></a> <a href="/blog/tags/.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>.NET</p></a> <a href="/blog/tags/Serverless" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Serverless</p></a> <a href="/blog/tags/AspNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AspNet</p></a> <a href="/blog/tags/Conferences" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Conferences</p></a> <a href="/blog/tags/Microsoft" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Microsoft</p></a> <a href="/blog/tags/Career" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Career</p></a> <a href="/blog/tags/FSharp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>FSharp</p></a> <a href="/blog/tags/Speaking" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Speaking</p></a> <a href="/blog/tags/SignalR" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>SignalR</p></a> <a href="/blog/tags/Online" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Online</p></a> <a href="/blog/tags/Comunidad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Comunidad</p></a> <a href="/blog/tags/WebAPI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WebAPI</p></a> <a href="/blog/tags/Mobile" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Mobile</p></a> <a href="/blog/tags/CosmosDB" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CosmosDB</p></a> <a href="/blog/tags/MachineLearning" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MachineLearning</p></a> <a href="/blog/tags/Python" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Python</p></a> <a href="/blog/tags/VisualStudio" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VisualStudio</p></a> <a href="/blog/tags/NetCore" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>NetCore</p></a> <a href="/blog/tags/Google" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Google</p></a> <a href="/blog/tags/DevOps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevOps</p></a> <a href="/blog/tags/WordPress" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WordPress</p></a> <a href="/blog/tags/Productivity" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productivity</p></a> <a href="/blog/tags/Contenedores" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Contenedores</p></a> <a href="/blog/tags/MVPSummit" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVPSummit</p></a> <a href="/blog/tags/Cloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Cloud</p></a> <a href="/blog/tags/OpenSource" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OpenSource</p></a> <a href="/blog/tags/CodeMentor" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CodeMentor</p></a> <a href="/blog/tags/AppCenter" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AppCenter</p></a> <a href="/blog/tags/YouTube" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>YouTube</p></a> <a href="/blog/tags/VS4Mac" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VS4Mac</p></a> <a href="/blog/tags/Taller" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Taller</p></a> <a href="/blog/tags/Charla" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Charla</p></a> <a href="/blog/tags/Git" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Git</p></a> <a href="/blog/tags/MVP" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVP</p></a> <a href="/blog/tags/iOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>iOS</p></a> <a href="/blog/tags/Android" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Android</p></a> <a href="/blog/tags/Freelance" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Freelance</p></a> <a href="/blog/tags/Linux" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Linux</p></a> <a href="/blog/tags/MacOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MacOS</p></a> <a href="/blog/tags/Asp.Net Core" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Asp.Net Core</p></a> <a href="/blog/tags/XamarinDiplomado" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinDiplomado</p></a> <a href="/blog/tags/MVVM" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVVM</p></a> <a href="/blog/tags/Backend" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Backend</p></a> <a href="/blog/tags/Spanish/English" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/English</p></a> <a href="/blog/tags/Meetup" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Meetup</p></a> <a href="/blog/tags/Bootcamp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Bootcamp</p></a> <a href="/blog/tags/DevDays" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevDays</p></a> <a href="/blog/tags/UX / UI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>UX / UI</p></a> <a href="/blog/tags/Realm" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Realm</p></a> <a href="/blog/tags/Rifa" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Rifa</p></a> <a href="/blog/tags/Open Source" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Open Source</p></a> <a href="/blog/tags/ASP.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ASP.NET</p></a> <a href="/blog/tags/Web Apps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web Apps</p></a> <a href="/blog/tags/Web API" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web API</p></a> <a href="/blog/tags/Workshop" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Workshop</p></a> <a href="/blog/tags/XamarinForms" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinForms</p></a> <a href="/blog/tags/Yeoman" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Yeoman</p></a> <a href="/blog/tags/HTML5" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>HTML5</p></a> <a href="/blog/tags/TestCloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>TestCloud</p></a> <a href="/blog/tags/Markdown" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Markdown</p></a> </section></section>
+                <div class="col-md-3 card"><h2>Archives</h2><section><ul class="list-group box-shadow" data-theme=""><li class="list-group-item"><a href="/blog/archives/2022"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2022</p></a></li><li class="list-group-item"><a href="/blog/archives/2021"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2021</p></a></li><li class="list-group-item"><a href="/blog/archives/2020"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2020</p></a></li><li class="list-group-item"><a href="/blog/archives/2019"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2019</p></a></li><li class="list-group-item"><a href="/blog/archives/2018"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2018</p></a></li><li class="list-group-item"><a href="/blog/archives/2017"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2017</p></a></li><li class="list-group-item"><a href="/blog/archives/2016"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2016</p></a></li><li class="list-group-item"><a href="/blog/archives/2015"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2015</p></a></li></ul></section></div>
+            </section>
+        </section>
+    </div>
+    <footer data-theme="" class="col-xs-12 site-footer text-center"><div class="inner"><section class="copyright">Copyright <a href="/about">Esteban Solano Granados</a> © <!-- -->2023<!-- --> • All rights reserved.</section><section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section></div></footer>
+  </body></html>

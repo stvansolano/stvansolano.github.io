@@ -1,301 +1,114 @@
 <!DOCTYPE html>
-<html ng-app="MainApp">
+<html lang="en">
+  <head><link rel="canonical" href="https://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba"/><link rel="publisher" href="https://twitter.com/stvansolano"/><link rel="author" href="https://twitter.com/stvansolano"/><link rel="alternate" type="application/rss+xml" title="Esteban Solano&#x27;s Blog" href="/atom.xml"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="keywords" itemProp="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker"/><title>Xamarin+Open Source=Love, Una historia que no acaba</title><meta name="title" content="Xamarin+Open Source=Love, Una historia que no acaba"/><meta name="description" content="Como parte del #XamarinMonth, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad."/><meta property="og:type" content="website"/><meta property="og:url" content="https://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba"/><meta property="og:title" content="Xamarin+Open Source=Love, Una historia que no acaba"/><meta property="og:description" content="Como parte del #XamarinMonth, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad."/><meta property="og:image" itemProp="image" content="https://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.png"/><meta property="og:site_name" content="stvansolano | Welcome to my blog"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba"/><meta name="twitter:title" content="Xamarin+Open Source=Love, Una historia que no acaba"/><meta name="twitter:description" content="Como parte del #XamarinMonth, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad."/><meta name="twitter:image" content="https://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.png"/><meta name="twitter:site" content="@stvansolano"/><meta name="twitter:creator" content="@stvansolano"/><link itemProp="thumbnailUrl" href="https://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.png"/><meta property="og:image:width" content="600"/><meta property="og:image:height" content="300"/><meta property="article:publisher" content="https://twitter.com/stvansolano"/><meta property="article:section" content="Blog"/><meta property="article:published_time" content="1551312000000"/><meta http-equiv="Content-Type" content="text/html" charSet="UTF-8"/><meta name="generator" content="stvansolano | Welcome to my blog"/><link async="" rel="stylesheet" type="text/css" href="/main.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QNLS5Q61WF"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<head>
-  <link rel="canonical" href="http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/" />
-  <link rel="publisher" href="https://twitter.com/stvansolano"/>
-  <link rel="author" href="https://twitter.com/stvansolano" />
-  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Xamarin+Open Source=Love, Una historia que no acaba | Esteban Solano G.</title>
-  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
-  
- 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Xamarin+Open Source=Love, Una historia que no acaba" />
-  <meta property="og:description" content="Como parte del #XamarinMonth, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad." />
-  <meta property="og:url" content="http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/" />
-  <meta property="og:site_name" content="Xamarin+Open Source=Love, Una historia que no acaba" />
-  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.png" />
-  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.png"> 
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="300" />
-  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
-  <meta property="article:tag" content="Xamarin Platform" />
-  <meta property="article:section" content="Blog" />
-  <meta property="article:published_time" content="Thu Feb 28 2019 00:00:00 GMT+0000" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.png" />
-  <meta name="twitter:url" content="http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/" />
-  <meta name="twitter:site" content="@stvansolano">
-  <meta name="twitter:creator" content="@stvansolano">
-  <meta name="twitter:title" content="Xamarin+Open Source=Love, Una historia que no acaba" />
-  <meta name="twitter:description" content="Como parte del #XamarinMonth, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad." />
-
-  <meta name="generator" content="Esteban Solano G.">
-  <link rel="stylesheet" type="text/css" href="/base.css" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme.css" />
-  <link rel="stylesheet" type="text/css" href="/overrides.css" />
-  <script async type="text/javascript" src="/script.min.js"></script>
-
-  
-  
-  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
-  
-  
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64743742-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-  <base href="/" />
-</head>
-<body data-ng-controller="default">
-  <header class="">
-    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
-      <h1 class="text-center">
-          /stvansolano
-      </h1>
-      <section class="social-links text-center">
-        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
-        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
-        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
-        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
-        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
-      </section>
-      <div class="text-center">
-        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
-        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
-          
-          Blog
-          <span class="caret"></span>
-        </button>
-      </div>
-    </nav>
-</header>
-  <section class="col-md-2" data-ng-hide="isCollapsed">
-    <nav class="list-group box-shadow">
-        <a class="list-group-item" href="/">
-            <i class="fa fa-home">&nbsp;</i>
-            Home
-        </a>
-        <a class="list-group-item" href="/blog">
-           <p class="list-group-item-text">
-              <i class="fa fa-bookmark">&nbsp;</i>
-              Blog
-          </p>
-        </a>
-        <a class="list-group-item" href="/community">
-           <p class="list-group-item-text">
-              <i class="fa fa-users">&nbsp;</i>
-              Community
-          </p>
-        </a>
-        <a class="list-group-item" href="/about">
-          <p class="list-group-item-text">
-              <i class="fa fa-code">&nbsp;</i>
-              About    
-          </p>
-        </a>    
-    </nav>
-</section>
-  
-  
-    
-
-
-<main class="content col-sm-10" role="main">
-  <article>
-    <span class="post-meta">
-
-    
-    
-        <a href="/blog/tags/Xamarin/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Xamarin</p>
-        </a>
-    
-        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
-        </a>
-    
-        <a href="/blog/tags/Productivity/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Productivity</p>
-        </a>
-    
-        <a href="/blog/tags/OpenSource/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>OpenSource</p>
-        </a>
-    
-
-</span>
-    <h1 class="post-title">
-      Xamarin+Open Source=Love, Una historia que no acaba
-    </h1>
-    <p class="content">
-      <p>Como parte del #mesXamarin #XamarinMonth/#MesXamarin, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad.<br><a id="more"></a></p>
-<p>¡El tiempo vuela! Vamos cerrando Febrero 2019 (casi 15% del año consumido ya) y los años se pasan rápido. No hace nada que conocí Xamarin por primera vez, por allí de 2015, y a pesar de que no era algo fácil de acceder tuve la oportunidad de conocerlo a través de terceros y un poco de vista a lo lejos. </p>
-<p>Por el tiempo en que supe de Xamarin, era bastante difícil poder aprenderlo y desarrollar porque había que pagar por ello. Era entendible dado la naturaleza de Xamarin como tal por sus orígen startup por parte de sus fundadores: Miguel de Icaza y Nat Friedman. </p>
-<p><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.png" alt="Xamarin Love" title="Xamrin Love"></p>
-<h2 id="A-Xamarin-story-From-Zero-to-Hero"><a href="#A-Xamarin-story-From-Zero-to-Hero" class="headerlink" title="A Xamarin story: From Zero to Hero!"></a>A Xamarin story: From Zero to Hero!</h2><p>Mi experiencia por esos tiempos había sido mayormente en .NET en web y escritorio con WPF, por lo que el mundo de móvil siempre me resultó interesante y todo un mundo por descubrir. Para mí, el no conocer la Xamarin ni mobile nunca lo consideré un impedimiento para aprender. Comencé leyendo, aprendiendo, participando y aprovechando mi experiencia previa con XAML y aprendí Xamarin.Forms con sus diferencias obvias, y llegue incluso a resolver algunos problemas que gente que recién conocía XAML en Xamarin los tenía y los daban a conocer en Xamarin Forums, una plataforma de uso de Xamarin por ese tiempo.</p>
-<p>Me di cuenta que no estaba solo, y que muchos como yo estaban teniendo problemas similares, así que me animé a participar más en la comunidad, tuve la oportunidad de dar el tema a conocer con colegas. No tardó en darse el interés de varias personas cercanas a mí y a lo interno en comunidad de mi país, y decidí crear un grupo de Meetup llamado <a href="https://www.meetup.com/es-ES/Costa-Rica-Mobile-Developers/" target="_blank" rel="noopener">Mobile CR Developers</a>, el cual cumple 4 años ya y me ha dado la oportunidad de hablar sobre Xamarin y mobile en varias universidades y en las oficinas de Microsoft de Costa Rica. A la fecha suman mas 1200 personas inscritas y mas de 500 participantes entre charlas, talleres abiertos e invitaciones a universidades y empresad. </p>
-<p><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/foto1.png" alt="Meetup" title="Meetup"></p>
+      gtag('config', 'G-QNLS5Q61WF');
+    </script><base href="/"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/></head>
+  <link rel="stylesheet" href="/_astro/_...slug_.7126134a.css" /><body>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="Z28i0fO" component-url="/_astro/Nav.4a132ef2.js" component-export="default" renderer-url="/_astro/client.c401bd7c.js" props="{&quot;title&quot;:[0,&quot;Xamarin+Open Source=Love, Una historia que no acaba&quot;],&quot;page&quot;:[0,{&quot;path&quot;:[0,&quot;/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba&quot;],&quot;canonical_path&quot;:[0,&quot;&quot;],&quot;navigationTitle&quot;:[0,&quot;&quot;],&quot;lang&quot;:[0,&quot;en&quot;],&quot;title&quot;:[0,&quot;Xamarin+Open Source=Love, Una historia que no acaba&quot;],&quot;layout&quot;:[0,null],&quot;date&quot;:[0,&quot;2019-02-28T00:00:00.000Z&quot;],&quot;header&quot;:[0,{&quot;description&quot;:[0,&quot;Como parte del #XamarinMonth, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad.&quot;],&quot;optimizedImage&quot;:[0,&quot;~/preview.webp&quot;]}],&quot;tags&quot;:[1,&quot;[[0,{\&quot;name\&quot;:[0,\&quot;Xamarin\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Xamarin\&quot;],\&quot;title\&quot;:[0,\&quot;Xamarin\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;OpenSource\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/OpenSource\&quot;],\&quot;title\&quot;:[0,\&quot;OpenSource\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;Productivity\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Productivity\&quot;],\&quot;title\&quot;:[0,\&quot;Productivity\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;Spanish/Español\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Spanish/Español\&quot;],\&quot;title\&quot;:[0,\&quot;Spanish/Español\&quot;]}]]&quot;],&quot;posts&quot;:[0,null],&quot;tag&quot;:[0,null],&quot;slug&quot;:[0,&quot;2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba&quot;],&quot;prev&quot;:[0,null],&quot;next&quot;:[0,null],&quot;raw&quot;:[0,null],&quot;content&quot;:[0,null],&quot;useLegacyLayout&quot;:[0,null],&quot;rawMarkdown&quot;:[0,null],&quot;thumbnail&quot;:[0,&quot;~/preview.png&quot;],&quot;excerpt&quot;:[0,&quot;Como parte del #XamarinMonth, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad.&quot;],&quot;permalink&quot;:[0,&quot;https://stvansolano.github.io2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba&quot;]}],&quot;config&quot;:[0,{&quot;title&quot;:[0,&quot;stvansolano | Welcome to my blog&quot;],&quot;subtitle&quot;:[0,&quot;&quot;],&quot;root&quot;:[0,&quot;&quot;],&quot;author&quot;:[0,&quot;Esteban Solano Granados&quot;],&quot;email&quot;:[0,&quot;stvansolano@outlook.com&quot;],&quot;twitter&quot;:[0,&quot;stvansolano&quot;],&quot;parentSite&quot;:[0,&quot;/&quot;],&quot;sitePermalink&quot;:[0,&quot;https://stvansolano.github.io&quot;]}]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:true}" await-children=""><nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top row"><span class="navbar-brand col-md-5"><a class="" href="/"><span><i class="social fa fa-2x fa-code navbar-icon"></i> stvansolano</span></a><a class="social fa fa-2x fa-twitter" rel="noreferrer" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a><a class="social fa fa-2x fa-linkedin" rel="noreferrer" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a><a class="social fa fa-2x fa-github" rel="noreferrer" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a><a class="social fa fa-2x fa-youtube" rel="noreferrer" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a><i class="social fa fa-2x fa-bars fa-bars-icon d-md-none visible"></i></span><ul class="navbar-nav col-md-8 collapse"><li class="nav-item"><a class="nav-link" href="/"><i class="fa fa-home"> </i>Home</a></li><li class="nav-item"><a class="nav-link" href="/blog"><i class="fa fa-bookmark"> </i>Blog</a></li><li class="nav-item"><a class="nav-link" href="/community"><i class="fa fa-users"> </i>Commmunity</a></li><li class="nav-item"><a class="nav-link" href="/about"><i class="fa fa-code"> </i>About</a></li></ul><span class="col-xs-12 hidden"><i class="social fa fa-2x collapse-icon d-md-none fa-angle-up"> </i></span></nav></astro-island>
+    <div class="row after-header">
+        <main class="content col-md-8" role="main">
+            <article class="row">
+                <div class="row"><section class="col-md-8"><div class="article-info-left"><div><a href="/about" class="profile-avatar" alt="Esteban Solano Granados - stvansolano"><img class="decorated" data-src="/about/stvansolano_circle.webp" height="40" width="40" alt="Esteban Solano Granados" src="/about/stvansolano_circle.webp"/></a></div><section><div class="username">By <a href="/about">Esteban Solano Granados</a></div><div><span class="date" data-theme="">Published・<!-- -->February 28, 2019</span><span class="read-time"></span></div></section></div></section><section class="col-md-4" style="margin-bottom:0.5rem"><h5>Share this post</h5><a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba&amp;text=Xamarin+Open Source=Love, Una historia que no acaba&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba"><span class="hidden">Facebook</span></a></section></div><h1>Xamarin+Open Source=Love, Una historia que no acaba</h1><span class="post-meta" style="margin-bottom:0.5rem"><a href="/blog/tags/Xamarin" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Xamarin</p> </a><a href="/blog/tags/OpenSource" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OpenSource</p> </a><a href="/blog/tags/Productivity" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productivity</p> </a><a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p> </a></span>
+                <p>Como parte del #mesXamarin #XamarinMonth/#MesXamarin, comparto un poco de mi historia con Xamarin y lo mucho que he recibido y aprendido de esta tecnología y su gran comunidad.</p>
+<!-- more -->
+<p>¡El tiempo vuela! Vamos cerrando Febrero 2019 (casi 15% del año consumido ya) y los años se pasan rápido. No hace nada que conocí Xamarin por primera vez, por allí de 2015, y a pesar de que no era algo fácil de acceder tuve la oportunidad de conocerlo a través de terceros y un poco de vista a lo lejos.</p>
+<p>Por el tiempo en que supe de Xamarin, era bastante difícil poder aprenderlo y desarrollar porque había que pagar por ello. Era entendible dado la naturaleza de Xamarin como tal por sus orígen startup por parte de sus fundadores: Miguel de Icaza y Nat Friedman.</p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/preview.webp" alt="Xamarin Love" title="Xamarin Love">
+<h2 id="a-xamarin-story-from-zero-to-hero">A Xamarin story: From Zero to Hero!</h2>
+<p>Mi experiencia por esos tiempos había sido mayormente en .NET en web y escritorio con WPF, por lo que el mundo de móvil siempre me resultó interesante y todo un mundo por descubrir. Para mí, el no conocer la Xamarin ni mobile nunca lo consideré un impedimiento para aprender. Comencé leyendo, aprendiendo, participando y aprovechando mi experiencia previa con XAML y aprendí Xamarin.Forms con sus diferencias obvias, y llegue incluso a resolver algunos problemas que gente que recién conocía XAML en Xamarin los tenía y los daban a conocer en Xamarin Forums, una plataforma de uso de Xamarin por ese tiempo.</p>
+<p>Me di cuenta que no estaba solo, y que muchos como yo estaban teniendo problemas similares, así que me animé a participar más en la comunidad, tuve la oportunidad de dar el tema a conocer con colegas. No tardó en darse el interés de varias personas cercanas a mí y a lo interno en comunidad de mi país, y decidí crear un grupo de Meetup llamado <a href="https://www.meetup.com/es-ES/Costa-Rica-Mobile-Developers/">Mobile CR Developers</a>, el cual cumple 4 años ya y me ha dado la oportunidad de hablar sobre Xamarin y mobile en varias universidades y en las oficinas de Microsoft de Costa Rica. A la fecha suman mas 1200 personas inscritas y mas de 500 participantes entre charlas, talleres abiertos e invitaciones a universidades y empresad.</p>
+<img class="img-fluid box-shadow text-center" width="487" height="487" src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/foto1.png" alt="Meetup" title="Meetup">
 <blockquote>
-<p>Para mí, el no conocer la Xamarin ni mobile nunca lo consideré un impedimiento para aprender</p>
+<p>Para mí, el no conocer la Xamarin ni mobile nunca lo consideré un impedimiento para aprender de esta tecnología.</p>
 </blockquote>
 <p>Con el tiempo y manteniéndome en mis contribuciones, se dieron cosas bien interesantes:</p>
 <ul>
-<li>Recibí la distinción de Xamarin MVP por el esfuerzo, lo que incluía una subscripción a Xamarin University. Wow! </li>
+<li>Recibí la distinción de Xamarin MVP por el esfuerzo, lo que incluía una subscripción a Xamarin University. Wow!</li>
 <li>Logré certificarme como Xamarin Mobile Developer meses después y seguí aprendiendo. Más importante aún, continué aprovechando ese conocimiento para ayudar a otros que aún pasaban por lo mismo.</li>
 <li>Participé en la iniciativa <a href="/2016/11/23/Recap-del-primer-diplomado-de-Xamarin-Latinoamerica-de-Microsoft/">XamarinDiplomado</a> para Latinoamérica con grandes colegas como Humberto Jaimes y Enrique Aguilar.</li>
 <li>Empece como instructor de tecnología .NET en Costa Rica y aún con mis primeros pasos en móviles impartí mi primer curso de Xamarin en Costa Rica.</li>
 <li>Pasé a ser Microsoft MVP en Developer Technologies donde llevo a la fecha 3 galardones anuales consecutivos desde 2016.</li>
 </ul>
-<p><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/recognitions.png" alt="Recognitions" title="Recognitions"></p>
-<h2 id="Xamarin-y-los-vientos-de-cambio"><a href="#Xamarin-y-los-vientos-de-cambio" class="headerlink" title="Xamarin y los vientos de cambio."></a>Xamarin y los vientos de cambio.</h2><p>Los tiempos cambian y pues bueno, ni Xamarin ni yo nos detuvimos. Con los cambios más recientes, Xamarin University se moverá a <a href="https://docs.microsoft.com/en-us/learn/" target="_blank" rel="noopener">Microsoft Learn</a>, por lo visto no habra mas Xamarin Evolve (el evento no, la idea persiste!) y la documentacion de Xamarin se ha ido moviendo a <a href="https://docs.microsoft.com/es-es/" target="_blank" rel="noopener">Microsoft Docs</a>, lo cual es genial! Miguel sigue contribuyendo activamente después de unirse a Microsoft y ahora Nat Friedman es el CEO de GitHub después de ser adquirido por Microsoft también. ¿Curioso, no?</p>
-<p>Yo por mi cuenta renuncié a mi empleador anterior y el último año me he dedicado a familia y proyectos que se venían dando en lo personal y profesional, con lo que ahora trabajo desde casa 100% en proyectos de Xamarin, .NET y otras tecnologías con clientes en Costa Rica y USA. </p>
-<p>En menos de un parpapeo (prácticamente en menos de 2 años) se dio que Microsoft adquirió Xamarin, luego vino GitHub en 2018 y la historia se sigue construyendo, por dicha de todos, las cosas han cambiado para bien. Muchos estuvieron a favor y otros en contra de que todo pasara a Microsoft, y con el tiempo algunos se han ido hacia otras alternativas o nuevos emergentes en el tablero. </p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/recognitions.png" alt="Recognitions" title="Recognitions">
+<h2 id="xamarin-y-los-vientos-de-cambio">Xamarin y los vientos de cambio.</h2>
+<p>Los tiempos cambian y pues bueno, ni Xamarin ni yo nos detuvimos. Con los cambios más recientes, Xamarin University se moverá a <a href="https://docs.microsoft.com/en-us/learn/">Microsoft Learn</a>, por lo visto no habra mas Xamarin Evolve (el evento no, la idea persiste!) y la documentacion de Xamarin se ha ido moviendo a <a href="https://docs.microsoft.com/es-es/">Microsoft Docs</a>, lo cual es genial! Miguel sigue contribuyendo activamente después de unirse a Microsoft y ahora Nat Friedman es el CEO de GitHub después de ser adquirido por Microsoft también. ¿Curioso, no?</p>
+<p>Yo por mi cuenta renuncié a mi empleador anterior y el último año me he dedicado a familia y proyectos que se venían dando en lo personal y profesional, con lo que ahora trabajo desde casa 100% en proyectos de Xamarin, .NET y otras tecnologías con clientes en Costa Rica y USA.</p>
+<p>En menos de un parpapeo (prácticamente en menos de 2 años) se dio que Microsoft adquirió Xamarin, luego vino GitHub en 2018 y la historia se sigue construyendo, por dicha de todos, las cosas han cambiado para bien. Muchos estuvieron a favor y otros en contra de que todo pasara a Microsoft, y con el tiempo algunos se han ido hacia otras alternativas o nuevos emergentes en el tablero.</p>
 <p>Por otro lado, muchos otros vinieron y se unieron a a contribuir unido, nuevos miembros a la comunidad, gente que ha encontrado en Xamarin una puerta abierta al mundo móvil con las herramientas que ya conocen como .NET, XAML y el ecosistema Microsoft. Muchos de los roles cambiarion pero la esencia de Xamarin se mantiene y la comunidad sigue en aumento!</p>
 <p>Creo que es bastante para tan poco tiempo. Haciendo restrospectiva un poco en Xamarin, resalto siguiente:</p>
-<h2 id="Xamarin-a-2019-5-cosas-en-que-Xamarin-ha-mejorado-y-por-mucho-con-links"><a href="#Xamarin-a-2019-5-cosas-en-que-Xamarin-ha-mejorado-y-por-mucho-con-links" class="headerlink" title="Xamarin a 2019: 5 cosas en que Xamarin ha mejorado y por mucho (con links)."></a>Xamarin a 2019: 5 cosas en que Xamarin ha mejorado y por mucho (con links).</h2><h3 id="1-Mejor-soporte-para-el-tooling-de-NET-e-integracion-de-las-herramientas"><a href="#1-Mejor-soporte-para-el-tooling-de-NET-e-integracion-de-las-herramientas" class="headerlink" title="1. Mejor soporte para el tooling de .NET e integración de las herramientas"></a>1. Mejor soporte para el tooling de .NET e integración de las herramientas</h3><p>Si bien han ido y venido mejoras en e desempeño de ejecución, se han ido incluyendo mejoras tanto en lo base como Xamarin.Android y Xamarin.iOS para hacer las apps más rápidas, ligeras y eficientes, cosa que en general llegó a sufrir Xamarin y que se fueron dando con el tiempo. En temas de .NET Standard dichosamente ha venido a solucionar muchos de los problemas que tocaba enfrentar para compartir código en el mundo .NET que se encontraba encrucijado entre PCLs y Shared Libraries.</p>
-<p><a href="https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer" target="_blank" rel="noopener"><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/dotnet-standard.png" alt="DotNet Standard"></a></p>
-<h3 id="2-Un-Xamarin-Forms-mas-mas-comunitario-y-abierto"><a href="#2-Un-Xamarin-Forms-mas-mas-comunitario-y-abierto" class="headerlink" title="2. Un Xamarin.Forms mas más comunitario y abierto."></a>2. Un Xamarin.Forms mas más comunitario y abierto.</h3><p>Nos acercamos a Xamarin.Forms 4 y lo que viene para la versión futura ya está en el horizonte. Puntualmente en Xamarin.Forms ha ido cumpliendo su misión y ampliandose a nuevas tendencias y adiciones como la inclusión de capacidades denomidadas Visual y Material y controles como el <a href="https://blog.xamarin.com/adaptive-mobile-designs-with-flexlayout/" target="_blank" rel="noopener">FlexLayout</a> que se ha esparcido notablemente.</p>
-<p><a href="https://blog.xamarin.com/adaptive-mobile-designs-with-flexlayout/" target="_blank" rel="noopener"><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/flexlayout.png" alt="Flex Layout"></a></p>
+<h2 id="xamarin-a-2019-5-cosas-en-que-xamarin-ha-mejorado-y-por-mucho-con-links">Xamarin a 2019: 5 cosas en que Xamarin ha mejorado y por mucho (con links).</h2>
+<h3 id="1-mejor-soporte-para-el-tooling-de-net-e-integración-de-las-herramientas">1. Mejor soporte para el tooling de .NET e integración de las herramientas</h3>
+<p>Si bien han ido y venido mejoras en e desempeño de ejecución, se han ido incluyendo mejoras tanto en lo base como Xamarin.Android y Xamarin.iOS para hacer las apps más rápidas, ligeras y eficientes, cosa que en general llegó a sufrir Xamarin y que se fueron dando con el tiempo. En temas de .NET Standard dichosamente ha venido a solucionar muchos de los problemas que tocaba enfrentar para compartir código en el mundo .NET que se encontraba encrucijado entre PCLs y Shared Libraries.</p>
+<p><a href="https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer"><img src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/dotnet-standard.png" alt="DotNet Standard -Image"></a></p>
+<h3 id="2-un-xamarinforms-más-comunitario-y-abierto">2. Un Xamarin.Forms más comunitario y abierto.</h3>
+<p>Nos acercamos a Xamarin.Forms 4 y lo que viene para la versión futura ya está en el horizonte. Puntualmente en Xamarin.Forms ha ido cumpliendo su misión y ampliandose a nuevas tendencias y adiciones como la inclusión de capacidades denomidadas Visual y Material y controles como el <a href="https://blog.xamarin.com/adaptive-mobile-designs-with-flexlayout/">FlexLayout</a> que se ha esparcido notablemente.</p>
+<p><a href="https://blog.xamarin.com/adaptive-mobile-designs-with-flexlayout/"><img src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/flexlayout.png" alt="Flex Layout -Image"></a></p>
 <p>El tema del famoso Previewer ha sido uno de los grandes retos que sigue para este año para mejorar el despliegue y velocidad del desarrollo. El año recién empieza y me atrevo a decir que es algo que estará mucho mejor en poco tiempo y cerrando la brecha del HotReload como lo ha venido haciendo el Xamarin Live Player o que salte alguna nueva herramienta de la comunidad que venga a sorprendernos nuevamente como ya lo han hecho otras. 🙂</p>
 <p>GitHub se mantienen como la principal herramienta de desarrollo para muchas de las tecnologías Open Source y Xamarin no se queda atrás. Algunos de los principales repos en GitHub los puedes encontrar y explorar en:</p>
 <ul>
-<li><a href="https://github.com/xamarin/Xamarin.Forms" target="_blank" rel="noopener">Xamarin.Forms</a></li>
-<li><a href="https://github.com/xamarin/xamarin-macios" target="_blank" rel="noopener">Xamarin.iOS</a></li>
-<li><a href="https://github.com/xamarin/xamarin-android" target="_blank" rel="noopener">Xamarin.Android</a></li>
+<li><a href="https://github.com/xamarin/Xamarin.Forms">Xamarin.Forms</a></li>
+<li><a href="https://github.com/xamarin/xamarin-macios">Xamarin.iOS</a></li>
+<li><a href="https://github.com/xamarin/xamarin-android">Xamarin.Android</a></li>
 </ul>
-<p>Todo es Open Source y abierto a contribuyentes! También y más recientemente, se ha ido extendiendo una costumbre bastante interesante que se venía dando en el mundo de la comunidad ASP.NET con sus Community Standups, los cuales están ahora dandose en el mundo móvil con Xamarin con el <a href="https://blog.xamarin.com/introducing-the-net-community-standup-series/" target="_blank" rel="noopener">.Net Mobile Community Standups</a> con formato en línea y otros formatos modernos como <a href="https://www.xamarinpodcast.com/" target="_blank" rel="noopener">Xamarin Podcast</a></p>
-<p><a href="https://www.xamarinpodcast.com/]" target="_blank" rel="noopener"><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/podcast.png" alt="Podcast"></a></p>
-<h3 id="3-Microsoft-Docs-nos-hable-posibilidades-de-aprendizaje-en-espanol"><a href="#3-Microsoft-Docs-nos-hable-posibilidades-de-aprendizaje-en-espanol" class="headerlink" title="3. Microsoft Docs nos hable posibilidades de aprendizaje en español!"></a>3. Microsoft Docs nos hable posibilidades de aprendizaje en español!</h3><p><a href="https://docs.microsoft.com/en-us/xamarin/" target="_blank" rel="noopener">Microsoft Docs</a>, la nueva forma de documentación es muy fresca y abierta. De hecho, puedes contribuir y ayudar a otros enterder mejor Xamarin desde contenidos en ingles. necesita tu ayuda!). Para contribuir con Docs, basta con hacer Fork (o copia) del repositorio y enviar un PR con las sugerencias. </p>
+<p>Todo es Open Source y abierto a contribuyentes! También y más recientemente, se ha ido extendiendo una costumbre bastante interesante que se venía dando en el mundo de la comunidad ASP.NET con sus Community Standups, los cuales están ahora dandose en el mundo móvil con Xamarin con el <a href="https://blog.xamarin.com/introducing-the-net-community-standup-series/">.Net Mobile Community Standups</a> con formato en línea y otros formatos modernos como <a href="https://www.xamarinpodcast.com/">Xamarin Podcast</a></p>
+<p><a href="https://www.xamarinpodcast.com/"><img src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/podcast.png" alt="Podcast -Image"></a></p>
+<h3 id="3-microsoft-docs-nos-hable-posibilidades-de-aprendizaje-en-español">3. Microsoft Docs nos hable posibilidades de aprendizaje en español!</h3>
+<p><a href="https://docs.microsoft.com/en-us/xamarin/">Microsoft Docs</a>, la nueva forma de documentación es muy fresca y abierta. De hecho, puedes contribuir y ayudar a otros enterder mejor Xamarin desde contenidos en ingles. necesita tu ayuda!). Para contribuir con Docs, basta con hacer Fork (o copia) del repositorio y enviar un PR con las sugerencias.</p>
 <blockquote>
-<p>Cómo contribuir en Microsoft Docs? Por acá de ejemplo sobre Bindable Layouts, y me encantó poderlo revisar! <a href="https://github.com/MicrosoftDocs/xamarin-docs.es-es/pull/58" target="_blank" rel="noopener">Xamarin Docs - PR #58</a></p>
+<p>Cómo contribuir en Microsoft Docs? Por acá de ejemplo sobre Bindable Layouts, y me encantó poderlo revisar! <a href="https://github.com/MicrosoftDocs/xamarin-docs.es-es/pull/58">Xamarin Docs - PR #58</a></p>
 </blockquote>
-<p><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/ms-docs.png" alt="MS Docs" title="MS Docs"></p>
-<h3 id="4-Mejoras-enfocadas-en-rendimiento-primero-luego-nuevos-features"><a href="#4-Mejoras-enfocadas-en-rendimiento-primero-luego-nuevos-features" class="headerlink" title="4. Mejoras enfocadas en rendimiento primero, luego nuevos features."></a>4. Mejoras enfocadas en rendimiento primero, luego nuevos features.</h3><p>Recientemente se han anunciado nuevas versiones, mejoras y nuevas caracteristicas que vienen para Xamarin.Forms que valen la pena. Como todo en la vida, no es perfecto y si encontramos cosas que necesiten atención es bueno reportarlo. Me pasó recientemente <a href="https://github.com/stvansolano/forms-grouping-example/issues/1" target="_blank" rel="noopener">con un issue de Grouping en Forms acá</a>. Tuve la oportunidad de reunirme con David Ortinau y Paul Di Pietro, PMs de Xamarin y siempre están dispuestos a escuchar 🙂.</p>
-<h3 id="5-Unificacion-de-APIs-y-hasta-los-Plugins"><a href="#5-Unificacion-de-APIs-y-hasta-los-Plugins" class="headerlink" title="5. Unificación de APIs, y hasta los Plugins!"></a>5. Unificación de APIs, y hasta los Plugins!</h3><p>Uno de los principales retos en comunidades abiertas y emergentes lo sufrimos en ocasiones los desarrolladores. Encontramos mil y un paquetes en la web que podemos usar. Dichosamente y en el caso de Xamarin, los esfuerzos se han unificado para bien y ha permitido que otros puedan participar. Tal es el caso del equipo detrás de <a href="https://docs.microsoft.com/en-us/xamarin/essentials/" target="_blank" rel="noopener">Xamarin.Essentials</a> liderado por James Montemagno que está ayudando enormemente a reducir la fricción entre tantos NuGet’s y Plugins. Recientemente está disponible para uso en producción y de manera oficial. Así que a aprovechar y disfrutarlo!</p>
-<p><a href="https://docs.microsoft.com/en-us/xamarin/essentials/" target="_blank" rel="noopener"><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/xamarin-essentials.png" alt="Essentials"></a></p>
-<h2 id="¿Que-estamos-dando-vuelta-a-la-comunidad"><a href="#¿Que-estamos-dando-vuelta-a-la-comunidad" class="headerlink" title="¿Que estamos dando vuelta a la comunidad?"></a>¿Que estamos dando vuelta a la comunidad?</h2><p>Si bien hemos recibido muchos regalos sin costo de Xamarin desde hace bastante tiempo y hay mucho amor en el aire, más en este mes, considero que es importante también contribuir de nuestro lado y dar algo de vuelta. En mi caso, sigo encontrando que la gran mayoría de colegas a los que entreno y nuevos alumnos que aprenden Xamarin tienen cierta base en C#, lo cual es bueno, y en otros casos no tanto o muy poca. </p>
+<img class="img-fluid box-shadow text-center" width="426" height="272" src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/ms-docs.png" alt="MS Docs" title="MS Docs">
+<h3 id="4-mejoras-enfocadas-en-rendimiento-primero-luego-nuevos-features">4. Mejoras enfocadas en rendimiento primero, luego nuevos features.</h3>
+<p>Recientemente se han anunciado nuevas versiones, mejoras y nuevas caracteristicas que vienen para Xamarin.Forms que valen la pena. Como todo en la vida, no es perfecto y si encontramos cosas que necesiten atención es bueno reportarlo. Me pasó recientemente <a href="https://github.com/stvansolano/forms-grouping-example/issues/1">con un issue de Grouping en Forms acá</a>. Tuve la oportunidad de reunirme con David Ortinau y Paul Di Pietro, PMs de Xamarin y siempre están dispuestos a escuchar 🙂.</p>
+<h3 id="5-unificación-de-apis-y-hasta-los-plugins">5. Unificación de APIs, y hasta los Plugins!</h3>
+<p>Uno de los principales retos en comunidades abiertas y emergentes lo sufrimos en ocasiones los desarrolladores. Encontramos mil y un paquetes en la web que podemos usar. Dichosamente y en el caso de Xamarin, los esfuerzos se han unificado para bien y ha permitido que otros puedan participar. Tal es el caso del equipo detrás de <a href="https://docs.microsoft.com/en-us/xamarin/essentials/">Xamarin.Essentials</a> liderado por James Montemagno que está ayudando enormemente a reducir la fricción entre tantos NuGet’s y Plugins. Recientemente está disponible para uso en producción y de manera oficial. Así que a aprovechar y disfrutarlo!</p>
+<p><a href="https://docs.microsoft.com/en-us/xamarin/essentials/"><img src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/xamarin-essentials.png" alt="Essentials -Image"></a></p>
+<h2 id="que-estamos-dando-vuelta-a-la-comunidad">¿Que estamos dando vuelta a la comunidad?</h2>
+<p>Si bien hemos recibido muchos regalos sin costo de Xamarin desde hace bastante tiempo y hay mucho amor en el aire, más en este mes, considero que es importante también contribuir de nuestro lado y dar algo de vuelta. En mi caso, sigo encontrando que la gran mayoría de colegas a los que entreno y nuevos alumnos que aprenden Xamarin tienen cierta base en C#, lo cual es bueno, y en otros casos no tanto o muy poca.</p>
 <p>Puntualmente en el camino he encontrado también otros no lo saben del todo o lo han usado por años en otras tecnologías precursoras como WinForms o WebForms desde hace mucho tiempo (Asp.net Forms). Incluso en varias visitas a universidades que he realizado para charlas me encuentro que aún lo ven como parte de contenidos de cursos y carrera. Eso me parece que sigue siendo cool en cierta manera, pero siempre hay chance de moverse hacia adelante.</p>
-<h2 id="Mi-aporte-a-la-comunidad-Aprende-Xamarin-desde-cero-En-espanol"><a href="#Mi-aporte-a-la-comunidad-Aprende-Xamarin-desde-cero-En-espanol" class="headerlink" title="Mi aporte a la comunidad: Aprende Xamarin desde cero! En español."></a>Mi aporte a la comunidad: Aprende Xamarin desde cero! En español.</h2><p>Es por eso y con el ánimo de seguir aprendiendo que he decidido contribuir con algo de Xamarin de vuelta. He decido crear un repositorio abierto al público para aprender Xamarin con muy poco o nulo conocimiento en C#, con ejercicios prácticos. Puede que para muchos resultará muy básico e innecesario porque ya conocen C# y .NET pero mi enfoque es orientarlo a otros .NET-eros y que su referente sea otros lenguajes como Java, JavaScript, Swift o el mismo Visual Basic. </p>
+<h2 id="un-aporte-a-la-comunidad-aprende-xamarin-desde-cero-en-español">Un aporte a la comunidad: Aprende Xamarin desde cero! En español.</h2>
+<p>Es por eso y con el ánimo de seguir aprendiendo que he decidido contribuir con algo de Xamarin de vuelta. He decido crear un repositorio abierto al público para aprender Xamarin con muy poco o nulo conocimiento en C#, con ejercicios prácticos. Puede que para muchos resultará muy básico e innecesario porque ya conocen C# y .NET pero mi enfoque es orientarlo a otros .NET-eros y que su referente sea otros lenguajes como Java, JavaScript, Swift o el mismo Visual Basic.</p>
 <p>De las cosas más interesantes que he encontrado es la diversidad y nuevos talentos que vienen de otras tecnologías y que necesitan o quieren aprender y aportar. Así que si sabes bastante de C# y Xamarin y sabes de otros que no lo saben del todo, el repositorio puede resultar de gran ayuda. Recomiendalo!</p>
-<p><a href="https://github.com/stvansolano/aprende-xamarin]" target="_blank" rel="noopener"><img src="2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/github.png" alt="Repo"></a></p>
-<h3 id="Aprende-Xamarin-auto-guiado-sin-matriculas"><a href="#Aprende-Xamarin-auto-guiado-sin-matriculas" class="headerlink" title="Aprende Xamarin (auto-guiado, sin matriculas)"></a>Aprende Xamarin (auto-guiado, sin matriculas)</h3><p>El curso del <a href="https://github.com/stvansolano/aprende-xamarin" target="_blank" rel="noopener">repositorio</a> sigue enfoques prácticos y auto-guiados por lo que no requiere mucha guia de mi lado o que haya que esperar a que empiece la proxima ronda del curso. Puedes tomarlo hoy mismo y empezar a aprender. Algunos contenidos iran variando y mejorando con el tiempo a medida que ire sumando mas contenido.</p>
-<h3 id="Bonus-Tip-Horas-de-mentoria-100-gratuitas"><a href="#Bonus-Tip-Horas-de-mentoria-100-gratuitas" class="headerlink" title="Bonus Tip: Horas de mentoría 100% gratuitas:"></a>Bonus Tip: Horas de mentoría 100% gratuitas:</h3><p>Si sigues el repositorio y encontraste este post, contáctamente en <a href="https://www.codementor.io/stvansolano" target="_blank" rel="noopener">CodeMentor</a> o a mo correo personal y le podemos dar seguimiento a tu avance en el curso, reunirnos periódicamente y aprender de lo que aprendiste. SI resultara de interés podemos hacer una sesión abierta en línea mediante Hangouts (o similar) o cuadramos una meetup y convocamos más gente.</p>
+<p><a href="https://github.com/stvansolano/aprende-xamarin"><img src="/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/github.png" alt="Repo -Image"></a></p>
+<h3 id="aprende-xamarin-auto-guiado-sin-matriculas">Aprende Xamarin (auto-guiado, sin matriculas)</h3>
+<p>El curso del <a href="https://github.com/stvansolano/aprende-xamarin">repositorio</a> sigue enfoques prácticos y auto-guiados por lo que no requiere mucha guia de mi lado o que haya que esperar a que empiece la proxima ronda del curso. Puedes tomarlo hoy mismo y empezar a aprender. Algunos contenidos iran variando y mejorando con el tiempo a medida que ire sumando mas contenido.</p>
+<h3 id="bonus-tip-horas-de-mentoría-100-gratuitas">Bonus Tip: Horas de mentoría 100% gratuitas:</h3>
+<p>Si sigues el repositorio y encontraste este post durante este año, contáctamente en <a href="https://www.codementor.io/stvansolano">CodeMentor</a> o a mi correo personal y le podemos dar seguimiento a tu avance en el curso, reunirnos periódicamente y aprender de lo que aprendiste. Si resultara de interés, podemos hacer una sesión abierta en línea mediante Hangouts (o similar) o cuadramos una meetup y convocamos más gente.</p>
 <p>Algunos avances del repo que estaré publicando incluirán:</p>
 <ul>
 <li>C# desde cero con Xamarin</li>
 <li>De la consola a lo movil: Primera app en Xamarin.Forms</li>
 <li>Videos, articulos y material de referencia</li>
 </ul>
-<h2 id="¿Quieres-contribuir-aprender-¡Hagamoslo-juntos"><a href="#¿Quieres-contribuir-aprender-¡Hagamoslo-juntos" class="headerlink" title="¿Quieres contribuir, aprender? ¡Hagámoslo juntos!"></a>¿Quieres contribuir, aprender? ¡Hagámoslo juntos!</h2><p>El repositorio es Open Source y libre de uso. Puedes hacerle Fork, extenderlo y hasta enviarme uj Pull Request si quieres colaborar en el tema y compartir conocimiento. Respetare la autoría y compartiré créditos de quien contribuya y quiera enseñar a otros.</p>
+<h2 id="quieres-contribuir-aprender-hagámoslo-juntos">¿Quieres contribuir, aprender? ¡Hagámoslo juntos!</h2>
+<p>El repositorio es Open Source y libre de uso. Puedes hacerle Fork, extenderlo y hasta enviarme uj Pull Request si quieres colaborar en el tema y compartir conocimiento. Respetare la autoría y compartiré créditos de quien contribuya y quiera enseñar a otros.</p>
 <p>Un saludo cordial y nos vemos en la próxima! 🙂</p>
-  
-    </p>
-    <section class="post-footer">
-      <section class="row-fluid">
-    <ul class="pager" role="pagination">
-        
-        
-        <li class="previous">
-            <a href="/2019/03/06/Sesiones-de-la-Cloud-Native-Computing-Foundation-ahora-en-Costa-Rica/">
-                ← Sesiones de la Cloud Native C&hellip;
-            </a>
-        </li>
-        
-        
-        
-        
-        <li class="next">
-            <a href="/2018/11/19/Compartiendo-mi-experiencia-como-trabajador-remoto-mentor-software-freelancer/" class="btn info">
-                Compartiendo mi experiencia c&hellip; →
-            </a>
-        </li>
-        
-    </ul>
-</section>
-      
-      <section class="row-fluid">
-        <h3>Share this post</h3>
-        
- <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/&text=Xamarin+Open Source=Love, Una historia que no acaba&via=stvansolano"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-     <span class="hidden">Twitter</span>
- </a>
- <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-     <span class="hidden">Facebook</span>
- </a>
- <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba/"
-    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-     <span class="hidden">Google+</span>
- </a>
+            </article>
+            <div class="col-xs-6">
+                <section class="pull-right">
+                    <h5>Share this post</h5>
+                    <a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba&amp;text=Xamarin+Open Source=Love, Una historia que no acaba&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2019/02/28/Xamarin-Open-Source-Love-Una-historia-que-no-acaba"><span class="hidden">Facebook</span></a>
+                </section>
+            </div>
+            <div class="col-xs-6">
+                <ul class="list-inline"><li><a href="/about" alt="About"><img class="blog-logo img-responsive" width="75" height="89" src="/about/stvansolano_card.webp" alt="My photo"/></a></li><li><a href="/about" alt="About MS MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/ms-mvp-logo.webp" alt="MS MVP logo"/></a></li><li><a href="/about" alt="About Xamarin MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/mvp-logo.webp" alt="MVP logo"/></a></li></ul>
+            </div>
 
-      </section>
-      
-      <ul class="list-inline"> 
-    <li>
-        <a href="/about">
-        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
-        </a>
-    </li>
-    <li>
-        <a href="https://www.planetxamarin.com" target="_blank">
-            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
-        </a>
-    </li>
-</ul>
-      <section class="row-fluid">
-    <h2>
-        <a href="/about">
-        Esteban Solano G.</a>
-    </h2>
-    <p>
-        Software Engineer at Microsoft | Former MVP, Certified developer
-        <br/>
-        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
-            @stvansolano
-        </a>
-        <br/>
-        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
-        <br/>
-        <a href="/about">More about me</a>
-    </p>    
-</section>
-    </section>
-  </article>
-</main>
-  
-  <footer class="col-xs-12 site-footer">
-  <div class="inner">
-     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
-     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
-  </div>
-</footer>
-</body>
-</html>
+            <section class="col-xs-12"><h2><a class="article-author" href="/about">Esteban Solano Granados</a></h2><p><br/><a href="https://twitter.com/stvansolano">@<!-- -->stvansolano</a><br/><a href="/about">More about me</a></p></section>
+        </main>
+        <section class="col-md-4">
+            <section class="card">
+                <ul class="list-group" data-theme=""><li class="list-group-item list-group-item-info"><h5 class="list-group-item-heading"><i class="fa fa fa-bookmark-o"> </i>Recent posts</h5></li><li class="list-group-item"><a href="/2023/11/18/Resumen-noviembre-2023-Ignite-GitHub-dotNetConf">Resumen - Novedades Microsoft Ignite, GitHub Universe y .NET Conf 2023!</a></li><li class="list-group-item"><a href="/2023/03/24/El-futuro-del-trabajo-presentando-M365-copilot">El futuro del trabajo en 2023 - Presentando Microsoft 365 Copilot</a></li><li class="list-group-item"><a href="/2023/03/24/The-future-of-work-introducing-microsoft-365-copilot">The future of work - Introducing Microsoft 365 Copilot 🤖</a></li><li class="list-group-item"><a href="/2022/09/22/Exam-passed-Microsoft-Azure-Data-Fundamentals-Certification">Exam passed! DP-900: Microsoft Azure Data Fundamentals Certification</a></li><li class="list-group-item"><a href="/2022/06/20/Creating-a-react-app-with-AspNet-Minimal-APIs-and-MongoDb-CosmosDb">Create a React-based app with ASP.NET Minimal APIs and MongoDB storage</a></li><li class="list-group-item"><a href="/2022/05/31/My-favorite-10-announcements-from-Microsoft-Build-2022">My favorite 10 DEV+Cloud announcements from Microsoft Build 2022</a></li><li class="list-group-item"><a href="/2022/03/24/Upgrading-dotnet-5-to-6-using-minimal-apis-and-github-codespaces">Upgrading .NET 5 -&gt; 6 using Minimal APIs, MySQL and GitHub Codespaces</a></li><li class="list-group-item"><a href="/2021/11/20/Exam-passed-Microsoft-Artificial-Intelligence-Fundamentals-AI-900-certification">Exam passed! Microsoft AI Fundamentals AI-900 Certification</a></li><li class="list-group-item"><a href="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers">Playing with .NET 6 preview, C# 10 and Docker</a></li><li class="list-group-item"><a href="/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft">Work at an awesome place. I&#x27;m joining Microsoft!</a></li><li class="list-group-item"><a href="/blog">Read more...</a></li></ul>
+            </section>
+            <section class="card">
+                <section class="card list-group" data-theme=""><a href="#" class="list-group-item active"><h5 class="list-group-item-heading"><i class="fa fa fa-tag"> </i>Browse by tag</h5></a><section class="list-group-item"><a href="/blog/tags/Windows" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Windows</p></a> <a href="/blog/tags/Productividad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productividad</p></a> <a href="/blog/tags/M365" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>M365</p></a> <a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p></a> <a href="/blog/tags/AI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AI</p></a> <a href="/blog/tags/DotNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DotNet</p></a> <a href="/blog/tags/GitHub" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>GitHub</p></a> <a href="/blog/tags/ChatGPT" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ChatGPT</p></a> <a href="/blog/tags/Azure" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Azure</p></a> <a href="/blog/tags/Data" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Data</p></a> <a href="/blog/tags/Exam" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Exam</p></a> <a href="/blog/tags/Certification" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Certification</p></a> <a href="/blog/tags/OSS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OSS</p></a> <a href="/blog/tags/Docker" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Docker</p></a> <a href="/blog/tags/containers" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>containers</p></a> <a href="/blog/tags/REST" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>REST</p></a> <a href="/blog/tags/Codespaces" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Codespaces</p></a> <a href="/blog/tags/React" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>React</p></a> <a href="/blog/tags/Xamarin" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Xamarin</p></a> <a href="/blog/tags/MAUI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MAUI</p></a> <a href="/blog/tags/Kubernetes" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Kubernetes</p></a> <a href="/blog/tags/.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>.NET</p></a> <a href="/blog/tags/Serverless" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Serverless</p></a> <a href="/blog/tags/AspNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AspNet</p></a> <a href="/blog/tags/Conferences" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Conferences</p></a> <a href="/blog/tags/Microsoft" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Microsoft</p></a> <a href="/blog/tags/Career" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Career</p></a> <a href="/blog/tags/FSharp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>FSharp</p></a> <a href="/blog/tags/Speaking" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Speaking</p></a> <a href="/blog/tags/SignalR" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>SignalR</p></a> <a href="/blog/tags/Online" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Online</p></a> <a href="/blog/tags/Comunidad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Comunidad</p></a> <a href="/blog/tags/WebAPI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WebAPI</p></a> <a href="/blog/tags/Mobile" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Mobile</p></a> <a href="/blog/tags/CosmosDB" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CosmosDB</p></a> <a href="/blog/tags/MachineLearning" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MachineLearning</p></a> <a href="/blog/tags/Python" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Python</p></a> <a href="/blog/tags/VisualStudio" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VisualStudio</p></a> <a href="/blog/tags/NetCore" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>NetCore</p></a> <a href="/blog/tags/Google" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Google</p></a> <a href="/blog/tags/DevOps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevOps</p></a> <a href="/blog/tags/WordPress" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WordPress</p></a> <a href="/blog/tags/Productivity" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productivity</p></a> <a href="/blog/tags/Contenedores" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Contenedores</p></a> <a href="/blog/tags/MVPSummit" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVPSummit</p></a> <a href="/blog/tags/Cloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Cloud</p></a> <a href="/blog/tags/OpenSource" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OpenSource</p></a> <a href="/blog/tags/CodeMentor" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CodeMentor</p></a> <a href="/blog/tags/AppCenter" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AppCenter</p></a> <a href="/blog/tags/YouTube" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>YouTube</p></a> <a href="/blog/tags/VS4Mac" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VS4Mac</p></a> <a href="/blog/tags/Taller" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Taller</p></a> <a href="/blog/tags/Charla" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Charla</p></a> <a href="/blog/tags/Git" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Git</p></a> <a href="/blog/tags/MVP" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVP</p></a> <a href="/blog/tags/iOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>iOS</p></a> <a href="/blog/tags/Android" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Android</p></a> <a href="/blog/tags/Freelance" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Freelance</p></a> <a href="/blog/tags/Linux" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Linux</p></a> <a href="/blog/tags/MacOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MacOS</p></a> <a href="/blog/tags/Asp.Net Core" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Asp.Net Core</p></a> <a href="/blog/tags/XamarinDiplomado" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinDiplomado</p></a> <a href="/blog/tags/MVVM" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVVM</p></a> <a href="/blog/tags/Backend" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Backend</p></a> <a href="/blog/tags/Spanish/English" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/English</p></a> <a href="/blog/tags/Meetup" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Meetup</p></a> <a href="/blog/tags/Bootcamp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Bootcamp</p></a> <a href="/blog/tags/DevDays" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevDays</p></a> <a href="/blog/tags/UX / UI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>UX / UI</p></a> <a href="/blog/tags/Realm" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Realm</p></a> <a href="/blog/tags/Rifa" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Rifa</p></a> <a href="/blog/tags/Open Source" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Open Source</p></a> <a href="/blog/tags/ASP.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ASP.NET</p></a> <a href="/blog/tags/Web Apps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web Apps</p></a> <a href="/blog/tags/Web API" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web API</p></a> <a href="/blog/tags/Workshop" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Workshop</p></a> <a href="/blog/tags/XamarinForms" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinForms</p></a> <a href="/blog/tags/Yeoman" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Yeoman</p></a> <a href="/blog/tags/HTML5" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>HTML5</p></a> <a href="/blog/tags/TestCloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>TestCloud</p></a> <a href="/blog/tags/Markdown" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Markdown</p></a> </section></section>
+                <div class="col-md-3 card"><h2>Archives</h2><section><ul class="list-group box-shadow" data-theme=""><li class="list-group-item"><a href="/blog/archives/2022"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2022</p></a></li><li class="list-group-item"><a href="/blog/archives/2021"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2021</p></a></li><li class="list-group-item"><a href="/blog/archives/2020"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2020</p></a></li><li class="list-group-item"><a href="/blog/archives/2019"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2019</p></a></li><li class="list-group-item"><a href="/blog/archives/2018"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2018</p></a></li><li class="list-group-item"><a href="/blog/archives/2017"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2017</p></a></li><li class="list-group-item"><a href="/blog/archives/2016"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2016</p></a></li><li class="list-group-item"><a href="/blog/archives/2015"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2015</p></a></li></ul></section></div>
+            </section>
+        </section>
+    </div>
+    <footer data-theme="" class="col-xs-12 site-footer text-center"><div class="inner"><section class="copyright">Copyright <a href="/about">Esteban Solano Granados</a> © <!-- -->2023<!-- --> • All rights reserved.</section><section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section></div></footer>
+  </body></html>

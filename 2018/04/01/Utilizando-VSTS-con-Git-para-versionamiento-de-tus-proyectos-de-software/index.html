@@ -1,286 +1,84 @@
 <!DOCTYPE html>
-<html ng-app="MainApp">
+<html lang="en">
+  <head><link rel="canonical" href="https://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software"/><link rel="publisher" href="https://twitter.com/stvansolano"/><link rel="author" href="https://twitter.com/stvansolano"/><link rel="alternate" type="application/rss+xml" title="Esteban Solano&#x27;s Blog" href="/atom.xml"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="keywords" itemProp="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker"/><title>Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software</title><meta name="title" content="Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software"/><meta name="description" content="Desde Azure DevOps puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo."/><meta property="og:type" content="website"/><meta property="og:url" content="https://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software"/><meta property="og:title" content="Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software"/><meta property="og:description" content="Desde Azure DevOps puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo."/><meta property="og:image" itemProp="image" content="https://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.png"/><meta property="og:site_name" content="stvansolano | Welcome to my blog"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software"/><meta name="twitter:title" content="Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software"/><meta name="twitter:description" content="Desde Azure DevOps puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo."/><meta name="twitter:image" content="https://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.png"/><meta name="twitter:site" content="@stvansolano"/><meta name="twitter:creator" content="@stvansolano"/><link itemProp="thumbnailUrl" href="https://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.png"/><meta property="og:image:width" content="600"/><meta property="og:image:height" content="300"/><meta property="article:publisher" content="https://twitter.com/stvansolano"/><meta property="article:section" content="Blog"/><meta property="article:published_time" content="1522540800000"/><meta http-equiv="Content-Type" content="text/html" charSet="UTF-8"/><meta name="generator" content="stvansolano | Welcome to my blog"/><link async="" rel="stylesheet" type="text/css" href="/main.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QNLS5Q61WF"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<head>
-  <link rel="canonical" href="http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/" />
-  <link rel="publisher" href="https://twitter.com/stvansolano"/>
-  <link rel="author" href="https://twitter.com/stvansolano" />
-  <link rel="alternate" type="application/rss+xml" title="Esteban Solano's Blog" href="/atom.xml" />
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Utilizando VSTS con Git para versionamiento de tus proyectos de software | Esteban Solano G.</title>
-  <meta name="description" content="Software Engineer at Microsoft | Former MVP, Certified developer" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" itemprop="keywords" content="software, xamarin, web developer, microsoft, mcsd, xaml, costa rica, speaker" />
-  
- 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Utilizando VSTS con Git para versionamiento de tus proyectos de software" />
-  <meta property="og:description" content="Desde VSTS (Visual Studio Team Services) puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo." />
-  <meta property="og:url" content="http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/" />
-  <meta property="og:site_name" content="Utilizando VSTS con Git para versionamiento de tus proyectos de software" />
-  <meta property="og:image" itemprop="image" content="http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.png" />
-  <link itemprop="thumbnailUrl" href="http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.png"> 
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="300" />
-  <meta property="article:publisher" content="https://twitter.com/stvansolano" />
-  <meta property="article:tag" content="Xamarin Platform" />
-  <meta property="article:section" content="Blog" />
-  <meta property="article:published_time" content="Sun Apr 01 2018 00:00:00 GMT+0000" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.png" />
-  <meta name="twitter:url" content="http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/" />
-  <meta name="twitter:site" content="@stvansolano">
-  <meta name="twitter:creator" content="@stvansolano">
-  <meta name="twitter:title" content="Utilizando VSTS con Git para versionamiento de tus proyectos de software" />
-  <meta name="twitter:description" content="Desde VSTS (Visual Studio Team Services) puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo." />
-
-  <meta name="generator" content="Esteban Solano G.">
-  <link rel="stylesheet" type="text/css" href="/base.css" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme.css" />
-  <link rel="stylesheet" type="text/css" href="/overrides.css" />
-  <script async type="text/javascript" src="/script.min.js"></script>
-
-  
-  
-  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
-  
-  
-  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64743742-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-  <base href="/" />
-</head>
-<body data-ng-controller="default">
-  <header class="">
-    <nav role="navigation" class="navbar navbar-default list-group box-shadow">
-      <h1 class="text-center">
-          /stvansolano
-      </h1>
-      <section class="social-links text-center">
-        <a class="social fa fa-2x fa-twitter" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a>
-        <a class="social fa fa-2x fa-linkedin" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a>
-        <a class="social fa fa-2x fa-github" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a>
-        <a class="social fa fa-2x fa-youtube" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a>
-        <a href="/"><i class="social fa fa-2x fa-code">&nbsp;</i></a>
-      </section>
-      <div class="text-center">
-        <h2 class="blog-description col-xs-8 col-sm-12">Software Engineer at Microsoft | Former MVP, Certified developer</h2>
-        <button type="button" class="navbar-toggle col-xs-3" data-ng-click="toggleMenu()" data-toggle="dropdown">
-          
-          Blog
-          <span class="caret"></span>
-        </button>
-      </div>
-    </nav>
-</header>
-  <section class="col-md-2" data-ng-hide="isCollapsed">
-    <nav class="list-group box-shadow">
-        <a class="list-group-item" href="/">
-            <i class="fa fa-home">&nbsp;</i>
-            Home
-        </a>
-        <a class="list-group-item" href="/blog">
-           <p class="list-group-item-text">
-              <i class="fa fa-bookmark">&nbsp;</i>
-              Blog
-          </p>
-        </a>
-        <a class="list-group-item" href="/community">
-           <p class="list-group-item-text">
-              <i class="fa fa-users">&nbsp;</i>
-              Community
-          </p>
-        </a>
-        <a class="list-group-item" href="/about">
-          <p class="list-group-item-text">
-              <i class="fa fa-code">&nbsp;</i>
-              About    
-          </p>
-        </a>    
-    </nav>
-</section>
-  
-  
-    
-
-
-<main class="content col-sm-10" role="main">
-  <article>
-    <span class="post-meta">
-
-    
-    
-        <a href="/blog/tags/Spanish-Espanol/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Spanish/Español</p>
-        </a>
-    
-        <a href="/blog/tags/DevOps/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>DevOps</p>
-        </a>
-    
-        <a href="/blog/tags/MacOS/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>MacOS</p>
-        </a>
-    
-        <a href="/blog/tags/Net/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>.Net</p>
-        </a>
-    
-        <a href="/blog/tags/Linux/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Linux</p>
-        </a>
-    
-        <a href="/blog/tags/Windows/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>Windows</p>
-        </a>
-    
-        <a href="/blog/tags/VSTS/" class="list-group-item-text">
-        <p class="badge"><i class="fa fa-tag">&nbsp;</i>VSTS</p>
-        </a>
-    
-
-</span>
-    <h1 class="post-title">
-      Utilizando VSTS con Git para versionamiento de tus proyectos de software
-    </h1>
-    <p class="content">
-      <p>Desde VSTS (Visual Studio Team Services) puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo.<br><a id="more"></a></p>
-<h2 id="Sobre-Git-GitHub-TFS-VSTS-y-y-Visual-Studio"><a href="#Sobre-Git-GitHub-TFS-VSTS-y-y-Visual-Studio" class="headerlink" title="Sobre Git, GitHub, TFS, VSTS y y Visual Studio."></a>Sobre Git, GitHub, TFS, VSTS y y Visual Studio.</h2><p>Existen muchas alternativas, herramientas y flujos de trabajo para administrar el código fuente de software. El más popular hoy en día es Git, y comunmente lo puedes usar a través de GitHub, que entre muchas otras cosas provee la interfaz gráfica que te permite explorar, configurar y hospedar el código. Es importante dejar claro que VSTS no es un reemplazo para Git, Github ni TFS en cualquiera de sus variantes. </p>
-<p>Mediante VSTS puedes utilizar Git para gestionar el versionamiento de código, en lugar de hospedarlo de manera pública o privada en tu cuenta <a href="https://github.com/stvansolano" target="_blank" rel="noopener">Github</a>, en VSTS puedes hospedarlo de forma privada y seguir utilizando Git desde la terminal o interfaz gráfica. Además, puedes gestionar tu proyecto de software con Scrum, Kanban y realizar DevOps desde un mismo lugar. </p>
-<p><img src="2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.png" alt="VSTS" title="VSTS"></p>
+      gtag('config', 'G-QNLS5Q61WF');
+    </script><base href="/"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/></head>
+  <link rel="stylesheet" href="/_astro/_...slug_.7126134a.css" /><body>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="1CUJ6g" component-url="/_astro/Nav.4a132ef2.js" component-export="default" renderer-url="/_astro/client.c401bd7c.js" props="{&quot;title&quot;:[0,&quot;Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software&quot;],&quot;page&quot;:[0,{&quot;path&quot;:[0,&quot;/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software&quot;],&quot;canonical_path&quot;:[0,&quot;&quot;],&quot;navigationTitle&quot;:[0,&quot;&quot;],&quot;lang&quot;:[0,&quot;en&quot;],&quot;title&quot;:[0,&quot;Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software&quot;],&quot;layout&quot;:[0,null],&quot;date&quot;:[0,&quot;2018-04-1&quot;],&quot;header&quot;:[0,{&quot;description&quot;:[0,&quot;Desde Azure DevOps puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo.&quot;],&quot;optimizedImage&quot;:[0,&quot;~/preview.webp&quot;]}],&quot;tags&quot;:[1,&quot;[[0,{\&quot;name\&quot;:[0,\&quot;Linux\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Linux\&quot;],\&quot;title\&quot;:[0,\&quot;Linux\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;Windows\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Windows\&quot;],\&quot;title\&quot;:[0,\&quot;Windows\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;MacOS\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/MacOS\&quot;],\&quot;title\&quot;:[0,\&quot;MacOS\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;DotNet\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/DotNet\&quot;],\&quot;title\&quot;:[0,\&quot;DotNet\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;DevOps\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/DevOps\&quot;],\&quot;title\&quot;:[0,\&quot;DevOps\&quot;]}],[0,{\&quot;name\&quot;:[0,\&quot;Spanish/Español\&quot;],\&quot;path\&quot;:[0,\&quot;/blog/tags/Spanish/Español\&quot;],\&quot;title\&quot;:[0,\&quot;Spanish/Español\&quot;]}]]&quot;],&quot;posts&quot;:[0,null],&quot;tag&quot;:[0,null],&quot;slug&quot;:[0,&quot;2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software&quot;],&quot;prev&quot;:[0,null],&quot;next&quot;:[0,null],&quot;raw&quot;:[0,null],&quot;content&quot;:[0,null],&quot;useLegacyLayout&quot;:[0,null],&quot;rawMarkdown&quot;:[0,null],&quot;thumbnail&quot;:[0,&quot;~/preview.png&quot;],&quot;excerpt&quot;:[0,&quot;Desde Azure DevOps puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo.&quot;],&quot;permalink&quot;:[0,&quot;https://stvansolano.github.io2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software&quot;]}],&quot;config&quot;:[0,{&quot;title&quot;:[0,&quot;stvansolano | Welcome to my blog&quot;],&quot;subtitle&quot;:[0,&quot;&quot;],&quot;root&quot;:[0,&quot;&quot;],&quot;author&quot;:[0,&quot;Esteban Solano Granados&quot;],&quot;email&quot;:[0,&quot;stvansolano@outlook.com&quot;],&quot;twitter&quot;:[0,&quot;stvansolano&quot;],&quot;parentSite&quot;:[0,&quot;/&quot;],&quot;sitePermalink&quot;:[0,&quot;https://stvansolano.github.io&quot;]}]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Nav&quot;,&quot;value&quot;:true}" await-children=""><nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top row"><span class="navbar-brand col-md-5"><a class="" href="/"><span><i class="social fa fa-2x fa-code navbar-icon"></i> stvansolano</span></a><a class="social fa fa-2x fa-twitter" rel="noreferrer" href="https://twitter.com/stvansolano" title="Twitter" target="_blank"></a><a class="social fa fa-2x fa-linkedin" rel="noreferrer" href="http://cr.linkedin.com/in/stvansolano" title="LinkedIn" target="_blank"></a><a class="social fa fa-2x fa-github" rel="noreferrer" href="https://github.com/stvansolano" title="GitHub" target="_blank"></a><a class="social fa fa-2x fa-youtube" rel="noreferrer" href="https://youtube.com/stvansolano/" title="GitHub" target="_blank"></a><i class="social fa fa-2x fa-bars fa-bars-icon d-md-none visible"></i></span><ul class="navbar-nav col-md-8 collapse"><li class="nav-item"><a class="nav-link" href="/"><i class="fa fa-home"> </i>Home</a></li><li class="nav-item"><a class="nav-link" href="/blog"><i class="fa fa-bookmark"> </i>Blog</a></li><li class="nav-item"><a class="nav-link" href="/community"><i class="fa fa-users"> </i>Commmunity</a></li><li class="nav-item"><a class="nav-link" href="/about"><i class="fa fa-code"> </i>About</a></li></ul><span class="col-xs-12 hidden"><i class="social fa fa-2x collapse-icon d-md-none fa-angle-up"> </i></span></nav></astro-island>
+    <div class="row after-header">
+        <main class="content col-md-8" role="main">
+            <article class="row">
+                <div class="row"><section class="col-md-8"><div class="article-info-left"><div><a href="/about" class="profile-avatar" alt="Esteban Solano Granados - stvansolano"><img class="decorated" data-src="/about/stvansolano_circle.webp" height="40" width="40" alt="Esteban Solano Granados" src="/about/stvansolano_circle.webp"/></a></div><section><div class="username">By <a href="/about">Esteban Solano Granados</a></div><div><span class="date" data-theme="">Published・<!-- -->April 01, 2018</span><span class="read-time"></span></div></section></div></section><section class="col-md-4" style="margin-bottom:0.5rem"><h5>Share this post</h5><a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software&amp;text=Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software"><span class="hidden">Facebook</span></a></section></div><h1>Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software</h1><span class="post-meta" style="margin-bottom:0.5rem"><a href="/blog/tags/Linux" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Linux</p> </a><a href="/blog/tags/Windows" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Windows</p> </a><a href="/blog/tags/MacOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MacOS</p> </a><a href="/blog/tags/DotNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DotNet</p> </a><a href="/blog/tags/DevOps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevOps</p> </a><a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p> </a></span>
+                <p>Desde Azure DevOps puedes hospedar y administrar tu proyecto de software de manera privada y sin costo. Es completamente integrable desde Visual Studio, VS Code ya sea en Windows, Linux o MacOS. En esta guia te indico cómo configurarlo.</p>
+<!-- more -->
+<h2 id="sobre-git-github-tfs-azure-devops-anteriormente-vsts-y-y-visual-studio">Sobre Git, GitHub, TFS, Azure DevOps (anteriormente VSTS) y y Visual Studio.</h2>
+<p>Existen muchas alternativas, herramientas y flujos de trabajo para administrar el código fuente de software. El más popular hoy en día es Git, y comunmente lo puedes usar a través de GitHub, que entre muchas otras cosas provee la interfaz gráfica que te permite explorar, configurar y hospedar el código. Es importante dejar claro que VSTS no es un reemplazo para Git, Github ni TFS en cualquiera de sus variantes.</p>
+<p>Mediante Azure DevOps puedes utilizar Git para gestionar el versionamiento de código, en lugar de hospedarlo de manera pública o privada en tu cuenta <a href="https://github.com/stvansolano">Github</a>, en Azure Devops puedes hospedarlo de forma privada y seguir utilizando Git desde la terminal o interfaz gráfica. Además, puedes gestionar tu proyecto de software con Scrum, Kanban y realizar DevOps desde un mismo lugar.</p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/preview.webp" alt="Azure DevOps" title="Azure DevOps">
 <blockquote>
-<p>Importante: VSTS no es un reemplazo para Git, Github ni TFS en cualquiera de sus variantes. Mediante VSTS puedes utilizar Git para gestionar el versionamiento de código, en lugar de hospedarlo en Github por ejemplo</p>
+<p>Importante: Azure DevOps no es un reemplazo para Git, Github ni TFS en cualquiera de sus variantes. Mediante Azure DevOps puedes utilizar Git para gestionar el versionamiento de código, en lugar de hospedarlo en Github por ejemplo</p>
 </blockquote>
-<p>En la siguiente imagen puedes ver la gestión desde VSTS de un repo en Git y las opciones de Fork/Clone:</p>
-<p><img src="2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/vsts.png" alt="VSTS" title="VSTS"></p>
-<p>Una vez teniendo tu proyecto distribuido en VSTS, puedes comenzar a trabajarlo desde tu PC o Mac, de la siguiente manera:</p>
-<h2 id="Requisitos-del-sistema"><a href="#Requisitos-del-sistema" class="headerlink" title="Requisitos del sistema"></a>Requisitos del sistema</h2><p>Según el sistema operativo que estés utilizando, los requisitos varían. Te incluyo lo necesario a descargar:</p>
-<h3 id="Instalacion-desde-Windows"><a href="#Instalacion-desde-Windows" class="headerlink" title="Instalacion desde Windows"></a>Instalacion desde Windows</h3><p>En Windows es bien facil, basta con instalar Visual Studio Community o superior y puedes empezarlo a utilizar desde la ventana de Team Explorer :)</p>
-<h3 id="Instalacion-desde-Mac-facil-pero-con-algunos-pasos-extra"><a href="#Instalacion-desde-Mac-facil-pero-con-algunos-pasos-extra" class="headerlink" title="Instalacion desde Mac (facil pero con algunos pasos extra)"></a>Instalacion desde Mac (facil pero con algunos pasos extra)</h3><ul>
+<p>En la siguiente imagen puedes ver la gestión desde Azure DevOps de un repo en Git y las opciones de Fork/Clone:</p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/vsts.png" alt="Azure DevOps (anteriormente VSTS)" title="Azure DevOps (anteriormente VSTS)">
+<p>Una vez teniendo tu proyecto distribuido en Azure DevOps, puedes comenzar a trabajarlo desde tu PC o Mac, de la siguiente manera:</p>
+<h2 id="requisitos-del-sistema">Requisitos del sistema</h2>
+<p>Según el sistema operativo que estés utilizando, los requisitos varían. Te incluyo lo necesario a descargar:</p>
+<h3 id="instalacion-desde-windows">Instalacion desde Windows</h3>
+<p>En Windows es bien facil, basta con instalar Visual Studio Community o superior y puedes empezarlo a utilizar desde la ventana de Team Explorer :)</p>
+<h3 id="instalacion-desde-mac-facil-pero-con-algunos-pasos-extra">Instalacion desde Mac (facil pero con algunos pasos extra)</h3>
+<ul>
 <li>Mac OS X versión 10.9.5 y versiones posteriores O una distribución reciente de GNU / Linux.</li>
 <li>Java 6 y más.</li>
 <li>Git versión 1.9 y superior.</li>
 </ul>
 <p>Como recomende <a href="http://stvansolano.github.io/2018/03/25/Guia-de-instalacion-MacOS-iOS-para-desarrollo-Net-ASP-Net-Core-y-Xamarin/">en mi post anterior</a>, si estas desde Mac OS la opcion mas recomendable es instalar <em>Homebrew</em>. Si no lo tienes te recomiendo echarle un vistazo. <a href="http://stvansolano.github.io/2018/03/25/Guia-de-instalacion-MacOS-iOS-para-desarrollo-Net-ASP-Net-Core-y-Xamarin/">Por acá el link revisar del post</a> de mi blog.</p>
-<h3 id="Instalacion-en-Mac-usando-Homebrew-o-en-Linux-usando-Linuxbrew-recomendado"><a href="#Instalacion-en-Mac-usando-Homebrew-o-en-Linux-usando-Linuxbrew-recomendado" class="headerlink" title="Instalación en Mac usando Homebrew o en Linux usando Linuxbrew (recomendado)"></a>Instalación en Mac usando Homebrew o en Linux usando Linuxbrew (recomendado)</h3><p>Teniendo Homebrew instalado puedes ejecutar los siguientes comandos:</p>
+<h3 id="instalación-en-mac-usando-homebrew-o-en-linux-usando-linuxbrew-recomendado">Instalación en Mac usando Homebrew o en Linux usando Linuxbrew (recomendado)</h3>
+<p>Teniendo Homebrew instalado puedes ejecutar los siguientes comandos:</p>
 <blockquote>
-<p>brew update<br>brew install git-credential-manager</p>
+<p>brew update
+brew install git-credential-manager</p>
 </blockquote>
-<p>En caso que estés desde Linux o Windows puedes seguir esta documentacion complementaria a continuación (en inglés) para gestional los Credential Managers: </p>
-<p><a href="https://docs.microsoft.com/en-us/vsts/git/set-up-credential-managers?view=vsts" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/vsts/git/set-up-credential-managers?view=vsts</a></p>
-<h2 id="A-disfrutar-desde-la-linea-de-consola-con-VSTS-Visual-Studio-o-Visual-Studio-Code"><a href="#A-disfrutar-desde-la-linea-de-consola-con-VSTS-Visual-Studio-o-Visual-Studio-Code" class="headerlink" title="A disfrutar desde la linea de consola con VSTS, Visual Studio o Visual Studio Code."></a>A disfrutar desde la linea de consola con VSTS, Visual Studio o Visual Studio Code.</h2><p>Una vez instalado el Credential Manager puedes empezarlo a utilizar desde la consola y hacer <em>Clone</em> de tus proyectos en VSTS mediante Git (Visual Studio Team Services). Puedes crear una cuenta gratuita y hospedar tus proyectos sin ningun costo.</p>
+<p>En caso que estés desde Linux o Windows puedes seguir esta documentacion complementaria a continuación (en inglés) para gestional los Credential Managers:</p>
+<p><a href="https://docs.microsoft.com/en-us/vsts/git/set-up-credential-managers?view=vsts">https://docs.microsoft.com/en-us/vsts/git/set-up-credential-managers?view=vsts</a></p>
+<h2 id="a-disfrutar-desde-la-linea-de-consola-con-azure-devops-anteriormente-vsts-visual-studio-o-visual-studio-code">A disfrutar desde la linea de consola con Azure DevOps (anteriormente VSTS), Visual Studio o Visual Studio Code.</h2>
+<p>Una vez instalado el Credential Manager puedes empezarlo a utilizar desde la consola y hacer <em>Clone</em> de tus proyectos en Azure DevOps mediante Git (Visual Studio Team Services). Puedes crear una cuenta gratuita y hospedar tus proyectos sin ningun costo.</p>
 <p>Tambien puedes hacerlo desde la terminal integrada de VS Code  (recomendable, en ingles “Integrated Terminal”) y desde alli puedes realizar el Clone desde Git. A partir de ese punto puedes trabajar tu proyecto y seguir tu flujo de Git favorito mediante los comandos clone, pull, add, commit, push, etc.</p>
-<p><img src="2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/credentials.png" alt="Credenciales" title="Credenciales"></p>
-<h2 id="Referencias-de-Git"><a href="#Referencias-de-Git" class="headerlink" title="Referencias de Git"></a>Referencias de Git</h2><p>Si eres nuevo en Git, hay bastante documentación en línea al respecto. Te recomiendo varios enlaces de Git y otras fuentes de internet.</p>
-<p>Libro de Git en linea: <a href="https://git-scm.com/book/es/v1/Empezando" target="_blank" rel="noopener">Enlace</a><br>Git &amp; BitBucket: <a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud" target="_blank" rel="noopener">Enlace</a></p>
-<h2 id="Te-gusto-el-post-Dale-❤️-y-comparte"><a href="#Te-gusto-el-post-Dale-❤️-y-comparte" class="headerlink" title="Te gusto el post? Dale ❤️ y comparte"></a>Te gusto el post? Dale ❤️ y comparte</h2><p>Cuentame que tal te va o bien estar al tanto de próximas publicaciones acá en mi blog :)</p>
-<p><br/><blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">De mi blog: Utilizando <a href="https://twitter.com/hashtag/VSTS?src=hash&amp;ref_src=twsrc%5Etfw" target="_blank" rel="noopener">#VSTS</a> con <a href="https://twitter.com/hashtag/Git?src=hash&amp;ref_src=twsrc%5Etfw" target="_blank" rel="noopener">#Git</a> para versionamiento de tus proyectos de software <a href="https://t.co/3gEUgqiqRW" target="_blank" rel="noopener">https://t.co/3gEUgqiqRW</a> vía <a href="https://twitter.com/stvansolano?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">@stvansolano</a></p>&mdash; Esteban Solano G. (@stvansolano) <a href="https://twitter.com/stvansolano/status/980540791042052096?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">1 de abril de 2018</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<img class="img-fluid box-shadow text-center" width="600" height="338" src="/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/credentials.png" alt="Credenciales" title="Credenciales">
+<h2 id="referencias-de-git">Referencias de Git</h2>
+<p>Si eres nuevo en Git, hay bastante documentación en línea al respecto. Te recomiendo varios enlaces de Git y otras fuentes de internet.</p>
+<p>Libro de Git en linea: <a href="https://git-scm.com/book/es/v1/Empezando">Enlace</a>
+Git &#x26; BitBucket: <a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">Enlace</a></p>
+<h2 id="te-gusto-el-post-dale-️-y-comparte">Te gusto el post? Dale ❤️ y comparte</h2>
+<p>Cuentame que tal te va o bien estar al tanto de próximas publicaciones acá en mi blog :)</p>
+<p><br></p><blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">De mi blog: Utilizando <a href="https://twitter.com/hashtag/VSTS?src=hash&#x26;ref_src=twsrc%5Etfw">#VSTS</a> con <a href="https://twitter.com/hashtag/Git?src=hash&#x26;ref_src=twsrc%5Etfw">#Git</a> para versionamiento de tus proyectos de software <a href="https://t.co/3gEUgqiqRW"></a><a href="https://t.co/3gEUgqiqRW">https://t.co/3gEUgqiqRW</a> vía <a href="https://twitter.com/stvansolano?ref_src=twsrc%5Etfw">@stvansolano</a></p>— Esteban Solano G. (@stvansolano) <a href="https://twitter.com/stvansolano/status/980540791042052096?ref_src=twsrc%5Etfw">1 de abril de 2018</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p></p>
 <p>También puedes ponerte en contacto conmigo enviandome un correo a <a href="mailto:stvansolano@outlook.com">stvansolano@oultook.com</a> por si tienes sugerencias y/o compartir tus experiencias en el tema.</p>
 <p>Saludos!</p>
-  
-    </p>
-    <section class="post-footer">
-      <section class="row-fluid">
-    <ul class="pager" role="pagination">
-        
-        
-        <li class="previous">
-            <a href="/2018/04/05/Busco-developers-y-trainers-en-Xamarin-en-espanol-para-Costa-Rica/">
-                ← Busco developers y trainers e&hellip;
-            </a>
-        </li>
-        
-        
-        
-        
-        <li class="next">
-            <a href="/2018/03/25/Guia-de-instalacion-MacOS-iOS-para-desarrollo-Net-ASP-Net-Core-y-Xamarin/" class="btn info">
-                Guia de instalacion MacOS/iOS&hellip; →
-            </a>
-        </li>
-        
-    </ul>
-</section>
-      
-      <section class="row-fluid">
-        <h3>Share this post</h3>
-        
- <a class="fa fa-twitter" href="http://twitter.com/share?url=http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/&text=Utilizando VSTS con Git para versionamiento de tus proyectos de software&via=stvansolano"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-     <span class="hidden">Twitter</span>
- </a>
- <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-     <span class="hidden">Facebook</span>
- </a>
- <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://stvansolano.github.io/2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software/"
-    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-     <span class="hidden">Google+</span>
- </a>
+            </article>
+            <div class="col-xs-6">
+                <section class="pull-right">
+                    <h5>Share this post</h5>
+                    <a class="social fa fa-2x fa-linkedin" target="_blank" rel="noreferrer" alt="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://stvansolano.github.io2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software"><span class="hidden">LinkedIn</span></a> <a class="social fa fa-2x fa-twitter" target="_blank" rel="noreferrer" alt="Share on Twitter" href="http://twitter.com/share?url=https://stvansolano.github.io2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software&amp;text=Utilizando Azure DevOps con Git para versionamiento de tus proyectos de software&amp;via=stvansolano"><span class="hidden">Twitter</span></a> <a class="social fa fa-2x fa-facebook" target="_blank" rel="noreferrer" alt="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://stvansolano.github.io2018/04/01/Utilizando-VSTS-con-Git-para-versionamiento-de-tus-proyectos-de-software"><span class="hidden">Facebook</span></a>
+                </section>
+            </div>
+            <div class="col-xs-6">
+                <ul class="list-inline"><li><a href="/about" alt="About"><img class="blog-logo img-responsive" width="75" height="89" src="/about/stvansolano_card.webp" alt="My photo"/></a></li><li><a href="/about" alt="About MS MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/ms-mvp-logo.webp" alt="MS MVP logo"/></a></li><li><a href="/about" alt="About Xamarin MVP"><img class="blog-logo img-responsive" width="75" height="89" src="/about/mvp-logo.webp" alt="MVP logo"/></a></li></ul>
+            </div>
 
-      </section>
-      
-      <ul class="list-inline"> 
-    <li>
-        <a href="/about">
-        <img class="img-responsive" width="75" src="/about/stvansolano_card.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/ms-mvp-logo.png"></img>
-        </a>
-    </li>
-    <li>
-        <a href="/about">
-            <img class="img-responsive" width="75" src="/about/mvp-logo.png"></img>  
-        </a>
-    </li>
-    <li>
-        <a href="https://www.planetxamarin.com" target="_blank">
-            <img class="img-responsive" width="200" src="/about/planetxamarin-featured-badge.png"></img>  
-        </a>
-    </li>
-</ul>
-      <section class="row-fluid">
-    <h2>
-        <a href="/about">
-        Esteban Solano G.</a>
-    </h2>
-    <p>
-        Software Engineer at Microsoft | Former MVP, Certified developer
-        <br/>
-        <a href="https://twitter.com/stvansolano" target="_blank" rel="noopener">
-            @stvansolano
-        </a>
-        <br/>
-        <a href="mailto:stvansolano@outlook.com">stvansolano@outlook.com</a>
-        <br/>
-        <a href="/about">More about me</a>
-    </p>    
-</section>
-    </section>
-  </article>
-</main>
-  
-  <footer class="col-xs-12 site-footer">
-  <div class="inner">
-     <section class="copyright">Copyright <a href="/about">Esteban Solano G.</a> &copy; 2021 &bull; All rights reserved.</section>
-     <section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section>
-  </div>
-</footer>
-</body>
-</html>
+            <section class="col-xs-12"><h2><a class="article-author" href="/about">Esteban Solano Granados</a></h2><p><br/><a href="https://twitter.com/stvansolano">@<!-- -->stvansolano</a><br/><a href="/about">More about me</a></p></section>
+        </main>
+        <section class="col-md-4">
+            <section class="card">
+                <ul class="list-group" data-theme=""><li class="list-group-item list-group-item-info"><h5 class="list-group-item-heading"><i class="fa fa fa-bookmark-o"> </i>Recent posts</h5></li><li class="list-group-item"><a href="/2023/11/18/Resumen-noviembre-2023-Ignite-GitHub-dotNetConf">Resumen - Novedades Microsoft Ignite, GitHub Universe y .NET Conf 2023!</a></li><li class="list-group-item"><a href="/2023/03/24/El-futuro-del-trabajo-presentando-M365-copilot">El futuro del trabajo en 2023 - Presentando Microsoft 365 Copilot</a></li><li class="list-group-item"><a href="/2023/03/24/The-future-of-work-introducing-microsoft-365-copilot">The future of work - Introducing Microsoft 365 Copilot 🤖</a></li><li class="list-group-item"><a href="/2022/09/22/Exam-passed-Microsoft-Azure-Data-Fundamentals-Certification">Exam passed! DP-900: Microsoft Azure Data Fundamentals Certification</a></li><li class="list-group-item"><a href="/2022/06/20/Creating-a-react-app-with-AspNet-Minimal-APIs-and-MongoDb-CosmosDb">Create a React-based app with ASP.NET Minimal APIs and MongoDB storage</a></li><li class="list-group-item"><a href="/2022/05/31/My-favorite-10-announcements-from-Microsoft-Build-2022">My favorite 10 DEV+Cloud announcements from Microsoft Build 2022</a></li><li class="list-group-item"><a href="/2022/03/24/Upgrading-dotnet-5-to-6-using-minimal-apis-and-github-codespaces">Upgrading .NET 5 -&gt; 6 using Minimal APIs, MySQL and GitHub Codespaces</a></li><li class="list-group-item"><a href="/2021/11/20/Exam-passed-Microsoft-Artificial-Intelligence-Fundamentals-AI-900-certification">Exam passed! Microsoft AI Fundamentals AI-900 Certification</a></li><li class="list-group-item"><a href="/2021/08/02/Playing-with-NET-6-preview-csharp10-docker-containers">Playing with .NET 6 preview, C# 10 and Docker</a></li><li class="list-group-item"><a href="/2020/12/07/Work-at-an-awesome-place-I-am-joining-Microsoft">Work at an awesome place. I&#x27;m joining Microsoft!</a></li><li class="list-group-item"><a href="/blog">Read more...</a></li></ul>
+            </section>
+            <section class="card">
+                <section class="card list-group" data-theme=""><a href="#" class="list-group-item active"><h5 class="list-group-item-heading"><i class="fa fa fa-tag"> </i>Browse by tag</h5></a><section class="list-group-item"><a href="/blog/tags/Windows" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Windows</p></a> <a href="/blog/tags/Productividad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productividad</p></a> <a href="/blog/tags/M365" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>M365</p></a> <a href="/blog/tags/Spanish/Español" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/Español</p></a> <a href="/blog/tags/AI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AI</p></a> <a href="/blog/tags/DotNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DotNet</p></a> <a href="/blog/tags/GitHub" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>GitHub</p></a> <a href="/blog/tags/ChatGPT" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ChatGPT</p></a> <a href="/blog/tags/Azure" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Azure</p></a> <a href="/blog/tags/Data" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Data</p></a> <a href="/blog/tags/Exam" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Exam</p></a> <a href="/blog/tags/Certification" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Certification</p></a> <a href="/blog/tags/OSS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OSS</p></a> <a href="/blog/tags/Docker" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Docker</p></a> <a href="/blog/tags/containers" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>containers</p></a> <a href="/blog/tags/REST" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>REST</p></a> <a href="/blog/tags/Codespaces" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Codespaces</p></a> <a href="/blog/tags/React" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>React</p></a> <a href="/blog/tags/Xamarin" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Xamarin</p></a> <a href="/blog/tags/MAUI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MAUI</p></a> <a href="/blog/tags/Kubernetes" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Kubernetes</p></a> <a href="/blog/tags/.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>.NET</p></a> <a href="/blog/tags/Serverless" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Serverless</p></a> <a href="/blog/tags/AspNet" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AspNet</p></a> <a href="/blog/tags/Conferences" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Conferences</p></a> <a href="/blog/tags/Microsoft" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Microsoft</p></a> <a href="/blog/tags/Career" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Career</p></a> <a href="/blog/tags/FSharp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>FSharp</p></a> <a href="/blog/tags/Speaking" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Speaking</p></a> <a href="/blog/tags/SignalR" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>SignalR</p></a> <a href="/blog/tags/Online" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Online</p></a> <a href="/blog/tags/Comunidad" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Comunidad</p></a> <a href="/blog/tags/WebAPI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WebAPI</p></a> <a href="/blog/tags/Mobile" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Mobile</p></a> <a href="/blog/tags/CosmosDB" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CosmosDB</p></a> <a href="/blog/tags/MachineLearning" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MachineLearning</p></a> <a href="/blog/tags/Python" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Python</p></a> <a href="/blog/tags/VisualStudio" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VisualStudio</p></a> <a href="/blog/tags/NetCore" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>NetCore</p></a> <a href="/blog/tags/Google" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Google</p></a> <a href="/blog/tags/DevOps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevOps</p></a> <a href="/blog/tags/WordPress" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>WordPress</p></a> <a href="/blog/tags/Productivity" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Productivity</p></a> <a href="/blog/tags/Contenedores" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Contenedores</p></a> <a href="/blog/tags/MVPSummit" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVPSummit</p></a> <a href="/blog/tags/Cloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Cloud</p></a> <a href="/blog/tags/OpenSource" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>OpenSource</p></a> <a href="/blog/tags/CodeMentor" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>CodeMentor</p></a> <a href="/blog/tags/AppCenter" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>AppCenter</p></a> <a href="/blog/tags/YouTube" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>YouTube</p></a> <a href="/blog/tags/VS4Mac" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>VS4Mac</p></a> <a href="/blog/tags/Taller" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Taller</p></a> <a href="/blog/tags/Charla" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Charla</p></a> <a href="/blog/tags/Git" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Git</p></a> <a href="/blog/tags/MVP" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVP</p></a> <a href="/blog/tags/iOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>iOS</p></a> <a href="/blog/tags/Android" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Android</p></a> <a href="/blog/tags/Freelance" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Freelance</p></a> <a href="/blog/tags/Linux" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Linux</p></a> <a href="/blog/tags/MacOS" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MacOS</p></a> <a href="/blog/tags/Asp.Net Core" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Asp.Net Core</p></a> <a href="/blog/tags/XamarinDiplomado" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinDiplomado</p></a> <a href="/blog/tags/MVVM" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>MVVM</p></a> <a href="/blog/tags/Backend" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Backend</p></a> <a href="/blog/tags/Spanish/English" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Spanish/English</p></a> <a href="/blog/tags/Meetup" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Meetup</p></a> <a href="/blog/tags/Bootcamp" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Bootcamp</p></a> <a href="/blog/tags/DevDays" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>DevDays</p></a> <a href="/blog/tags/UX / UI" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>UX / UI</p></a> <a href="/blog/tags/Realm" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Realm</p></a> <a href="/blog/tags/Rifa" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Rifa</p></a> <a href="/blog/tags/Open Source" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Open Source</p></a> <a href="/blog/tags/ASP.NET" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>ASP.NET</p></a> <a href="/blog/tags/Web Apps" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web Apps</p></a> <a href="/blog/tags/Web API" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Web API</p></a> <a href="/blog/tags/Workshop" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Workshop</p></a> <a href="/blog/tags/XamarinForms" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>XamarinForms</p></a> <a href="/blog/tags/Yeoman" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Yeoman</p></a> <a href="/blog/tags/HTML5" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>HTML5</p></a> <a href="/blog/tags/TestCloud" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>TestCloud</p></a> <a href="/blog/tags/Markdown" class="list-group-item-text"><p class="badge"><i class="fa fa-tag"> </i>Markdown</p></a> </section></section>
+                <div class="col-md-3 card"><h2>Archives</h2><section><ul class="list-group box-shadow" data-theme=""><li class="list-group-item"><a href="/blog/archives/2022"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2022</p></a></li><li class="list-group-item"><a href="/blog/archives/2021"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2021</p></a></li><li class="list-group-item"><a href="/blog/archives/2020"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2020</p></a></li><li class="list-group-item"><a href="/blog/archives/2019"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2019</p></a></li><li class="list-group-item"><a href="/blog/archives/2018"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2018</p></a></li><li class="list-group-item"><a href="/blog/archives/2017"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2017</p></a></li><li class="list-group-item"><a href="/blog/archives/2016"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2016</p></a></li><li class="list-group-item"><a href="/blog/archives/2015"><p class="list-group-item-text"><i class="fa fa-bookmark"> </i>2015</p></a></li></ul></section></div>
+            </section>
+        </section>
+    </div>
+    <footer data-theme="" class="col-xs-12 site-footer text-center"><div class="inner"><section class="copyright">Copyright <a href="/about">Esteban Solano Granados</a> © <!-- -->2023<!-- --> • All rights reserved.</section><section class="poweredby">Custom theme made with <i class="fa fa-heart-o"></i> and JavaScript</section></div></footer>
+  </body></html>
